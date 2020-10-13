@@ -162,7 +162,7 @@
   &-feat-cont {
     align-self: stretch;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     justify-content: space-between;
     border: 1px solid rgb(23, 13, 29);
     padding: 0.4rem;
@@ -287,47 +287,24 @@
   padding: 2rem 1rem;
   background-color: rgba(#2e2e34, 1);
 
-<<<<<<< HEAD
-  &-options{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-    align-items:center;
-    justify-items:center;
-=======
   &-options {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     align-items: center;
     justify-items: center;
->>>>>>> experiment
     // border: 1px solid yellow;
     text-align: center;
     grid-gap: 1rem;
   }
 
   &-list {
-<<<<<<< HEAD
-    &:nth-of-type(1){
-=======
     &:nth-of-type(1) {
->>>>>>> experiment
       align-self: start;
     }
   }
 
   &-items {
     // border: 1px solid red;
-<<<<<<< HEAD
-    margin-bottom: .5rem;
-    padding: .4rem .8rem;
-  }
-
-  &-ack{
-    text-align:center;
-    color: #fff;
-    background: rgb(6, 5, 6);
-    padding: .6rem;
-=======
     margin-bottom: 0.5rem;
     padding: 0.4rem 0.8rem;
   }
@@ -337,6 +314,5 @@
     color: #fff;
     background: rgb(6, 5, 6);
     padding: 0.6rem;
->>>>>>> experiment
   }
 }
