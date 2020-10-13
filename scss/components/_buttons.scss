@@ -1,0 +1,78 @@
+//show deal
+.view-deal{
+  padding: .5rem 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  background:rgb(19, 156, 156);
+  color: #fff;
+  border: none;
+  @include shadow(.3, 9px);
+  text-align: center;
+  font-size: .9rem;
+  letter-spacing: 1px;
+  &:hover{
+    background:rgb(9, 91, 91);
+
+  }
+}
+
+
+
+//show more sample spaces
+.show-more{
+  background-color: rgb(22, 33, 60);
+  border: none;
+  padding: .7rem .9rem;
+  margin: 1rem 0;
+  @include shadow(.3, 11px);
+  cursor:pointer;
+  text-align: center;
+  &:hover{
+    background-color: rgb(8, 13, 26);
+    .icon{
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+    .text{
+      transform: translateX(0);
+    }
+  }
+
+  &:focus{
+    outline: 2px solid var(--link-hover-clr-1);
+    outline-offset: 3px;
+  }
+
+  .icon{
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    fill: #fff;
+    opacity: 0;
+    visibility: hidden;
+    &-home{
+      transition: transform .2s ease,
+      opacity .4s ease;
+      opacity: 0;
+      visibility: hidden;
+      // margin-top: .4rem;
+      transform: translateY(.1rem) scale(0);
+      transform-origin: bottom;
+      margin-left: .2rem;
+
+    }
+  }
+}
+
+.text{
+  transition: transform .2s ease;
+  display: inline-block;
+  transform: translateX(.6rem);
+  border: none;
+  font-size: 1rem;
+  text-transform: CamelCase;
+  letter-spacing: 1px;
+  margin-left: .2rem;
+  color: rgb(244, 234, 243);
+}

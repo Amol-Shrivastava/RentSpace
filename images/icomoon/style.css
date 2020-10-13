@@ -1,0 +1,48 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-hash {
+  width: 0.875em;
+}
+
+.icon-comments {
+  width: 1.07421875em;
+}
+
+.icon-user {
+  width: 0.7142857142857142em;
+}
+
+.icon-home1 {
+  width: 0.9285714285714285em;
+}
+
+.icon-map-marker {
+  width: 0.5714285714285714em;
+}
+
+.icon-bullseye {
+  width: 0.8571428571428571em;
+}
+
+.icon-thumbs-up {
+  width: 0.8928571428571428em;
+}
+
+.icon-handshake-o {
+  width: 1.2857142857142856em;
+}

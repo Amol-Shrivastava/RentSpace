@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 0.625rem; //1rem = 10px
+  font-family: var(--font-family);
+  padding:0 1rem;
+}
+
+img{
+  max-width: 100%;
+  display: inline-block;
+}
+
+a{
+  font-family: inherit;
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}

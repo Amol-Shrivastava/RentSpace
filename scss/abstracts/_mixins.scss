@@ -1,0 +1,23 @@
+@mixin flex($fd:row, $ac: center, $jc: center){
+  display: flex;
+  flex-direction:$fd;
+  align-items:$ac;
+  justify-content:$jc;
+}
+
+@mixin shadow($alp: .5,  $blr: 10px, $x:0 , $y: 4px){
+  box-shadow: $x $y $blr rgba(0,0,0, $alp);
+}
+
+@mixin background($size: cover, $position-x: center, $position-y: center){
+  background-size: $size;
+  background-position: $position-x $position-y;
+  background-repeat: no-repeat;
+}
+
+@mixin font($fam, $size, $color, $weight: normal){
+  font-family: $fam;
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}

@@ -1,0 +1,21 @@
+//nav-link hover
+        .hover-link{
+          position:relative;
+          &::after{
+            content: '';
+            position:absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 1.3px solid  var(--link-hover-clr-1);
+            transform: scale(0);
+            transition: transform .3s ease-in-out;
+            transform-origin: right;
+          }
+          &:hover{
+            &::after{
+              transform: scale(1);
+              transform-origin: left;
+            }
+          }
+        }
