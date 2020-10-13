@@ -148,3 +148,30 @@ transform: translateY(-.6rem);
     color: rgb(0, 0, 0);
   }
 }
+
+//footer section styling
+.footer{
+    &-links{
+    font-size: 1rem;
+    color: #bbb;
+    &:hover{
+      outline: 3px dotted var(--link-hover-clr-1);
+      outline-offset: 7px;
+    }
+    &-logo{
+      font-size: 2rem;
+      color: rgb(191, 208, 228);
+      letter-spacing: 3px;
+      font-family: 'Playfair Display';
+    }
+  }
+  &-list-heading{
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 2px;
+    border-bottom: var(--border-bottom);
+  }
+  &-ack{
+
+  }
+}

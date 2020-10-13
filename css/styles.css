@@ -149,6 +149,24 @@ ul {
   letter-spacing: 1px;
   color: black; }
 
+.footer-links {
+  font-size: 1rem;
+  color: #bbb; }
+  .footer-links:hover {
+    outline: 3px dotted var(--link-hover-clr-1);
+    outline-offset: 7px; }
+  .footer-links-logo {
+    font-size: 2rem;
+    color: #bfd0e4;
+    letter-spacing: 3px;
+    font-family: 'Playfair Display'; }
+
+.footer-list-heading {
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: 2px;
+  border-bottom: var(--border-bottom); }
+
 .view-deal {
   padding: .5rem 1rem;
   margin: 1rem 0;
@@ -422,29 +440,24 @@ ul {
   object-fit: cover; }
 
 .footer {
-  height: 40vh;
   color: #fff;
-  padding: 2rem 1rem 0;
-  background-color: #2e2e34;
-  display: flex;
-  flex-direction: space-between;
-  align-items: center;
-  justify-content: row; }
+  padding: 2rem 1rem;
+  background-color: #2e2e34; }
   .footer-options {
-    flex: 0 0 20%;
-    margin-right: 1rem; }
-  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    align-items: center;
+    justify-items: center;
+    border: 1px solid yellow;
+    text-align: center;
+    grid-gap: 1rem; }
+  .footer-list:nth-of-type(1) {
+    align-self: start; }
+  .footer-items {
+    margin-bottom: .5rem;
+    padding: .4rem .8rem; }
+  .footer-ack {
+    text-align: center;
     color: #fff;
-    display: inline-block;
-    font-size: 0.8rem;
-    padding: 1rem 0 0.2rem; }
-  .footer-form {
-    border: 2px solid yellow;
-    flex: 1;
-    height: 100%; }
-
-.form {
-  display: block; }
-  .form .input {
-    width: 100%;
-    padding: 0.4rem 0.2rem; }
+    background: #060506;
+    padding: .6rem; }
