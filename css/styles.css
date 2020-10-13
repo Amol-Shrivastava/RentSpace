@@ -390,7 +390,6 @@ ul {
     fill: #829d8c; }
 
 .reviews {
-  border: 3px solid blue;
   background: #fff;
   position: relative;
   height: 78vh;
@@ -448,7 +447,6 @@ ul {
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     align-items: center;
     justify-items: center;
-    border: 1px solid yellow;
     text-align: center;
     grid-gap: 1rem; }
   .footer-list:nth-of-type(1) {
