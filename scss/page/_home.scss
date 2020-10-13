@@ -126,6 +126,13 @@
 }
 //sample space styling
 
+.space-houses{
+  border: 2px solid purple;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+
 .sample-space{
   padding: .2rem;
   text-align: center;
@@ -134,8 +141,9 @@
   .space {
     &-container {
       border: 1px solid rgb(98, 103, 94);
-      margin-bottom: 0.9rem;
+      margin: 0 auto .9rem;
       position:relative;
+      // flex: 0 0 calc(45% - 2rem);
     }
 
     //image section styling
@@ -166,9 +174,13 @@
     }
 
     &-feat-cont{
-      @include flex(row, center, space-between);
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
       border: 1px solid rgb(23, 13, 29);
       padding: .4rem;
+      grid-gap: .2rem;
+      text-align: center;
+
     }
 
     &-feat {
@@ -199,6 +211,7 @@
       }
     }
   }
+
 
 
 //review section styling

@@ -126,8 +126,7 @@ ul {
 .cost {
   position: relative;
   font-size: 1.2rem;
-  color: #140804;
-  top: -.1rem; }
+  color: #140804; }
 
 .reviewer_name {
   font-size: 1.2rem;
@@ -311,6 +310,11 @@ ul {
       background: #8d9a7c;
       fill: #d9e7c9; }
 
+.space-houses {
+  border: 2px solid purple;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); }
+
 .sample-space {
   padding: .2rem;
   text-align: center;
@@ -318,7 +322,7 @@ ul {
 
 .space-container {
   border: 1px solid #62675e;
-  margin-bottom: 0.9rem;
+  margin: 0 auto .9rem;
   position: relative; }
 
 .space-intro {
@@ -343,12 +347,12 @@ ul {
   margin-top: -4rem; }
 
 .space-feat-cont {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   border: 1px solid #170d1d;
-  padding: .4rem; }
+  padding: .4rem;
+  grid-gap: .2rem;
+  text-align: center; }
 
 .space-feat .icon {
   width: 1.5rem;
