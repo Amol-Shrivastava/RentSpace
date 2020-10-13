@@ -71,8 +71,7 @@
     cursor: pointer;
 
     &:hover {
-      @include shadow(0, 4px, 5px, 0.3);
-
+      @include shadow(0.3, 5px);
       .services-heading::after {
         transform: scale(1);
       }
@@ -125,25 +124,23 @@
   }
 }
 //sample space styling
-
 .space-houses{
-  border: 2px solid purple;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1rem;
 }
 
 
 .sample-space{
   padding: .2rem;
   text-align: center;
-  background-color: rgba(225, 225, 225, .3);
+  background-color: rgba(225, 225, 225, .25);
 }
   .space {
     &-container {
       border: 1px solid rgb(98, 103, 94);
       margin: 0 auto .9rem;
       position:relative;
-      // flex: 0 0 calc(45% - 2rem);
     }
 
     //image section styling
@@ -170,7 +167,7 @@
     //description section styling
     &-desc-cont {
       background-color: #fff;
-      margin-top: -4rem;
+      margin-top: -4.2rem;
     }
 
     &-feat-cont{
@@ -217,39 +214,50 @@
 //review section styling
 
 .reviews {
-  // border: 3px solid yellow;
-  background: rgba(232, 222, 217, .6);
-  padding: 2rem 0;
+  border: 3px solid blue;
+  background: #fff;
+  position:relative;
+  height: 78vh;
   text-align: center;
-
-  &-sect {
-    // border: 1px solid red;
-  }
+  @include flex(column, space-between);
 }
 
 .review {
-  transition: border-bottom 0.4s ease-in-out;
-  cursor: pointer;
+border: 1px solid rgb(190, 188, 184);
+top: 4rem;
+position:absolute;
+background: #fff;
+height: 57vh;
+width: 45vh;
+@include flex(column, space-evenly);
+padding: 1rem;
+@include shadow(.3, 8px);
 
-  &:nth-child(2) {
-    margin: 1.8rem 0;
-    // border: 1px solid red;
-  }
 }
 
-.reviews-sect {
-  border: 1px solid blue;
-
-  &:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-}
 
 .reviewer {
   &-img-Cont {
-    width: 65px;
-    height: 65px;
+    width: 100px;
+    height: 100px;
     margin: 1rem auto;
+    border: 3px solid #eee;
+    border-radius: 50%;
+    position:relative;
+
+    .icon{
+      position:absolute;
+      bottom: 1px;
+      right: 1px;
+      border-radius: 50%;
+      background: rgb(24, 181, 59);
+      &-quotes-left{
+        width: 1.7rem;
+        height: 1.7rem;
+        padding: .2rem;
+        fill: #fff;
+     }
+    }
   }
 
   &-img {
@@ -257,6 +265,10 @@
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+  }
+
+  &-desc{
+    // border: 3px solid pink;
   }
 }
 //footer section styling
@@ -266,7 +278,7 @@
   color: #fff;
   padding: 2rem 1rem 0;
   background-color: rgba(#2e2e34, 1);
-  @include flex(row, flex-start, space-between);
+  @include flex( space-between, row);
 
   &-options {
     // border: 1px solid #ccc;

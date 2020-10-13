@@ -128,10 +128,11 @@ transform: translateY(-.6rem);
     color: rgb(8, 14, 12);
     font-weight: 800;
     letter-spacing: 1px;
+    font-family: 'Source Serif Pro', serif;
   }
 
   &_city {
-    display: inline-block;
+    display:block;
     margin-top: 0.5rem;
     font-size: 1rem;
     text-transform: uppercase;
@@ -139,7 +140,7 @@ transform: translateY(-.6rem);
   }
 
   &_text {
-    width: 460px;
+    width: 100%;
     margin: 0 auto;
     font-size: 1rem;
     line-height: 1.2;

@@ -15,12 +15,12 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
-.icon-hash {
-  width: 0.875em;
-}
-
 .icon-comments {
   width: 1.07421875em;
+}
+
+.icon-bicycle {
+  width: 1.2861328125em;
 }
 
 .icon-user {
@@ -45,4 +45,8 @@ Single-colored icons can be modified like so:
 
 .icon-handshake-o {
   width: 1.2857142857142856em;
+}
+
+.icon-hash {
+  width: 0.875em;
 }
