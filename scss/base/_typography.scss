@@ -84,12 +84,15 @@
 .space {
   &-name {
     font-family: 'Playfair Display', Sans-Serif;
-    font-size: 1.2rem;
+    font-size: 2rem;
+    margin: 1rem 0;
     color: rgb(54, 79, 227);
   }
 
   &-desc {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    width: 80%;
+    margin:.4rem auto;
     line-height: 1.2;
     letter-spacing: 1px;
     color: rgb(23, 13, 6);
