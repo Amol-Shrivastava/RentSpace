@@ -7,7 +7,7 @@
 body{
   font-size: 0.625rem; //1rem = 10px
   font-family: var(--font-family);
-  padding:0 1rem;
+  overflow-x: hidden;
 }
 
 img{
@@ -15,7 +15,7 @@ img{
 }
 
 a{
-  font-family: inherit;
+  // font-family: inherit;
   text-decoration: none;
 }
 

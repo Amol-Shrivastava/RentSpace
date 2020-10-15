@@ -9,7 +9,7 @@
   box-shadow: $x $y $blr rgba(0,0,0, $alp);
 }
 
-@mixin background($size: cover, $position-x: center, $position-y: center){
+@mixin background( $position-x: center, $position-y: center, $size: cover){
   background-size: $size;
   background-position: $position-x $position-y;
   background-repeat: no-repeat;

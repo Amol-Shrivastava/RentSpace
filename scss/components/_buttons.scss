@@ -3,7 +3,7 @@
   padding: .5rem 1rem;
   margin: 1rem 0;
   cursor: pointer;
-  background:rgb(19, 156, 156);
+  background:#139c9c;
   color: #fff;
   border: none;
   @include shadow(.3, 9px);
@@ -11,7 +11,7 @@
   font-size: .9rem;
   letter-spacing: 1px;
   &:hover{
-    background:rgb(9, 91, 91);
+    background:#095b5b;
 
   }
 }
@@ -20,7 +20,7 @@
 
 //show more sample spaces
 .show-more{
-  background-color: rgb(22, 33, 60);
+  background-color: #16213c;
   border: none;
   padding: .7rem .9rem;
   margin: 1rem 0;
@@ -28,7 +28,7 @@
   cursor:pointer;
   text-align: center;
   &:hover{
-    background-color: rgb(8, 13, 26);
+    background-color: #080d1a;
     .icon{
       opacity: 1;
       visibility: visible;
@@ -56,11 +56,9 @@
       opacity .4s ease;
       opacity: 0;
       visibility: hidden;
-      // margin-top: .4rem;
       transform: translateY(.1rem) scale(0);
       transform-origin: bottom;
       margin-left: .2rem;
-
     }
   }
 }
@@ -74,5 +72,23 @@
   text-transform: CamelCase;
   letter-spacing: 1px;
   margin-left: .2rem;
-  color: rgb(244, 234, 243);
+  color: #f4eaf3;
+}
+
+.load-btn{
+  padding: .5rem 1.3rem;
+  border:none;
+  background: #0b82a3;
+  color: #fff;
+  font-size: 1.3rem;
+  // font-family: 'Poppins', serif;
+  letter-spacing: 1px;
+  transition: transform .2s ease-in;
+  cursor:pointer;
+  // @include shadow(0.3, 15px);
+  &:hover,
+  &:focus{
+    outline: 5px dashed var(--link-hover-clr-1);
+    outline-offset: 10px;
+  }
 }

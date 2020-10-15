@@ -1,56 +1,97 @@
-.hero__text {
-  display: inline-block;
-  position: absolute;
-  top: 13rem;
-  left: 4rem;
+//HOME PAGE TYPOGRAPHY
+
+//nav section typography
+.nav-logo {
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 700;
+  color: var(--logo-clr);
 }
 
+.login{
+  font-size: 1.1rem;
+  color: var(--login-clr);
+  letter-spacing: 1px;
+}
+
+.join {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  background: #e3662a;
+  color: #fff;
+  border-radius: 22px;
+  padding: 0.2rem 0.8rem;
+  &:hover{
+    color: #e3662a;
+    background: #fff;
+  }
+}
+//hero section typography
 .hero {
+  &__text {
+    display: inline-block;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
   &_heading {
+    font-family: 'Source Serif Pro', serif;
     font-size: 3rem;
-    color: rgb(230, 214, 195);
+    color: #e9eaf6;
     letter-spacing: 1px;
     line-height: 1.4;
   }
 
   &_desc {
-    font-size: 1.4rem;
-    max-width: 350px;
-    color: rgb(236, 225, 215);
+    font-family: 'Lobster';
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+    max-width: 650px;
+    color: #ece1d7;
+  }
+}
+
+.les_lor{
+  &-heading{
+    color: #e1f9f7;
+    font-family: 'Source Serif Pro', Sans-serif;
+  }
+  &-desc{
+
   }
 }
 
 .primary_heading {
   font-size: 2rem;
   margin-bottom: 1.3rem;
-  color: rgb(11, 38, 115);
+  color: #000205;
   border-bottom: var(--border-bottom);
   display: inline-block;
-  // animation-name: pulse;
-  // animation-duration: 1s;
-  // animation-iteration-count: infinite;
 }
 
 .secondary-heading {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #342ac7;
+  color: #1c0808;
   border-bottom: var(--heading-border-bottom);
   margin-bottom: 1.2rem;
   font-weight: bolder;
   display: inline-block;
-  // animation-name: fadeInDown;
-  // animation-duration: 1s;
-  // animation-iteration-count: 1;
 }
+//service section typography
 
 .services {
   &-heading {
     font-size: 1.1rem;
     position: relative;
     display: inline-block;
-    font-family: 'Poppins',sans;
-    color: rgb(13, 14, 19);
+    font-weight: 700;
+    color: #0d0e13;
     letter-spacing: 1.1px;
     transition: transform 0.5s ease;
     transform-origin: right;
@@ -69,9 +110,8 @@
 
   &-desc {
     margin-bottom: 0.6rem;
-    color: rgb(64, 62, 73);
+    color: #403e49;
     display: inline-block;
-    // border: 1px solid green;
     font-weight: 400;
     margin: 1rem auto 0;
     width: 300px;
@@ -80,105 +120,123 @@
     line-height: 1.7;
   }
 }
+//explore section typography
 
 .space {
   &-name {
-    font-family: 'Playfair Display', Sans-Serif;
+    font-family: 'Source Serif Pro', Sans-Serif;
+    letter-spacing: 1px;
     font-size: 2rem;
     margin: 1rem 0;
-    color: rgb(54, 79, 227);
+    color: #050303;
+    display: inline-block;
+    border-bottom: var(--border-bottom);
   }
 
   &-desc {
     font-size: 1.2rem;
     width: 80%;
-    margin:.4rem auto;
-    line-height: 1.2;
+    margin: 0.4rem auto;
+    line-height: 1.5;
     letter-spacing: 1px;
-    color: rgb(23, 13, 6);
-    text-align: center;
-    padding: .7rem .3rem;
+    color: #170d06;
+    padding: 0.7rem 0.3rem;
     flex-wrap: wrap;
   }
 }
 
-.price{
-font-size: 1.2rem;
-color: rgb(198, 57, 13);
-transform: translateY(-.6rem);
+.price {
+  font-size: 1.2rem;
+  color: #c6390d;
+  transform: translateY(-.6rem);
 }
 
 .address,
-.rooms,
-{
-  position:relative;
+.rooms {
+  position: relative;
   top: -.4rem;
-  left: .2rem;
+  left: 0.2rem;
   font-size: 1.2rem;
-  color: rgb(20, 8, 4);
+  color: #140804;
 }
 
-.cost{
-  position:relative;
+.address {
+  font-size: 1.1rem;
+}
+
+.cost {
+  position: relative;
   font-size: 1.2rem;
-  color: rgb(20, 8, 4);
+  color: #140804;
   // top: -.1rem;
 }
+//reviewer section typography
 
 .reviewer {
   &_name {
     font-size: 1.2rem;
-    color: rgb(8, 14, 12);
+    color: #080e0c;
     font-weight: 800;
     letter-spacing: 1px;
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Poppins', serif;
+    display: inline-block;
   }
 
   &_city {
-    display:block;
-    margin-top: 0.5rem;
-    font-size: 1rem;
+    display: block;
+    font-family: 'Poppins', serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #91a899;
+    font-size: 1.1rem;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    // margin-bottom: 0.5rem;
   }
 
   &_text {
     width: 100%;
     margin: 0 auto;
-    font-size: 1rem;
-    line-height: 1.2;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.5;
     letter-spacing: 1px;
-    color: rgb(0, 0, 0);
+    color: #000000;
   }
 }
+//footer section typography
 
-//footer section styling
-.footer{
-    &-links{
+.footer {
+  &-links {
     font-size: 1rem;
-    color: #bbb;
-    &:hover{
+    color: #c6c8c9;
+
+    &:hover {
       outline: 3px dotted var(--link-hover-clr-1);
       outline-offset: 7px;
     }
-    &-logo{
+
+    &-logo {
       font-size: 2rem;
-      color: rgb(191, 208, 228);
-      letter-spacing: 3px;
-      font-family: 'Playfair Display';
+      color: #c4e4c9;
+      letter-spacing: 1px;
+      font-weight: 700;
+      font-family: 'Source Serif Pro';
     }
   }
-  &-list-heading{
+
+  &-list-heading {
     font-size: 1.1rem;
     color: #fff;
     letter-spacing: 2px;
     border-bottom: var(--border-bottom);
   }
-  &-ack{
-    text-align:center;
+
+  &-ack {
+    text-align: center;
     color: #fff;
-    background: rgb(6, 5, 6);
-    padding: .6rem;
-    font-size: .7rem;
+    background: #060506;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    font-family: 'Source Serif Pro', serif;
   }
 }

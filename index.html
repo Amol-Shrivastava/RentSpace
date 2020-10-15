@@ -6,15 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- google-font -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,700&family=Pacifico&family=Playfair+Displaywght@0,800&family=Poppins:wght@400;500;600&family=Alegreya:ital,wght@0,500;0,800;1,400;1,700&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lucida&family=Lobster&family=Alegreya:ital,wght@0,400;0,500;0,700;1,800&family=Pacifico&family=Playfair+Display:wght@500;800&family=Poppins:wght@400;500&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,600&display=swap"
     rel="stylesheet">
   <!-- font awesome  -->
 
   <!-- css styling -->
+
+  <!-- animate.css cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- css styles -->
   <link rel="stylesheet" href="css/styles.css">
-  <title>RentIt</title>
+  <title>RentSpace</title>
 </head>
 
 <body>
@@ -22,23 +25,58 @@
   <div class="container">
     <nav class="nav">
       <ul class="nav_list">
-        <li class="nav_list--items"><a href="" class="nav_list--links">RentIt</a></li>
-        <li class="nav_list--items"><a href="" class="nav_list--links hover-link">LogIn</a></li>
-        <li class="nav_list--items"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M3 6h18v2.016h-18v-2.016zM3 12.984v-1.969h18v1.969h-18zM3 18v-2.016h18v2.016h-18z"></path>
-          </svg> </li>
-      </ul>
+        <li class="nav_list--items"><a href="" class="nav_list--links nav-logo">RentSpace</a></li>
+        <li class="nav_list--items"><span class="nav_list--links login hover-link">LogIn</span></li>
+        <li class="nav_list--items"><span class="nav-list-links join">JOIN</span></li>
     </nav>
-
     <section class="hero">
-      <div class="hero__text">
-        <h1 class="hero_heading">RentIt</h1>
-        <p class="hero_desc">Space where <span class="lessor">Lessor</span> and <span class="lessee">Lessee</span>
-          can help each other.</p>
+
+      <div class="trans-btn prev-btn" id="prev">
+        <span class="icon icon-arrow-left">&#11160;</span>
       </div>
-      <div class="hero_img">
-        <img src="" alt="" class="house">
+
+      <div class="sliders">
+
+        <div class="slide slide-1" id="slide-1">
+          <div class="slide-content">
+            <div class="hero__text">
+              <h1 class="hero_heading">RentSpace</h1>
+              <p class="hero_desc">Space where <span class="lessor">Lessor</span> and <span class="lessee">Lessee</span>
+                can help each other...</p>
+            </div>
+          </div>
+        </div>
+
+     <div class="slide slide-2" id="slide-2">
+          <div class="slide-content">
+            <div class="hero__text">
+              <h1 class="hero_heading les_lor-heading">Lessor Business</h1>
+              <p class="hero_desc les_lor-desc  mt--md mb--md">Space where you can advertise your property for rent..</p>
+              <a href="" class="lessor-link"><button class="load-btn les-btn">Know More</button></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="slide slide-3" id="slide-3">
+          <div class="slide-content">
+            <div class="hero__text">
+              <h1 class="hero_heading les-heading">Lessee Luxury</h1>
+              <p class="hero_desc  mt--md mb--md">Space where you can find some property at rent..</p>
+
+              <a href="" class="lessor-link"><button class="load-btn les-btn">Start Exploring</button></a>
+
+            </div>
+          </div>
+        </div>
+
       </div>
+
+
+      <div class="trans-btn next-btn" id="next">
+        <span class="icon icon-arrow-right">&#11162;</span>
+      </div>
+
     </section>
 
     <section class="services">
@@ -49,7 +87,7 @@
         <h2 class="secondary-heading services-sect">Lessor Services</h2>
         <div class="features">
 
-          <div class="services-customer serv-lessor">
+          <div class="services-customer faded serv-lessor">
             <figure class="lessor-features">
               <svg class="icon icon-user">
                 <use xlink:href="./images/icomoon/symbol-defs.svg#icon-user"></use>
@@ -61,7 +99,7 @@
             </figcaption>
           </div>
 
-          <div class="services-customer serv-lessor">
+          <div class="services-customer faded serv-lessor">
             <figure class="lessor-features">
               <svg class="icon icon-profile">
                 <use xlink:href="./images/icomoon/symbol-defs.svg#icon-profile"></use>
@@ -73,7 +111,7 @@
             </figcaption>
           </div>
 
-          <div class="services-customer serv-lessor">
+          <div class="services-customer faded serv-lessor">
             <figure class="lessor-features">
               <svg class="icon icon-handshake-o">
                 <use xlink:href="./images/icomoon/symbol-defs.svg#icon-handshake-o"></use>
@@ -86,7 +124,7 @@
             </figcaption>
           </div>
 
-          <div class="services-customer serv-lessor">
+          <div class="services-customer faded serv-lessor">
             <figure class="lessor-features">
               <svg class="icon icon-home">
                 <use xlink:href="./images/icomoon/symbol-defs.svg#icon-home"></use>
@@ -106,7 +144,7 @@
       <div class="services_lessee">
         <h2 class="secondary-heading services-sect">Lessee Services</h2>
         <div class="features">
-          <div class="services-customer serv-cust">
+          <div class="services-customer faded serv-cust">
             <figure class="lessee-features">
               <svg class="icon icon-bullseye">
                 <use xlink:href="./images/icomoon/symbol-defs.svg#icon-bullseye"></use>
@@ -119,7 +157,7 @@
             </figcaption>
           </div>
 
-          <div class="services-customer serv-cust">
+          <div class="services-customer faded serv-cust">
             <figure class="lessee-features">
               <svg class="icon icon-gps_not_fixed">
                 <use xlink:href="./images/icomoon/symbol-defs.svg#icon-gps_not_fixed"></use>
@@ -132,7 +170,7 @@
             </figcaption>
           </div>
 
-          <div class="services-customer serv-cust">
+          <div class="services-customer faded serv-cust">
             <figure class="lessee-features">
               <svg class="icon icon-comments">
                 <use xlink:href="./images/icomoon/symbol-defs.svg#icon-comments"></use>
@@ -145,7 +183,7 @@
             </figcaption>
           </div>
 
-          <div class="services-customer serv-cust">
+          <div class="services-customer faded serv-cust">
             <figure class="lessee-features">
               <svg class="icon icon-thumbs-up">
                 <use xlink:href="./images/icomoon/symbol-defs.svg#icon-thumbs-up"></use>
@@ -153,7 +191,7 @@
             </figure>
             <figcaption class="services-desc">
               <p class="services-heading">Verified Lessor Details</p>
-              <br>RentIt completely verifies information submitted by each lessor about their
+              <br>RentSpace completely verifies information submitted by each lessor about their
               space
             </figcaption>
           </div>
@@ -163,12 +201,28 @@
 
     <!-- samples **************************** -->
     <section class="sample-space">
-      <h2 class="primary_heading">Explore our Spaces</h2>
+      <h2 class="primary_heading mb--lg">Explore our Spaces</h2>
 
       <div class="space-houses">
 
         <div class="space-container">
-          <figcaption class="space-desc-cont">
+
+          <!-- img -->
+          <figure class="space-img-cont imgRight from-right slide-in">
+            <div class="space-intro">
+              <div class="space-feat">
+                <svg class="icon icon-tag">
+                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+                </svg>
+                <p class="space-feat-about price">4000 <img src="./images/icomoon/rupee.svg" class="icon icon-rupees-symb"></img> /month</p>
+              </div>
+            </div>
+
+            <img src="./images/houses/arora-house.jpg" alt="" class="space-img">
+          </figure>
+
+          <!-- text -->
+          <figcaption class="space-desc-cont txtLeft from-left slide-in">
             <h2 class="space-name">Sinha's Bunglow</h2>
             <div class="space-feat-cont">
               <div class="space-feat">
@@ -191,50 +245,36 @@
               This place is in Bhopal, Madhya Pradesh. The owner of this house is Mr.Rajiv Sinha.
               It contains 2 rooms and an attached toilet. This place lies close to mall and is at the
               center of the city. <br>
-              This place is RentIt verified.
+              This place is RentSpace verified.
             </div>
 
             <a href="" class="space-check"><button class="view-deal">View Deal</button></a>
           </figcaption>
-
-          <figure class="space-img-cont">
-            <div class="space-intro">
-                <div class="space-feat">
-                <svg class="icon icon-tag">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
-                </svg>
-                <p class="space-feat-about price">4000 <img src="./images/icomoon/rupee.svg" class="icon icon-rupees-symb"></img> /month</p>
-              </div>
-            </div>
-
-            <img src="./images/houses/arora-house.jpg" alt="" class="space-img">
-          </figure>
-
-
         </div>
 
 
 
         <div class="space-container">
 
-          <figure class="space-img-cont">
-          <div class="space-intro">
+          <!-- img -->
+          <figure class="space-img-cont imgLeft from-left slide-in">
+            <div class="space-intro">
               <div class="space-feat">
-              <svg class="icon icon-tag">
-                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
-              </svg>
-              <p class="space-feat-about price">7000 <img src="./images/icomoon/rupee.svg" class="icon icon-rupees-symb"></img> /month</p>
+                <svg class="icon icon-tag">
+                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+                </svg>
+                <p class="space-feat-about price">7000 <img src="./images/icomoon/rupee.svg" class="icon icon-rupees-symb"></img> /month</p>
+              </div>
             </div>
-          </div>
             <img src="./images/houses/out-house.jpg" alt="" class="space-img">
           </figure>
 
-
-          <figure class="space-desc-cont">
-          <h2 class="space-name">Ramtani House</h2>
+          <!-- text -->
+          <figcaption class="space-desc-cont txtRight from-right slide-in">
+            <h2 class="space-name">Ramtani House</h2>
             <div class="space-feat-cont">
               <div class="space-feat">
-                    <svg class="icon icon-map-marker">
+                <svg class="icon icon-map-marker">
                   <use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker">
                 </svg>
                 <span class="space-feat-about address">Jabalpur, Madhya Pradesh</span>
@@ -253,55 +293,57 @@
               This place is Jabalpur, Madhya Pradesh. The owner of this house is Mr.Ranghunadan Ramtani.
               This place lies at the outskirts of the city and is surrounded by lush greenry.
               It has a parking space which can be accessed for free. <br>
-              This place is RentIt verified.
+              This place is RentSpace verified.
             </div>
             <a href="" class="space-check"><button class="view-deal">View Deal</button></a>
-          </figure>
+          </figcaption>
         </div>
 
 
 
         <div class="space-container">
-
-        <figcaption class="space-desc-cont">
-          <h2 class="space-name">Arora's House</h2>
-          <div class="space-feat-cont">
-            <div class="space-feat">
-              <svg class="icon icon-map-marker">
-                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker">
-              </svg>
-              <span class="space-feat-about address">Indore, Madhya Pradesh</span>
-            </div>
-            <div class="space-feat">
-              <svg class="icon icon-hash">
-                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-hash"></use>
-              </svg>
-              <span class="space-feat-about rooms">Rooms: 3</span>
-            </div>
-            <div class="space-feat">
-              <p class="space-feat-about cost">3000 <img src="./images/icomoon/rupee.svg" class="icon icon-rupees-symb"></img> /month</p>
-            </div>
-          </div>
-          <div class="space-desc">
-            This place is Indore, Madhya Pradesh. The owner of this house is Mr.Rakesh Arora.
-            It contains 2 rooms and an attached toilet. This place is closer to the market and hospital.
-            This place is RentIt verified.
-          </div>
-
-          <a href="" class="space-check"><button class="view-deal">View Deal</button></a>
-        </figcaption>
-
-          <figure class="space-img-cont">
-          <div class="space-intro">
+          <!-- img -->
+          <figure class="space-img-cont imgRight from-right slide-in">
+            <div class="space-intro">
               <div class="space-feat">
-              <svg class="icon icon-tag">
-                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
-              </svg>
-              <p class="space-feat-about price">3000 <img src="./images/icomoon/rupee.svg" class="icon icon-rupees-symb"></img> /month</p>
+                <svg class="icon icon-tag">
+                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+                </svg>
+                <p class="space-feat-about price">3000 <img src="./images/icomoon/rupee.svg" class="icon icon-rupees-symb"></img> /month</p>
+              </div>
             </div>
-          </div>
             <img src="./images/houses/jbp-house.jpg" alt="" class="space-img">
           </figure>
+
+          <!-- text -->
+          <figcaption class="space-desc-cont txtLeft from-left slide-in">
+            <h2 class="space-name">Arora's House</h2>
+            <div class="space-feat-cont">
+              <div class="space-feat">
+                <svg class="icon icon-map-marker">
+                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker">
+                </svg>
+                <span class="space-feat-about address">Indore, Madhya Pradesh</span>
+              </div>
+              <div class="space-feat">
+                <svg class="icon icon-hash">
+                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-hash"></use>
+                </svg>
+                <span class="space-feat-about rooms">Rooms: 3</span>
+              </div>
+              <div class="space-feat">
+                <p class="space-feat-about cost">3000 <img src="./images/icomoon/rupee.svg" class="icon icon-rupees-symb"></img> /month</p>
+              </div>
+            </div>
+            <div class="space-desc">
+              This place is Indore, Madhya Pradesh. The owner of this house is Mr.Rakesh Arora.
+              It contains 2 rooms and an attached toilet. This place is closer to the market and hospital.
+              This place is RentSpace verified.
+            </div>
+
+            <a href="" class="space-check"><button class="view-deal">View Deal</button></a>
+          </figcaption>
+
         </div>
       </div>
 
@@ -313,90 +355,103 @@
 
     <!-- reviews**************************** -->
     <section class="reviews">
-      <p class="primary_heading">Why Trust RentIt?</p>
-      <br>
+      <p class="primary_heading mt--md mb--lg">Why Trust RentSpace?</p>
+
+      <div class="trans-btn prev-btn" id="comprev">
+        <span class="icon icon-arrow-left">&#11160;</span>
+      </div>
+
+      <div class="reviewsCont">
       <!-- Lessee review section -->
       <div class="review" id="lessee-1">
-      <figure class="reviewer-img-Cont">
-        <img src="./images/reviewers/college-boy.jpg" alt="" class="reviewer-img">
-        <svg class="icon icon-quotes-left"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-quotes-left"></use></svg>
-</figure>
-      <figcaption class="reviewer-desc">
-        <span class="reviewer_name">Smarth Saxena</span>
-        <span class="reviewer_city">Lessee</span>
-        <p class="reviewer_city">Bhopal</p>
-        <p class="reviewer_text">I am an engineering student who recently moved into Bhopal. Me and my friends were looking for a
-        1BHK for living near my college premise. RentIt made our quest very easy and we found a very nice place at
-        reasonable cost.</p>
-      </figcaption>
-    </div>
+        <figure class="reviewer-img-Cont">
+          <img src="./images/reviewers/college-boy.jpg" alt="" class="reviewer-img">
+          <svg class="icon icon-quotes-left">
+            <use xlink:href="./images/icomoon/symbol-defs.svg#icon-quotes-left"></use>
+          </svg>
+        </figure>
+        <figcaption class="reviewer-desc mt--md">
+          <span class="reviewer_name mb--sm">Smarth Saxena</span>
+          <span class="reviewer_city">Lessee</span>
+          <span class="reviewer_city">Bhopal (M.P.)</span>
+          <p class="reviewer_text mt--sm">I am an engineering student who recently moved into Bhopal. Me and my friends were looking for a
+            1BHK for living near my college premise. RentSpace made our quest very easy and we found a very nice place at
+            reasonable cost.</p>
+        </figcaption>
+      </div>
 
 
 
-    <div class="review" id="lessee-2">
-    <figure class="reviewer-img-Cont">
-      <img src="./images/reviewers/prep-boy.jpg" alt="" class="reviewer-img">
-      <svg class="icon icon-quotes-left"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-quotes-left"></use></svg>
-</figure>
-    <figcaption class="reviewer-desc">
-      <span class="reviewer_name">Raman Khare</span>
-      <span class="reviewer_city">Lessee</span>
-      <p class="reviewer_city">Bhopal</p>
-      <p class="reviewer_text">For me RentIt has been a very helpful as it made me find a small room for my preparation near my coaching.
-      The price and room were very good.
-      I recommend RentIt to anyone who wants to
-      look for a small rented place.</p>
-    </figcaption>
-  </div>
+      <div class="review" id="lessee-2">
+        <figure class="reviewer-img-Cont">
+          <img src="./images/reviewers/prep-boy.jpg" alt="" class="reviewer-img">
+          <svg class="icon icon-quotes-left">
+            <use xlink:href="./images/icomoon/symbol-defs.svg#icon-quotes-left"></use>
+          </svg>
+        </figure>
+        <figcaption class="reviewer-desc mt--sm">
+          <span class="reviewer_name mb--sm">Raman Khare</span>
+          <span class="reviewer_city">Lessee</span>
+          <span class="reviewer_city">Bhopal (M.P.)</span>
+          <p class="reviewer_text mt--sm">For me RentSpace has been a very helpful as it made me find a small room for my preparation near my coaching.
+            The price and room were very good.
+            I recommend RentSpace to anyone who wants to
+            look for a small rented place.</p>
+        </figcaption>
+      </div>
 
       <div class="review" id="lessee-3">
-  <figure class="reviewer-img-Cont">
-    <img src="./images/reviewers/working-girl.jpg" alt="" class="reviewer-img">
-    <svg class="icon icon-quotes-left"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-quotes-left"></use></svg>
-  </figure>
-  <figcaption class="reviewer-desc">
-    <span class="reviewer_name">Riya Jain</span>
-    <span class="reviewer_city">Lessee</span>
-    <p class="reviewer_city">Indore</p>
-    <p class="reviewer_text">
-    RentIt has been a blessing for me as it became very easy using RentIt to find a 1BHK house
-    near my workspace. It has reduced people's
-    headache of searching houses monotonously.</p>
-  </figcaption>
-</div>
+        <figure class="reviewer-img-Cont">
+          <img src="./images/reviewers/working-girl.jpg" alt="" class="reviewer-img">
+          <svg class="icon icon-quotes-left">
+            <use xlink:href="./images/icomoon/symbol-defs.svg#icon-quotes-left"></use>
+          </svg>
+        </figure>
+        <figcaption class="reviewer-desc">
+          <span class="reviewer_name mb--sm">Riya Jain</span>
+          <span class="reviewer_city">Lessee</span>
+          <span class="reviewer_city">Indore (M.P.)</span>
+          <p class="reviewer_text mt--sm">
+            RentSpace has been a blessing for me as it became very easy using RentSpace to find a 1BHK house
+            near my workspace. It has reduced people's
+            headache of searching houses monotonously.</p>
+        </figcaption>
+      </div>
 
 
       <!-- Lessor review section -->
-      <!-- <p class="secondary-heading">Some happy Lessee</p> -->
+      <!-- <span class="secondary-heading">Some happy Lessee</p> -->
 
       <div class="review" id="lessor-1">
-<figure class="reviewer-img-Cont">
-<img src="./images/reviewers/lessor-man.jpg" alt="" class="reviewer-img">
-<svg class="icon icon-quotes-left"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-quotes-left"></use></svg>
-</figure>
-<figcaption class="reviewer-desc">
-<span class="reviewer_name">Rajnish Anand</span>
-  <span class="reviewer_city">Lessor</span>
-<p class="reviewer_city">Jabalpur</p>
-<p class="reviewer_text">I had a 1BHK flat in the city and it was unocupied from a long time. I uploaded its details
-on RentIt and RentIt arranged some pretty decent tenants for my house. </p>
-</figcaption>
-</div>
+        <figure class="reviewer-img-Cont">
+          <img src="./images/reviewers/lessor-man.jpg" alt="" class="reviewer-img">
+          <svg class="icon icon-quotes-left">
+            <use xlink:href="./images/icomoon/symbol-defs.svg#icon-quotes-left"></use>
+          </svg>
+        </figure>
+        <figcaption class="reviewer-desc">
+          <span class="reviewer_name mb--sm">Rajnish Anand</span>
+          <span class="reviewer_city">Lessor</span>
+          <span class="reviewer_city">Jabalpur (M.P.)</span>
+          <p class="reviewer_text mt--sm">I had a 1BHK flat in the city and it was unocupied from a long time. I uploaded its details
+            on RentSpace and RentSpace arranged some pretty decent tenants for my house. </p>
+        </figcaption>
+      </div>
 
-       <div class="review" id="lessor-2">
-<figure class="reviewer-img-Cont">
-<img src="./images/reviewers/lessor-boy.jpg" alt="" class="reviewer-img">
-</figure>
-<figcaption class="reviewer-desc">
-<span class="reviewer_name">Saksham Shekawat</span>
-  <span class="reviewer_city">Lessor</span>
-<p class="reviewer_city">Bhopal</p>
-<p class="reviewer_text">
-  RentIt has been very helpful for us, as it helped us to get 2 tenants
-  for our rooms. I would recommend RentIt to everyone who wants to rent a space.
-</p>
-</figcaption>
-</div>
+      <div class="review" id="lessor-2">
+        <figure class="reviewer-img-Cont">
+          <img src="./images/reviewers/lessor-boy.jpg" alt="" class="reviewer-img">
+        </figure>
+        <figcaption class="reviewer-desc">
+          <span class="reviewer_name mb--sm">Saksham Shekawat</span>
+          <span class="reviewer_city">Lessor</span>
+          <span class="reviewer_city">Bhopal (M.P.)</span>
+          <p class="reviewer_text mt--sm">
+            RentSpace has been very helpful for us, as it helped us to get 2 tenants
+            for our rooms. I would recommend RentSpace to everyone who wants to rent a space.
+          </p>
+        </figcaption>
+      </div>
 
       <div class="review" id="lessor-3">
         <figure class="reviewer-img-Cont">
@@ -406,16 +461,20 @@ on RentIt and RentIt arranged some pretty decent tenants for my house. </p>
           </svg>
         </figure>
         <figcaption class="reviewer-desc">
-          <span class="reviewer_name">Shankar Sachdeva</span>
+          <span class="reviewer_name mb--sm">Shankar Sachdeva</span>
           <span class="reviewer_city">Lessor</span>
-          <p class="reviewer_city">Indore</p>
-          <p class="reviewer_text">
-            Experience with RentIt has been exceptional. It always arranged a decent number of tenants for our rooms.
-            I have used RentIt for a long a time and I love their services.
+          <span class="reviewer_city">Indore (M.P.)</span>
+          <p class="reviewer_text mt--sm">
+            Experience with RentSpace has been exceptional. It always arranged a decent number of tenants for our rooms.
+            I have used RentSpace for a long a time and I love their services.
           </p>
         </figcaption>
       </div>
 
+</div>
+      <div class="trans-btn next-btn" id="comnext">
+        <span class="icon icon-arrow-right">&#11162;</span>
+      </div>
 
     </section>
 
@@ -443,12 +502,13 @@ on RentIt and RentIt arranged some pretty decent tenants for my house. </p>
         </ul>
       </div>
 
-        </section>
+    </section>
     <div class="footer-ack">
-      copyright &copy; for RentIt
+      copyright &copy; for RentSpace
     </div>
   </div>
   <script src="js/index.js"></script>
+  <script src="js/animation.js"></script>
 </body>
 
 </html>
