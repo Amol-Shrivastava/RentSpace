@@ -8,6 +8,9 @@
 
 @import "components/buttons";
 @import "components/links";
-@import "./layout";
+@import "components/checkbox";
+
+@import "layout/list_layout";
 
 @import "page/home";
+@import "page/list";

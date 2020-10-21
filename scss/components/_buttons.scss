@@ -1,4 +1,4 @@
-//show deal
+//show deal*******************************
 .view-deal{
   padding: .5rem 1rem;
   margin: 1rem 0;
@@ -18,7 +18,7 @@
 
 
 
-//show more sample spaces
+//show more sample spaces****************************
 .show-more{
   background-color: #16213c;
   border: none;
@@ -92,3 +92,146 @@
     outline-offset: 10px;
   }
 }
+
+//trans-btns*****************************
+.trans-btn{
+  position: absolute;
+  top:50%;
+  z-index:6;
+  transform: translateY(-50%);
+  display: inline-block;
+  background: rgba(#000, 1);
+  opacity: 0.6;
+  padding: 1.3rem .5rem;
+  cursor: pointer;
+}
+
+.icon{
+  display: inline-block;
+  font-size: 48px;
+  color: #eee;
+  filter: brightness(100%);
+}
+
+.prev-btn{
+  left:0;
+  // border: 2px solid yellow;
+  &:hover{
+    .icon-arrow-left{
+      color: #fff;
+      filter: brightness(250%);
+    }
+  }
+}
+.cmnt-btn{
+  .icon{
+    font-size: 35px;
+  }
+}
+.next-btn{
+  // border: 2px solid yellow;
+  right: 0;
+  &:hover{
+    .icon-arrow-right{
+        color: #fff;
+        filter: brightness(250%);
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .cmnt-btn{
+    padding: 1rem .2rem;
+    .icon{
+      font-size: 20px;
+    }
+  }
+}
+
+//toggle- btn
+.togglebtn{
+  position:absolute;
+  top: 50%;
+  transform: translateY(-20%);
+  margin-top: .8rem;
+  margin-left: .9rem;
+  margin-right: 1rem;
+  display: none;
+  pointer-events: none;
+  cursor: pointer;
+
+.icon{
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.7rem;
+  padding: .2rem;
+  fill: #7c6e6e;
+  border: 1px solid #cfc6ce;
+}
+}
+
+//search-submit btn *****************************
+  .search{
+  &-submit-btn{
+    background-color: #edf2ec;
+    border:none;
+    border: 1px solid #dad6f2;
+    cursor: pointer;
+    transition: transform .2s ease;
+    transform: scale(.9);
+      @include shadow(.1, 4px);
+    .icon{
+      padding: .1rem .2rem;
+      width: 1.7rem;
+      height: 1.7rem;
+       &-search{
+        fill: #8f8c9e;
+      }
+    }
+
+    &:hover,
+    &:focus{
+          box-shadow:none;
+    }
+  }
+}
+
+// upload btn styling
+.upload-btn{
+    position:absolute;
+    top: 59%;
+    right:1rem;
+    padding: .5rem;
+    text-align: center;
+    border: none;
+    background: #eb0c0c;
+    color: #f0f2f7;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    .add{
+      margin-right: .3rem;
+      font-size:1rem;
+      font-weight: bold;
+    }
+
+    .upload-text{
+      font-size: .8rem;
+    }
+
+    &:hover{
+      background:#d70012;
+    }
+  }
+
+  @media only screen and (max-width:650px){
+    .upload-btn{
+      bottom: 0;
+      left: 0;
+      margin-top: 3rem;
+      padding: .9rem;
+      margin-left: .9rem;
+    }
+  }

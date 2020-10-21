@@ -2,37 +2,7 @@
   @include shadow(0.3, 10px);
   position: relative;
 }
-//navbar styling
 
-.nav {
-  --logo-clr: #fefeff;
-  --login-clr: #dfe4eb;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  padding: 0 0.9rem;
-
-  &_list {
-    display: flex;
-
-    &--items {
-      cursor: pointer;
-
-      &:nth-child(2) {
-        margin-left: auto;
-        text-transform: uppercase;
-        @include flex(column);
-      }
-
-      &:nth-child(3) {
-        margin: 0.4rem 0.4rem 0.4rem 1.5rem;
-        @include flex(column);
-        transition: background 0.3s ease;
-      }
-    }
-  }
-}
 //hero section styling
 
 .hero {
@@ -64,47 +34,6 @@
       background:#bbb url('../images/houses/hero-less.jpg');
       @include background(100%);
         }
-}
-
-.trans-btn{
-  position: absolute;
-  top:50%;
-  z-index:6;
-  transform: translateY(-50%);
-  display: inline-block;
-  background: rgba(#000, 1);
-  opacity: 0.6;
-  padding: 1.3rem .5rem;
-  cursor: pointer;
-}
-
-.icon{
-  display: inline-block;
-  font-size: 48px;
-  color: #eee;
-  filter: brightness(100%);
-}
-
-.prev-btn{
-  left:0;
-  // border: 2px solid yellow;
-  &:hover{
-    .icon-arrow-left{
-      color: #fff;
-      filter: brightness(250%);
-    }
-  }
-}
-
-.next-btn{
-  // border: 2px solid yellow;
-  right: 0;
-  &:hover{
-    .icon-arrow-right{
-        color: #fff;
-        filter: brightness(250%);
-    }
-  }
 }
 
 //services section styling
@@ -365,10 +294,10 @@
   top: -3rem;
   position: relative;
   background: #fff;
-  height: 53vh;
+  // height: 53vh;
   width: 80vh;
   @include flex(column, space-evenly);
-  padding:1.1rem .2rem .2rem;
+  padding:1.1rem .2rem .8rem;
   @include shadow(0.3, 8px);
 }
 
@@ -408,47 +337,4 @@
     // border: 3px solid red;
     margin-top: 0rem;
   }
-}
-//footer section styling
-
-.footer {
-  color: #fff;
-  padding: 2rem 1rem;
-  background-color: rgba(#2e2e34, 1);
-
-  &-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    grid-gap: 1rem;
-  }
-
-  &-list {
-    &:nth-of-type(1) {
-      align-self: start;
-    }
-  }
-
-  &-items {
-    // border: 1px solid red;
-    margin-bottom: 0.5rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  &-ack {
-    text-align: center;
-    color: #fff;
-    background: rgb(6, 5, 6);
-    padding: 0.6rem;
-  }
-}
-//Intersection Observer API classes Styling
-
-.nav-scrolled {
-  --logo-clr: #c4e4c9;
-  --login-clr: #b0b7d6;
-  @include shadow(0.3, 14px);
-  background: #07080f;
 }

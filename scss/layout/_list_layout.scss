@@ -1,0 +1,120 @@
+:root{
+  --sidebar-width: 15rem;
+  --sidebar-container: var(--sidebar-width);
+}
+
+.grid{
+  &-container{
+    display: grid;
+    grid-template-columns: var(--sidebar-container) 1fr 1fr;
+    grid-template-rows: 8rem auto;
+    grid-template-areas: " search search search"
+                          "sidebar main main"
+                          "sidebar main main";
+    }
+  &-items{
+    // padding: 4rem;
+  }
+}
+
+.search-area{
+  grid-area: search;
+  position:relative;
+}
+
+.highlighted{
+  border: none;
+  padding-top: .1rem;
+  outline: 3px dashed var(--link-hover-clr-1);
+  outline-offset: 3px;
+}
+
+.sidebar{
+    &-container{
+      grid-area: sidebar;
+      position:relative;
+    }
+    &-sidebar{
+      background-color: #e6eeee;
+      position: absolute;
+      top: 0;
+      left:0;
+      bottom: 0;
+      width: 15rem;
+      z-index: 50;
+      @include shadow(.2, 11px);
+      display: grid;
+      grid-template-rows: minmax(60px, min-content) repeat(3, minmax(170px, min-content));
+      grid-gap: 1rem;
+      grid-template-areas: "selection"
+                            "city"
+                            "rent"
+                            "stars";
+      align-items: center;
+
+
+    .selection-cont{
+      grid-area: selection;
+      // border: 2px solid red;
+    }
+    .cities-cont{
+      grid-area: city;
+      // border: 2px solid yellow;
+    }
+    .rates-cont{
+      grid-area: rent;
+      // border: 2px solid blue;
+
+    }
+    .review-cont{
+      grid-area: stars;
+      // border: 2px solid green;
+     }
+  }
+}
+
+.main-content-container{
+  background-color: rgba(#e6eeee, 0.5);
+  grid-area: main;
+  margin-left: .6rem;
+  margin-bottom: .6rem;
+  @media only screen and (max-width: 650px){
+    margin-top: 2.7rem;
+  }
+}
+
+
+
+@media only screen and (max-width: 1000px){
+  :root{
+    --sidebar-container: 0;
+  }
+
+    .search-area{
+      .togglebtn{
+        display: inline-block;
+        pointer-events: auto;
+      }
+    }
+
+    .grid-items{
+        transition: transform .4s cubic-bezier(.69,.47,.66,.9);
+      }
+
+    .sidebar{
+        &-sidebar{
+          transform: translateX(-100%);
+          transition: transform .4s cubic-bezier(.3,.7,.68,1.07);
+          opacity: 0;
+          visibility: hidden;
+        }
+    }
+
+    .sidebar-sidebar.show{
+      transform: translateX(0);
+      // transform-origin: right;
+       opacity: 1;
+       visibility: visible;
+    }
+
+}

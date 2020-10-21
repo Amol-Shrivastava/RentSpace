@@ -19,6 +19,14 @@ Single-colored icons can be modified like so:
   width: 1.07421875em;
 }
 
+.icon-bed {
+  width: 1.142578125em;
+}
+
+.icon-bars {
+  width: 0.857421875em;
+}
+
 .icon-bicycle {
   width: 1.2861328125em;
 }

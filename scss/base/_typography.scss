@@ -1,33 +1,5 @@
 //HOME PAGE TYPOGRAPHY
 
-//nav section typography
-.nav-logo {
-  font-size: 2.4rem;
-  letter-spacing: 1px;
-  font-family: 'Source Serif Pro', serif;
-  font-weight: 700;
-  color: var(--logo-clr);
-}
-
-.login{
-  font-size: 1.1rem;
-  color: var(--login-clr);
-  letter-spacing: 1px;
-}
-
-.join {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 1.1rem;
-  background: #e3662a;
-  color: #fff;
-  border-radius: 22px;
-  padding: 0.2rem 0.8rem;
-  &:hover{
-    color: #e3662a;
-    background: #fff;
-  }
-}
 //hero section typography
 .hero {
   &__text {
@@ -201,42 +173,16 @@
     line-height: 1.5;
     letter-spacing: 1px;
     color: #000000;
+
   }
 }
-//footer section typography
 
-.footer {
-  &-links {
-    font-size: 1rem;
-    color: #c6c8c9;
+//options details styling
+.option-detail{
+  font-size: 1.2rem;
+  color: #ddf6ee;
+}
 
-    &:hover {
-      outline: 3px dotted var(--link-hover-clr-1);
-      outline-offset: 7px;
-    }
-
-    &-logo {
-      font-size: 2rem;
-      color: #c4e4c9;
-      letter-spacing: 1px;
-      font-weight: 700;
-      font-family: 'Source Serif Pro';
-    }
-  }
-
-  &-list-heading {
-    font-size: 1.1rem;
-    color: #fff;
-    letter-spacing: 2px;
-    border-bottom: var(--border-bottom);
-  }
-
-  &-ack {
-    text-align: center;
-    color: #fff;
-    background: #060506;
-    padding: 0.6rem;
-    font-size: 0.9rem;
-    font-family: 'Source Serif Pro', serif;
-  }
+.room-det{
+  margin-left: .4rem;
 }

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- google-font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lucida&family=Lobster&family=Alegreya:ital,wght@0,400;0,500;0,700;1,800&family=Pacifico&family=Playfair+Display:wght@500;800&family=Poppins:wght@400;500&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+  <!-- font awesome  -->
+
+  <!-- css styling -->
+
+  <!-- animate.css cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- css styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <title>RentSpace >> spaces to view</title>
+</head>
+<body>
+  <nav class="other-page-navbar">
+    <ul class="nav_list">
+      <li class="nav_list--items"><a href="index.html" class="nav_list--links nav-logo">RentSpace</a></li>
+      <li class="nav_list--items"><span class="nav_list--links login hover-link">LogIn</span></li>
+      <li class="nav_list--items"><span class="nav-list-links join">JOIN</span></li>
+  </nav>
+  <div class="grid-container">
+
+    <!-- search-area -->
+    <div class="grid-item search-area">
+
+      <!-- toggle button -->
+      <div class="togglebtn" id="togglebtn">
+        <svg class="icon icon-bars, navicon, reorder"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-bars"></use></svg>
+      </div>
+
+      <div class="search-content">
+        <form action="" class="search-form">
+          <input type="search" class="search-input" placeholder="Type to search houses near landmarks">
+          <button class="search-submit-btn" type = "submit">
+            <svg class="icon icon-search"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-search"></use></svg>
+          </button>
+        </form>
+    </div>
+
+        <button class="upload-btn">
+          <span class="upload-text">Add Space</span>
+        </button>
+
+    </div>
+
+    <!-- sidebar area -->
+    <div class="grid-items sidebar-container">
+      <!-- sidebar-container -->
+    <div class="grid-items sidebar-sidebar">
+      <div class="selection-cont" id="selection">
+        <h2 class="filter-heading">Selected</h2>
+      </div>
+      <div class="cities-cont" id="cities">
+        <h2 class="filter-heading">Filter By Cities</h2>
+
+        <ul class="filter_list">
+          <li class="filter_items">
+            <label id="city-b" class="filter__name">
+              <input type="checkbox" for= "city-b">
+              <span class="option">Bhopal</span>
+            </label>
+          </li>
+          <li class="filter_items">
+            <label id="city-i" class="filter__name">
+              <input type="checkbox" for= "city-i">
+              <span class="option">Indore</span>
+            </label>
+      </li>
+          <li class="filter_items">
+            <label id="city-j" class="filter__name">
+              <input type="checkbox" for= "city-j">
+              <span class="option">Jabalpur</span>
+            </label>
+      </li>
+          <li class="filter_items">
+            <label id="city-s" class="filter__name">
+              <input type="checkbox" for= "city-s">
+              <span class="option">Sagar</span>
+            </label>
+      </li>
+        </ul>
+      </div>
+
+      <div class="rates-cont" id="rate">
+        <h2 class="filter-heading">Filter By Rent</h2>
+        <ul class="filter_list">
+        <li class="filter_items">
+          <label id="price-six" class="filter__name">
+            <input type="checkbox" for= "price-six">
+            <span class="option">6000Rs+</span>
+          </label>
+        </li>
+
+        <li class="filter_items">
+          <label id="price-five" class="filter__name">
+            <input type="checkbox" for= "price-five">
+            <span class="option">5000Rs-6000Rs</span>
+          </label>
+        </li>
+
+        <li class="filter_items">
+          <label id="price-four" class="filter__name">
+            <input type="checkbox" for= "price-four">
+            <span class="option">4000Rs-5000Rs</span>
+          </label>
+        </li>
+
+        <li class="filter_items">
+          <label id="price-two" class="filter__name">
+            <input type="checkbox" for= "price-two">
+            <span class="option">2000Rs-4000Rs</span>
+          </label>
+        </li>
+
+        <li class="filter_items">
+          <label id="price-one" class="filter__name">
+            <input type="checkbox" for= "price-one">
+            <span class="option">1000Rs-2000Rs</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+      <div class="review-cont" id="review">
+        <h2 class="filter-heading">Filter By Stars</h2>
+        <ul class="filter_list">
+        <li class="filter_items">
+          <label id="rating-five" class="filter__name">
+            <input type="checkbox" for= "rating-five">
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+          </label>
+        </li>
+
+        <li class="filter_items">
+          <label id="rating-four" class="filter__name">
+            <input type="checkbox" for= "rating-four">
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+            <svg class="icon icon-star_outline"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_outline"></use></svg>
+          </label>
+        </li>
+
+        <li class="filter_items">
+          <label id="rating-three" class="filter__name">
+            <input type="checkbox" for= "rating-three">
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+            <svg class="icon icon-star_rate"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use></svg>
+            <svg class="icon icon-star_outline"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_outline"></use></svg>
+            <svg class="icon icon-star_outline"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_outline"></use></svg>
+          </label>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </div>
+
+    <!-- main-content area -->
+    <div class="grid-items main-content-container">
+      <div class="main-content">
+        <div class="main-content-items item-1">
+            <div class="overlay-cont">
+              <div class="house-options mb--sm">
+              <div class="detail-cont price-cont">
+                <svg class="icon icon-tag options-icon tag-icon">
+                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+                </svg>
+              <span class="option-detail">2000<img src="./images/icomoon/iconfinder-rupee-16.png" class="icon icon-rupees-symb rupee-symbol"></span>
+              </div>
+              <div class="detail-cont rooms-cont">
+                <svg class="icon icon-bed options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-bed"></use></svg>
+                <span class="option-detail room-det">2</span>
+              </div>
+              <div class="detail-cont loc-cont">
+                <svg class="icon icon-map-marker options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker"></use></svg>
+                <span class="option-detail">Bhopal</span>
+              </div>
+              </div>
+
+              <button class="view-deal">Explore</button>
+            </div>
+        </div>
+
+        <div class="main-content-items item-2">
+          <div class="overlay-cont">
+            <div class="house-options mb--sm">
+            <div class="detail-cont price-cont">
+              <svg class="icon icon-tag options-icon tag-icon">
+                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+              </svg>
+            <span class="option-detail">2000<img src="./images/icomoon/iconfinder-rupee-16.png" class="icon icon-rupees-symb rupee-symbol"></span>
+            </div>
+            <div class="detail-cont rooms-cont">
+              <svg class="icon icon-bed options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-bed"></use></svg>
+              <span class="option-detail room-det">2</span>
+            </div>
+            <div class="detail-cont loc-cont">
+              <svg class="icon icon-map-marker options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker"></use></svg>
+              <span class="option-detail">Sagar</span>
+            </div>
+            </div>
+
+            <button class="view-deal">Explore</button>
+          </div>
+        </div>
+
+        <div class="main-content-items item-3">
+          <div class="overlay-cont">
+            <div class="house-options mb--sm">
+            <div class="detail-cont price-cont">
+              <svg class="icon icon-tag options-icon tag-icon">
+                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+              </svg>
+            <span class="option-detail">3000<img src="./images/icomoon/iconfinder-rupee-16.png" class="icon icon-rupees-symb rupee-symbol"></span>
+            </div>
+            <div class="detail-cont rooms-cont">
+              <svg class="icon icon-bed options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-bed"></use></svg>
+              <span class="option-detail room-det">1</span>
+            </div>
+            <div class="detail-cont loc-cont">
+              <svg class="icon icon-map-marker options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker"></use></svg>
+              <span class="option-detail">Indore</span>
+            </div>
+            </div>
+
+            <button class="view-deal">Explore</button>
+          </div>
+        </div>
+
+        <div class="main-content-items item-5">
+          <div class="overlay-cont">
+            <div class="house-options mb--sm">
+            <div class="detail-cont price-cont">
+              <svg class="icon icon-tag options-icon tag-icon">
+                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+              </svg>
+            <span class="option-detail">1500<img src="./images/icomoon/iconfinder-rupee-16.png" class="icon icon-rupees-symb rupee-symbol"></span>
+            </div>
+            <div class="detail-cont rooms-cont">
+              <svg class="icon icon-bed options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-bed"></use></svg>
+              <span class="option-detail room-det">1</span>
+            </div>
+            <div class="detail-cont loc-cont">
+              <svg class="icon icon-map-marker options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker"></use></svg>
+              <span class="option-detail">Jabalpur</span>
+            </div>
+            </div>
+
+            <button class="view-deal">Explore</button>
+          </div>
+        </div>
+
+        <div class="main-content-items item-6">
+          <div class="overlay-cont">
+            <div class="house-options mb--sm">
+            <div class="detail-cont price-cont">
+              <svg class="icon icon-tag options-icon tag-icon">
+                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+              </svg>
+            <span class="option-detail">4500<img src="./images/icomoon/iconfinder-rupee-16.png" class="icon icon-rupees-symb rupee-symbol"></span>
+            </div>
+            <div class="detail-cont rooms-cont">
+              <svg class="icon icon-bed options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-bed"></use></svg>
+              <span class="option-detail room-det">3</span>
+            </div>
+            <div class="detail-cont loc-cont">
+              <svg class="icon icon-map-marker options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker"></use></svg>
+              <span class="option-detail">Bhopal</span>
+            </div>
+            </div>
+
+            <button class="view-deal">Explore</button>
+          </div>
+        </div>
+
+        <div class="main-content-items item-4">
+          <div class="overlay-cont">
+            <div class="house-options mb--sm">
+            <div class="detail-cont price-cont">
+              <svg class="icon icon-tag options-icon tag-icon">
+                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+              </svg>
+            <span class="option-detail">2000<img src="./images/icomoon/iconfinder-rupee-16.png" class="icon icon-rupees-symb rupee-symbol"></span>
+            </div>
+            <div class="detail-cont rooms-cont">
+              <svg class="icon icon-bed options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-bed"></use></svg>
+              <span class="option-detail room-det">2</span>
+            </div>
+            <div class="detail-cont loc-cont">
+              <svg class="icon icon-map-marker options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker"></use></svg>
+              <span class="option-detail">Sagar</span>
+            </div>
+            </div>
+
+            <button class="view-deal">Explore</button>
+          </div>
+        </div>
+
+        <div class="main-content-items item-7">
+          <div class="overlay-cont">
+            <div class="house-options mb--sm">
+            <div class="detail-cont price-cont">
+              <svg class="icon icon-tag options-icon tag-icon">
+                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+              </svg>
+            <span class="option-detail">5000<img src="./images/icomoon/iconfinder-rupee-16.png" class="icon icon-rupees-symb rupee-symbol"></span>
+            </div>
+            <div class="detail-cont rooms-cont">
+              <svg class="icon icon-bed options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-bed"></use></svg>
+              <span class="option-detail room-det">1BHK</span>
+            </div>
+            <div class="detail-cont loc-cont">
+              <svg class="icon icon-map-marker options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker"></use></svg>
+              <span class="option-detail">Bhopal</span>
+            </div>
+            </div>
+
+            <button class="view-deal">Explore</button>
+          </div>
+        </div>
+
+        <div class="main-content-items item-8">
+          <div class="overlay-cont">
+            <div class="house-options mb--sm">
+            <div class="detail-cont price-cont">
+              <svg class="icon icon-tag options-icon tag-icon">
+                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+              </svg>
+            <span class="option-detail">6000<img src="./images/icomoon/iconfinder-rupee-16.png" class="icon icon-rupees-symb rupee-symbol"></span>
+            </div>
+            <div class="detail-cont rooms-cont">
+              <svg class="icon icon-bed options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-bed"></use></svg>
+              <span class="option-detail room-det">3</span>
+            </div>
+            <div class="detail-cont loc-cont">
+              <svg class="icon icon-map-marker options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker"></use></svg>
+              <span class="option-detail">Indore</span>
+            </div>
+            </div>
+
+            <button class="view-deal">Explore</button>
+          </div>
+        </div>
+
+        <div class="main-content-items item-9">
+          <div class="overlay-cont">
+            <div class="house-options mb--sm">
+            <div class="detail-cont price-cont">
+              <svg class="icon icon-tag options-icon tag-icon">
+                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+              </svg>
+            <span class="option-detail">2000<img src="./images/icomoon/iconfinder-rupee-16.png" class="icon icon-rupees-symb rupee-symbol"></span>
+            </div>
+            <div class="detail-cont rooms-cont">
+              <svg class="icon icon-bed options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-bed"></use></svg>
+              <span class="option-detail room-det">2</span>
+            </div>
+            <div class="detail-cont loc-cont">
+              <svg class="icon icon-map-marker options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker"></use></svg>
+              <span class="option-detail">Jabalpur</span>
+            </div>
+            </div>
+
+            <button class="view-deal">Explore</button>
+          </div>
+        </div>
+
+        <div class="main-content-items item-10">
+          <div class="overlay-cont">
+            <div class="house-options mb--sm">
+            <div class="detail-cont price-cont">
+              <svg class="icon icon-tag options-icon tag-icon">
+                <use xlink:href="./images/icomoon/symbol-defs.svg#icon-tag"></use>
+              </svg>
+            <span class="option-detail">6500<img src="./images/icomoon/iconfinder-rupee-16.png" class="icon icon-rupees-symb rupee-symbol"></span>
+            </div>
+            <div class="detail-cont rooms-cont">
+              <svg class="icon icon-bed options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-bed"></use></svg>
+              <span class="option-detail room-det">1BHK</span>
+            </div>
+            <div class="detail-cont loc-cont">
+              <svg class="icon icon-map-marker options-icon"><use xlink:href="./images/icomoon/symbol-defs.svg#icon-map-marker"></use></svg>
+              <span class="option-detail">Indore</span>
+            </div>
+            </div>
+
+            <button class="view-deal">Explore</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- footer area -->
+  <section class="footer">
+    <div class="footer-options">
+      <ul class="footer-list">
+        <li class="footer-items"><a href="" class="footer-links footer-links-logo">RentSpace</a></li>
+        <li class="footer-items"><a href="" class="footer-links">About Us</a></li>
+        <li class="footer-items"><a href="" class="footer-links">Contact Us</a></li>
+      </ul>
+      <ul class="footer-list">
+        <li class="footer-items"><span class="footer-list-heading">Frequently Rented Space</span></li>
+        <li class="footer-items"><a href="" class="footer-links">1 BHK Houses</a></li>
+        <li class="footer-items"><a href="" class="footer-links">2 BHK Houses</a></li>
+        <li class="footer-items"><a href="" class="footer-links">2 Rooms</a></li>
+        <li class="footer-items"><a href="" class="footer-links">1 rooms</a></li>
+      </ul>
+      <ul class="footer-list">
+        <li class="footer-items"><span class="footer-list-heading">Frequently Searched Cities</span></li>
+        <li class="footer-items"><a href="" class="footer-links">Indore</a></li>
+        <li class="footer-items"><a href="" class="footer-links">Bhopal</a></li>
+        <li class="footer-items"><a href="" class="footer-links">Jabalpur</a></li>
+        <li class="footer-items"><a href="" class="footer-links">Sagar</a></li>
+      </ul>
+    </div>
+
+  </section>
+  <div class="footer-ack">
+    copyright &copy; for RentSpace
+  </div>
+
+<script src="js/index.js"></script>
+</body>
+</html>

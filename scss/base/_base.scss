@@ -22,3 +22,154 @@ a{
 ul{
   list-style: none;
 }
+
+//navbar styling
+.nav,
+.other-page-navbar {
+  --logo-clr: #fefeff;
+  --login-clr: #dfe4eb;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 0 0.9rem;
+
+  &_list {
+    display: flex;
+
+    &--items {
+      cursor: pointer;
+
+      &:nth-child(2) {
+        margin-left: auto;
+        text-transform: uppercase;
+        @include flex(column);
+      }
+
+      &:nth-child(3) {
+        margin: 0.4rem 0.4rem 0.4rem 1.5rem;
+        @include flex(column);
+        transition: background 0.3s ease;
+      }
+    }
+  }
+}
+
+.other-page-navbar {
+  background: #07080f;
+  margin-bottom: 2rem;
+}
+
+//Intersection Observer API classes Styling
+
+.nav-scrolled {
+  --logo-clr: #c4e4c9;
+  --login-clr: #b0b7d6;
+  @include shadow(0.3, 14px);
+  background: #07080f;
+}
+
+
+//footer section styling
+
+.footer {
+  color: #fff;
+  padding: 2rem 1rem;
+  background-color: rgba(#2e2e34, 1);
+
+  &-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+  }
+
+  &-list {
+    &:nth-of-type(1) {
+      align-self: start;
+    }
+  }
+
+  &-items {
+    // border: 1px solid red;
+    margin-bottom: 0.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  &-ack {
+    text-align: center;
+    color: #fff;
+    background: rgb(6, 5, 6);
+    padding: 0.6rem;
+  }
+}
+
+//navbar section typography
+
+.nav-logo {
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 700;
+  color: var(--logo-clr);
+}
+
+.login{
+  font-size: 1.1rem;
+  color: var(--login-clr);
+  letter-spacing: 1px;
+}
+
+.join {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  background: #e3662a;
+  color: #fff;
+  border-radius: 22px;
+  padding: 0.2rem 0.8rem;
+  &:hover{
+    color: #e3662a;
+    background: #fff;
+  }
+}
+
+
+//footer section typography
+.footer {
+  &-links {
+    font-size: 1rem;
+    color: #c6c8c9;
+
+    &:hover {
+      outline: 3px dotted var(--link-hover-clr-1);
+      outline-offset: 7px;
+    }
+
+    &-logo {
+      font-size: 2rem;
+      color: #c4e4c9;
+      letter-spacing: 1px;
+      font-weight: 700;
+      font-family: 'Source Serif Pro';
+    }
+  }
+
+  &-list-heading {
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 2px;
+    border-bottom: var(--border-bottom);
+  }
+
+  &-ack {
+    text-align: center;
+    color: #fff;
+    background: #060506;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    font-family: 'Source Serif Pro', serif;
+  }
+}
