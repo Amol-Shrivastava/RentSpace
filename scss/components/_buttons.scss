@@ -170,6 +170,34 @@
 }
 }
 
+.remove-btn{
+  margin-right: .4rem;
+  background-color: transparent;
+  border: 1px solid #d62828;
+  width: 1rem;
+  height: 1rem;
+  font-size: 1rem;
+  color: #d62828;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .7;
+  cursor:pointer;
+  &:hover{
+    opacity: 1;
+  }
+  &:focus{
+    outline: none;
+  }
+  //  .icon{
+  //   width: .9rem;
+  //   height: .9rem;
+  //   fill: #d62828;
+  //   padding: .3rem;
+  // }
+}
+
 //search-submit btn *****************************
   .search{
   &-submit-btn{

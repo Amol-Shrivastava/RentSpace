@@ -63,141 +63,117 @@
       <div class="grid-items sidebar-sidebar">
         <div class="selection-cont" id="selection">
           <h2 class="filter-heading">Selected</h2>
+
+          <div class="selected-options" id="selected_options">
+            <ul class="filter_list" id="selected_filter_list"></ul>
+          </div>
+
         </div>
+        <!-- Filter by city***************************** -->
         <div class="cities-cont" id="cities">
           <h2 class="filter-heading">Filter By Cities</h2>
 
-          <ul class="filter_list">
+          <ul class="filter_list" id="option_list_item--city">
             <li class="filter_items">
               <label id="city-b" class="filter__name">
-                <input type="checkbox" for="city-b">
+                <input type="checkbox" for="city-b" class="input-box">
                 <span class="option">Bhopal</span>
               </label>
             </li>
             <li class="filter_items">
               <label id="city-i" class="filter__name">
-                <input type="checkbox" for="city-i">
+                <input type="checkbox" for="city-i" class="input-box">
                 <span class="option">Indore</span>
               </label>
             </li>
             <li class="filter_items">
               <label id="city-j" class="filter__name">
-                <input type="checkbox" for="city-j">
+                <input type="checkbox" for="city-j" class="input-box">
                 <span class="option">Jabalpur</span>
               </label>
             </li>
             <li class="filter_items">
               <label id="city-s" class="filter__name">
-                <input type="checkbox" for="city-s">
+                <input type="checkbox" for="city-s" class="input-box">
                 <span class="option">Sagar</span>
               </label>
             </li>
           </ul>
         </div>
 
+
+        <!-- Filter by room configuration***************************** -->
+        <div class="room-config" id="room_config">
+          <h2 class="filter-heading">Filter By Rooms</h2>
+          <ul class="filter_list" id="option_list_item--room-config">
+            <li class="filter_items">
+              <label id="one-bhk" class="filter__name">
+                <input type="checkbox" for="one-bhk" class="input-box">
+                <span class="option">1 BHK</span>
+              </label>
+            </li>
+
+            <li class="filter_items">
+              <label id="two-bhk" class="filter__name">
+                <input type="checkbox" for="two-bhk" class="input-box">
+                <span class="option">2 BHK</span>
+              </label>
+            </li>
+
+            <li class="filter_items">
+              <label id="one-room" class="filter__name">
+                <input type="checkbox" for="one-room" class="input-box">
+                <span class="option">1 Room</span>
+              </label>
+            </li>
+
+            <li class="filter_items">
+              <label id="two-rooms" class="filter__name">
+                <input type="checkbox" for="two-rooms" class="input-box">
+                <span class="option">2 Rooms</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <!-- Filter by room rent***************************** -->
         <div class="rates-cont" id="rate">
           <h2 class="filter-heading">Filter By Rent</h2>
-          <ul class="filter_list">
+          <ul class="filter_list" id="option_list_item--rate">
             <li class="filter_items">
               <label id="price-six" class="filter__name">
-                <input type="checkbox" for="price-six">
+                <input type="checkbox" for="price-six" class="input-box">
                 <span class="option">6000Rs+</span>
               </label>
             </li>
 
             <li class="filter_items">
               <label id="price-five" class="filter__name">
-                <input type="checkbox" for="price-five">
+                <input type="checkbox" for="price-five" class="input-box">
                 <span class="option">5000Rs-6000Rs</span>
               </label>
             </li>
 
             <li class="filter_items">
               <label id="price-four" class="filter__name">
-                <input type="checkbox" for="price-four">
+                <input type="checkbox" for="price-four" class="input-box">
                 <span class="option">4000Rs-5000Rs</span>
               </label>
             </li>
 
             <li class="filter_items">
               <label id="price-two" class="filter__name">
-                <input type="checkbox" for="price-two">
+                <input type="checkbox" for="price-two" class="input-box">
                 <span class="option">2000Rs-4000Rs</span>
               </label>
             </li>
 
             <li class="filter_items">
               <label id="price-one" class="filter__name">
-                <input type="checkbox" for="price-one">
+                <input type="checkbox" for="price-one" class="input-box">
                 <span class="option">1000Rs-2000Rs</span>
-              </label>
-            </li>
-          </ul>
-        </div>
-
-        <div class="review-cont" id="review">
-          <h2 class="filter-heading">Filter By Stars</h2>
-          <ul class="filter_list">
-            <li class="filter_items">
-              <label id="rating-five" class="filter__name">
-                <input type="checkbox" for="rating-five">
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-              </label>
-            </li>
-
-            <li class="filter_items">
-              <label id="rating-four" class="filter__name">
-                <input type="checkbox" for="rating-four">
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-                <svg class="icon icon-star_outline">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_outline"></use>
-                </svg>
-              </label>
-            </li>
-
-            <li class="filter_items">
-              <label id="rating-three" class="filter__name">
-                <input type="checkbox" for="rating-three">
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-                <svg class="icon icon-star_rate">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_rate"></use>
-                </svg>
-                <svg class="icon icon-star_outline">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_outline"></use>
-                </svg>
-                <svg class="icon icon-star_outline">
-                  <use xlink:href="./images/icomoon/symbol-defs.svg#icon-star_outline"></use>
-                </svg>
               </label>
             </li>
           </ul>

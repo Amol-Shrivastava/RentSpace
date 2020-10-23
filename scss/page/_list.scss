@@ -142,6 +142,19 @@
 
 
 //sidebar content Styling
+.selected{
+  &-option{
+    position:relative;
+    }
+  &-filter{
+    pointer-events: none;
+  }
+}
+
+.selected_filter_item{
+  @include flex(row,space-between);
+}
+
 .filter{
 
   &_items + &_items{
@@ -163,26 +176,26 @@
   &__name{
     padding:0 .8rem;
     cursor: pointer;
-      .icon{
-      width: .8rem;
-      height: .8rem;
-      &-star_rate{
-        fill: #eec02b;
-      }
-      &-star_outline{
-        // outline: 2px solid red;
-        stroke-width: 1px;
+      // .icon{
+      // width: .8rem;
+      // height: .8rem;
+      // &-star_rate{
+      //   fill: #eec02b;
+      // }
+      // &-star_outline{
+      //   // outline: 2px solid red;
+      //   stroke-width: 1px;
+      // }
+      .option{
+        font-size: .8rem;
+        letter-spacing: 1px;
+        font-family: 'Poppins';
+        position:relative;
+        top: -.06rem;
+        margin-left: .5rem;
+        text-transform: uppercase;
       }
     }
 
-    .option{
-      font-size: .8rem;
-      letter-spacing: 1px;
-      font-family: 'Poppins';
-      position:relative;
-      top: -.06rem;
-      margin-left: .5rem;
-      text-transform: uppercase;
-    }
+
   }
-}

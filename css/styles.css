@@ -437,6 +437,25 @@ ul {
     fill: #7c6e6e;
     border: 1px solid #cfc6ce; }
 
+.remove-btn {
+  margin-right: .4rem;
+  background-color: transparent;
+  border: 1px solid #d62828;
+  width: 1rem;
+  height: 1rem;
+  font-size: 1rem;
+  color: #d62828;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .7;
+  cursor: pointer; }
+  .remove-btn:hover {
+    opacity: 1; }
+  .remove-btn:focus {
+    outline: none; }
+
 .search-submit-btn {
   background-color: #edf2ec;
   border: none;
@@ -572,18 +591,19 @@ ul {
   z-index: 50;
   box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
   display: grid;
-  grid-template-rows: minmax(60px, min-content) repeat(3, minmax(170px, min-content));
+  grid-template-rows: minmax(60px, min-content) repeat(4, minmax(170px, min-content));
   grid-gap: 1rem;
-  grid-template-areas: "selection" "city" "rent" "stars";
+  grid-template-areas: "selection" "city" "room-config" "rent";
   align-items: center; }
   .sidebar-sidebar .selection-cont {
+    position: relative;
     grid-area: selection; }
   .sidebar-sidebar .cities-cont {
     grid-area: city; }
+  .sidebar-sidebar .room-config {
+    grid-area: room-config; }
   .sidebar-sidebar .rates-cont {
     grid-area: rent; }
-  .sidebar-sidebar .review-cont {
-    grid-area: stars; }
 
 .main-content-container {
   background-color: rgba(230, 238, 238, 0.5);
@@ -982,6 +1002,18 @@ ul {
       height: .9rem;
       fill: #fff; }
 
+.selected-option {
+  position: relative; }
+
+.selected-filter {
+  pointer-events: none; }
+
+.selected_filter_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+
 .filter_items + .filter_items {
   margin: .9rem auto 0; }
 
@@ -1000,13 +1032,6 @@ ul {
 .filter__name {
   padding: 0 .8rem;
   cursor: pointer; }
-  .filter__name .icon {
-    width: .8rem;
-    height: .8rem; }
-    .filter__name .icon-star_rate {
-      fill: #eec02b; }
-    .filter__name .icon-star_outline {
-      stroke-width: 1px; }
   .filter__name .option {
     font-size: .8rem;
     letter-spacing: 1px;

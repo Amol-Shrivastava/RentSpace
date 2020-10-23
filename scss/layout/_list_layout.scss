@@ -44,16 +44,18 @@
       z-index: 50;
       @include shadow(.2, 11px);
       display: grid;
-      grid-template-rows: minmax(60px, min-content) repeat(3, minmax(170px, min-content));
+      grid-template-rows: minmax(60px, min-content) repeat(4, minmax(170px, min-content));
       grid-gap: 1rem;
       grid-template-areas: "selection"
                             "city"
-                            "rent"
-                            "stars";
+                            "room-config"
+                            "rent";
+
       align-items: center;
 
 
     .selection-cont{
+      position:relative;
       grid-area: selection;
       // border: 2px solid red;
     }
@@ -61,15 +63,14 @@
       grid-area: city;
       // border: 2px solid yellow;
     }
+    .room-config{
+      grid-area: room-config;
+    }
     .rates-cont{
       grid-area: rent;
       // border: 2px solid blue;
-
     }
-    .review-cont{
-      grid-area: stars;
-      // border: 2px solid green;
-     }
+
   }
 }
 
