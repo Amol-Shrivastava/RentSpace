@@ -84,6 +84,7 @@ ul{
     justify-items: center;
     text-align: center;
     grid-gap: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   &-list {
@@ -96,6 +97,33 @@ ul{
     // border: 1px solid red;
     margin-bottom: 0.5rem;
     padding: 0.4rem 0.8rem;
+  }
+
+  &-disclaimer{
+    display: block;
+    margin: 0 0;
+    width:100%;
+    position:relative;
+    line-height: 1.4;
+    font-size: .7rem;
+    letter-spacing: 1.1px;
+    color: #c1ccc9;
+    .disclaimer{
+      font-size:.8rem;
+      letter-spacing:1.1px;
+      color: #f1e8e7;
+    }
+    &::before{
+      position:absolute;
+      content: '';
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 2px;
+      border-radius: 20px;
+      background-color: #d2eede;
+      }
   }
 
   &-ack {
