@@ -186,3 +186,84 @@
 .room-det{
   margin-left: .4rem;
 }
+
+//Lessor form typography
+
+.lessor-form-heading{
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  color: #f24539;
+  text-align: center;
+  border-bottom: 1px dotted #0c1d22;
+  @include flex();
+  @media only screen and (max-width: 600px){
+    margin-top: 2rem;
+  }
+}
+
+.section-heading{
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  font-family: 'Poppins', serif;
+  color: #f16a64;
+}
+
+.space-type-label{
+  font-size: .8rem;
+  font-family: 'Poppins', serif;
+  position:relative;
+  top: -2px;
+  margin-left: .4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-hint{
+  font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #3c4244;
+}
+
+.space-desc{
+  display: block;
+  width: 100%;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: #000000;
+  border: 1px solid #0e0911;
+  font-family: 'Source Serif Pro', serif;
+  &::placeholder{
+    font-size: .9rem;
+    color: #96a193;
+  }
+
+  &:focus{
+    outline: none;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, .3);
+  }
+}
+
+.holder-item{
+  font-size: .8rem;
+  font-family: 'Source Serif Pro', serif;
+  color: #5b5d5b;
+  letter-spacing: 1px;
+}
+.holder-item + .holder-item{
+  margin-top: .3rem;
+}
+
+.photo-size{
+  position: relative;
+  top: .8rem;
+  font-size: .8rem;
+  letter-spacing: 1.1px;
+  font-family: 'Source Serif Pro', serif;
+  color: #9991a1;
+}

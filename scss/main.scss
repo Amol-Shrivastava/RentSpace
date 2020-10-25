@@ -9,10 +9,11 @@
 @import "components/buttons";
 @import "components/links";
 @import "components/checkbox";
+@import "components/custom_radio-buttons";
 
-@import "layout/lessor_layout";
+@import "layout/lessor_form_layout";
 @import "layout/list_layout";
 
 @import "page/home";
 @import "page/list";
-@import "page/lessor";
+@import "page/lessor_form";

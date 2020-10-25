@@ -148,7 +148,7 @@
   }
 }
 
-//toggle- btn
+//toggle- btn**************
 .togglebtn{
   position:absolute;
   top: 50%;
@@ -190,12 +190,6 @@
   &:focus{
     outline: none;
   }
-  //  .icon{
-  //   width: .9rem;
-  //   height: .9rem;
-  //   fill: #d62828;
-  //   padding: .3rem;
-  // }
 }
 
 //search-submit btn *****************************
@@ -263,3 +257,47 @@
       margin-left: .9rem;
     }
   }
+
+//details upload button
+
+.file-input{
+  display: none;
+}
+
+.overlay-img-button{
+  // border: 2px solid red;
+  margin-top: .55rem;
+  padding: .3rem .9rem;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: #d4a821;
+  color: #fff;
+  font-size: .8rem;
+  font-family: 'Source Serif Pro', serif;
+  letter-spacing: 1px;
+  border: none;
+}
+
+
+.sub-btn{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: .4rem;
+  text-align: center;
+  border: none;
+  background-color:#f24539;
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover{
+    background-color: #9a1010;
+  }
+
+  &:focus{
+    outline: 4px dotted #dd3232;
+    outline-offset: 3px;
+  }
+}

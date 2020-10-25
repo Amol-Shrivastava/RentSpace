@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Post Your Property >> RentSpace</title>
+
+  <!-- google-font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lucida&family=Lobster&family=Alegreya:ital,wght@0,400;0,500;0,700;1,800&family=Pacifico&family=Playfair+Display:wght@500;800&family=Poppins:wght@400;500&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- animate.css cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+  <!-- css styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <nav class="other-page-navbar">
+    <ul class="nav_list">
+      <li class="nav_list--items"><a href="index.html" class="nav_list--links nav-logo">RentSpace</a></li>
+      <li class="nav_list--items"><span class="nav_list--links login hover-link">LogIn</span></li>
+      <li class="nav_list--items"><span class="nav-list-links join">JOIN</span></li>
+  </nav>
+
+  <main class="lessor-form-container">
+    <div class="form-bg">
+      <img src="./images/form-bg.svg" alt="" class="svg-bg">
+    </div>
+
+    <div class="form_body">
+      <h2 class="lessor-form-heading mb--md">Post About your Space</h2>
+
+      <form action="" class="lessor_form" id="form">
+
+        <div class="form_section identification">
+          <h3 class="section-heading mb--sm">Lessor Details</h3>
+
+          <div class="form_control posting_owner">
+            <input type="radio" name="posted-by" id="owner" class="radio-input">
+            <label for="owner" class="space-type-label">Owner</label>
+            <span class="overlay-radio"></span>
+          </div>
+
+          <div class="form_control posting_agent">
+            <input type="radio" name="posted-by" id="Agent" class="radio-input">
+            <label for="Agent" class="space-type-label">Agent</label>
+            <span class="overlay-radio"></span>
+          </div>
+
+          <div class="form_control username">
+            <input type="text" placeholder="Please Enter Your Name" class="text-input">
+
+            <span class="confirmation">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+
+            <span class="error-msg">Error Msg</span>
+
+          </div>
+          <div class="form_control email">
+            <input type="email" placeholder="Please Enter Your Email Address" class="text-input">
+
+            <span class="confirmation">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+
+            <span class="error-msg">Error Msg</span>
+
+          </div>
+
+          <div class="form_control phoneNumber">
+            <input type="text" placeholder="Please Enter Your Phone Number" class="text-input">
+
+            <span class="confirmation">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+
+            <span class="error-msg">Error Msg</span>
+
+          </div>
+        </div>
+
+        <div class="form_section room-config_details">
+          <h3 class="section-heading mt--md mb--sm">Space Type</h3>
+
+          <div class="form_control single-room">
+            <input type="radio" name="room-config" id="one-room" class="radio-input">
+            <label for="one-room" class="space-type-label">1 ROOM</label>
+            <span class="overlay-radio"></span>
+          </div>
+
+          <div class="form_control double-room">
+            <input type="radio" name="room-config" id="two-rooms" class="radio-input">
+            <label for="two-rooms" class="space-type-label">2 ROOMS</label>
+            <span class="overlay-radio"></span>
+          </div>
+
+          <div class="form_control single-bhk">
+            <input type="radio" name="room-config" id="one-bhk" class="radio-input">
+            <label for="one-bhk" class="space-type-label">1 BHK</label>
+            <span class="overlay-radio"></span>
+          </div>
+
+          <div class="form_control double-bhk">
+            <input type="radio" name="room-config" id="two-bhk" class="radio-input">
+            <label for="two-bhk" class="space-type-label">2 BHK</label>
+            <span class="overlay-radio"></span>
+          </div>
+        </div>
+
+        <div class="form_section address-details">
+          <h3 class="section-heading mt--md mb--sm">Address Details</h3>
+
+          <div class="form_control houseNumber">
+            <input type="text" id="house-no." class="text-input" placeholder="Please Enter Your House Number">
+
+            <span class="confirmation">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+
+            <span class="error-msg">Error Msg</span>
+
+          </div>
+          <div class="form_control streetName">
+            <input type="text" id="street-name" class="text-input" placeholder="Please Enter Your Street Name">
+
+            <span class="confirmation">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+
+            <span class="error-msg">Error Msg</span>
+
+          </div>
+          <div class="form_control landmarkName">
+            <input type="text" id="landmarks" class="text-input" placeholder="Please Enter Your Landmark">
+
+            <span class="confirmation">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+
+            <span class="error-msg">Error Msg</span>
+
+          </div>
+          <div class="form_control cityName">
+            <input type="text" id="city" class="text-input" placeholder="Please Enter Your City">
+
+            <span class="confirmation">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+
+            <span class="error-msg">Error Msg</span>
+
+          </div>
+
+          <div class="form_control pincode">
+            <input type="text" id="pincode" class="text-input" placeholder="Please Enter Your Pincode">
+
+            <span class="confirmation">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+
+            <span class="error-msg">Error Msg</span>
+
+          </div>
+
+          <div class="form_control stateName">
+            <input type="text" id="State" class="text-input stateInfo" placeholder="Madhya Pradesh" disabled>
+          </div>
+        </div>
+
+        <div class="form_section amenities-details">
+          <h3 class="section-heading mt--md mb--sm">Amenities Details</h3>
+
+          <div class="form_control elec">
+            <input type="checkbox" name="electricity" id="electricity" class="checkbox-input">
+            <label for="electricity" class="space-type-label">Electricity 24 x 7</label>
+            <span class="overlay-checkbox"></span>
+          </div>
+          <div class="form_control wat">
+            <input type="checkbox" name="water" id="water" class="checkbox-input">
+            <label for="water" class="space-type-label">Water Supply</label>
+            <span class="overlay-checkbox"></span>
+          </div>
+          <div class="form_control bed">
+            <input type="checkbox" name="beds" id="beds" class="checkbox-input">
+            <label for="beds" class="space-type-label">Beds</label>
+            <span class="overlay-checkbox"></span>
+          </div>
+          <div class="form_control cubord">
+            <input type="checkbox" name="cupboards" id="cupboards" class="checkbox-input">
+            <label for="cupboards" class="space-type-label">Cupboards</label>
+            <span class="overlay-checkbox"></span>
+          </div>
+
+          <div class="form_control park">
+            <input type="checkbox" name="parking" id="parking" class="checkbox-input">
+            <label for="parking" class="space-type-label">Parking</label>
+            <span class="overlay-checkbox"></span>
+          </div>
+          <div class="form_control secity">
+            <input type="checkbox" name="security" id="security" class="checkbox-input">
+            <label for="security" class="space-type-label">Security</label>
+            <span class="overlay-checkbox"></span>
+          </div>
+        </div>
+
+        <div class="form_section upload-details">
+          <h3 class="section-heading mt--md mb--sm">House Image</h3>
+          <div class="form_control housImg mb--md mt--sm">
+            <input type="file" class="file-input" accept="image/*" id="houseImg">
+            <label class="overlay-img-button" for="houseImg">
+              Choose a photo
+            </label>
+          </div>
+          <div class="house-preview"></div>
+
+        <h3 class="section-heading mb--sm">Room Images</h3>
+          <div class="form_control romImg  mt--sm">
+            <input type="file" multiple class="file-input" accept="image/*" id="roomImg">
+            <label class="overlay-img-button" for="roomImg">
+              Choose photos
+            </label>
+          </div>
+          <div class="room-preview"></div>
+
+          <small class="photo-size">All the above images must be individually less than 4MB.</small>
+        </div>
+
+        <div class="form_section desc">
+        <h3 class="section-heading mb--sm mt--md">Space Description</h3>
+        <span class="text-holder-text">
+          <span class="text-hint mb--sm">
+            Describe about your space and perks of choosing your
+            space. <br> You can use following listed things to
+            describe your space.
+          </span>
+          <ul class="holder-list mt--sm">
+            <li class="holder-item">Surrounding places (For eg. market, mall, school/college., etc)</li>
+            <li class="holder-item">Toilet Configuration</li>
+            <li class="holder-item">Flooring</li>
+            <li class="holder-item">Other facilities you can provide to Lessee</li>
+            <li class="holder-item">Renting options you can provide to Lessee</li>
+            <li class="holder-item">Your requirements from the Lessee</li>
+            <li class="holder-item">Some Instructions for Lessee</li>
+          </ul>
+        </span>
+          <textarea name="aboutspace" value="" id="space-desc" cols="30" rows="10" class="space-desc mt--md" placeholder="Tell Lessee about Your space..."></textarea>
+        </div>
+
+        <div class="form_control room-rent mt--md mb--md">
+          <h3 class="section-heading mb--sm">Rent / month</h3>
+            <input type="text" id="price" class="text-input" placeholder="Please enter rent you expect including all maintenance cost">
+          </div>
+
+        <div class="form_section occup mb--lg">
+          <span class="edit-note">
+            <span class="asterick">*</span>
+            <span class="occupancy-text">When your property will be, please update
+              occupancy state to occupied in order to avoid notifications from Lessees.</span>
+            <br><label for="state" class="switch">
+              <span class="state-text">Vaccant</span>
+              <input type="checkbox" name="" id="state" checked class="checkbox-input">
+              <span class="slider-round"></span>
+            </label>
+          </span>
+        </div>
+
+        <div class="form_control">
+          <button type="submit" class="sub-btn"> Upload </button>
+        </div>
+
+      </form>
+
+    </div>
+
+
+  </main>
+
+
+
+  <!-- footer area -->
+  <section class="footer">
+    <div class="footer-options">
+      <ul class="footer-list">
+        <li class="footer-items"><a href="index.html" class="footer-links footer-links-logo">RentSpace</a></li>
+        <li class="footer-items"><a href="" class="footer-links">About Us</a></li>
+        <li class="footer-items"><a href="" class="footer-links">Contact Us</a></li>
+      </ul>
+      <ul class="footer-list">
+        <li class="footer-items"><span class="footer-list-heading">Frequently Rented Space</span></li>
+        <li class="footer-items"><a href="" class="footer-links">1 BHK Houses</a></li>
+        <li class="footer-items"><a href="" class="footer-links">2 BHK Houses</a></li>
+        <li class="footer-items"><a href="" class="footer-links">2 Rooms</a></li>
+        <li class="footer-items"><a href="" class="footer-links">1 rooms</a></li>
+      </ul>
+      <ul class="footer-list">
+        <li class="footer-items"><span class="footer-list-heading">Frequently Searched Cities</span></li>
+        <li class="footer-items"><a href="" class="footer-links">Indore</a></li>
+        <li class="footer-items"><a href="" class="footer-links">Bhopal</a></li>
+        <li class="footer-items"><a href="" class="footer-links">Jabalpur</a></li>
+        <li class="footer-items"><a href="" class="footer-links">Sagar</a></li>
+      </ul>
+    </div>
+
+    <p class="footer-disclaimer">
+      <span class="disclaimer">Disclaimer</span>: RentSpace Realty Services is only an intermediary offering its platform to advertise properties of Seller for a Customer/Buyer/User coming on its Website and is not and cannot be a party to or privy to or control in any manner any transactions between the Seller and the Customer/Buyer/User. All the offers and discounts on this Website have been extended by various Owner(s)/Agent(s) who have advertised their products. RentSpace is only communicating the offers and not selling or rendering any of those products or services. It neither warrants nor is it making any representations with respect to offer(s) made on the site. RentSpace Realty Services shall neither be responsible nor liable to mediate or resolve any disputes or disagreements between the Customer/Buyer/User and the Seller and both Seller and Customer/Buyer/User shall settle all such disputes without involving RentSpace Realty Services Limited in any manner.
+    </p>
+
+
+  </section>
+  <div class="footer-ack">
+    copyright &copy; for RentSpace
+  </div>
+</div>
+  <script src="./js/lessor_form.js"></script>
+</body>
+
+</html>

@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 
+html{
+  height: 100%;
+}
+
 body{
   font-size: 0.625rem; //1rem = 10px
   font-family: var(--font-family);
   overflow-x: hidden;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
 }
 
 img{
@@ -73,6 +80,7 @@ ul{
 //footer section styling
 
 .footer {
+  margin-top: auto;
   color: #fff;
   padding: 2rem 1rem;
   background-color: rgba(#2e2e34, 1);
