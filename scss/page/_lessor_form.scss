@@ -157,6 +157,7 @@ letter-spacing: 1px;
 }
 
 .house-preview{
+  position:relative;
   width: 400px;
   height: 250px;
   border: 1px solid #637171;
@@ -187,7 +188,8 @@ letter-spacing: 1px;
 
 .room-preview{
   // width: 100px;
-  min-height: 80px;
+  min-height: 70px;
+  position:relative;
   border: 1px solid #637171;
   cursor: pointer;
   transition: transform .4s ease;
@@ -204,6 +206,10 @@ letter-spacing: 1px;
   // display: none;
 }
 
+.show{
+  opacity: 1;
+  visibility: visible;
+}
 
 .holder-list{
   list-style-type: disc;

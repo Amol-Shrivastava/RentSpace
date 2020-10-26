@@ -261,7 +261,6 @@
 //details upload button
 
 .file-input{
-
   display: none;
 }
 
@@ -298,11 +297,33 @@
   text-transform: uppercase;
   cursor: pointer;
   &:hover{
-    background-color: #9a1010;
+    background-color: #cf4040;
   }
 
   &:focus{
     outline: 4px dotted #dd3232;
     outline-offset: 3px;
+  }
+}
+
+.del-btn{
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  @include flex();
+  width: 18px;
+  height: 18px;
+  // border: 2px solid red;
+  border-radius: 50%;
+  background-color:#525c53;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99;
+  .cut{
+    font-size: 1rem;
   }
 }

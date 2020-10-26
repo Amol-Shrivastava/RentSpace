@@ -647,10 +647,32 @@ ul {
   text-transform: uppercase;
   cursor: pointer; }
   .sub-btn:hover {
-    background-color: #9a1010; }
+    background-color: #cf4040; }
   .sub-btn:focus {
     outline: 4px dotted #dd3232;
     outline-offset: 3px; }
+
+.del-btn {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #525c53;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99; }
+  .del-btn .cut {
+    font-size: 1rem; }
 
 .hover-link {
   position: relative; }
@@ -1315,6 +1337,7 @@ ul {
     font-weight: bold; }
 
 .house-preview {
+  position: relative;
   width: 400px;
   height: 250px;
   border: 1px solid #637171;
@@ -1340,7 +1363,8 @@ ul {
   margin-top: 1rem; }
 
 .room-preview {
-  min-height: 80px;
+  min-height: 70px;
+  position: relative;
   border: 1px solid #637171;
   cursor: pointer;
   transition: transform .4s ease;
@@ -1352,6 +1376,10 @@ ul {
 .roomsAllImg {
   object-fit: cover;
   display: block; }
+
+.show {
+  opacity: 1;
+  visibility: visible; }
 
 .holder-list {
   list-style-type: disc;
