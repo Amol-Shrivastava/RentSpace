@@ -261,6 +261,7 @@
 //details upload button
 
 .file-input{
+
   display: none;
 }
 
@@ -277,6 +278,10 @@
   font-family: 'Source Serif Pro', serif;
   letter-spacing: 1px;
   border: none;
+  cursor:pointer;
+  &:hover{
+    background:#a68611;
+  }
 }
 
 

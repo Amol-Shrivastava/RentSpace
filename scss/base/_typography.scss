@@ -267,3 +267,10 @@
   font-family: 'Source Serif Pro', serif;
   color: #9991a1;
 }
+
+.preview-img{
+  font-size: 1rem;
+  font-family: 'Source Serif Pro', serif;
+  color: #9c9f93;
+  @include flex();
+}

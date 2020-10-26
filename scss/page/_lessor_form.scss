@@ -158,20 +158,52 @@ letter-spacing: 1px;
 
 .house-preview{
   width: 400px;
-  height: 300px;
+  height: 250px;
   border: 1px solid #637171;
   margin-bottom: 1.5rem;
   cursor: pointer;
+  transition: transform .4s ease;
+  transform: scale(1);
+  &:hover{
+    transform: scale(1.02);
+    @include shadow(.3, 5px);
+  }
+}
+.houseImg{
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  display: none;
+}
+
+.roomImgPreviewCont{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(70px, 120px));
+  justify-content: space-between;
+  grid-gap: .5rem;
+  margin-top: 1rem;
+  // border: 2px solid red;
 }
 
 .room-preview{
-  margin-top: 1rem;
-  width: 150px;
-  height: 100px;
+  // width: 100px;
+  min-height: 80px;
   border: 1px solid #637171;
-  margin-bottom: 1.5rem;
-    cursor: pointer;
+  cursor: pointer;
+  transition: transform .4s ease;
+  transform: scale(1);
+  &:hover{
+    transform: scale(1.05);
+    @include shadow(.3, 5px);
+  }
 }
+
+.roomsAllImg{
+  object-fit: cover;
+  display: block;
+  // display: none;
+}
+
 
 .holder-list{
   list-style-type: disc;
