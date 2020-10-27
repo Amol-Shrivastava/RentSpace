@@ -135,8 +135,10 @@
 
 .radio_control{
   &.error{
-    border-radius:6px;
-    border: 2px solid #e74c3c;
+    .radio_input{
+      border-radius:6px;
+      border: 2px solid #e74c3c;
+      }
     .fa-exclamation-circle {
       color: #e74c3c;
       display: block;
@@ -150,10 +152,17 @@
   }
 }
 
+.space-Box{
+  width: 100%;
+  margin-top: .5rem;
+}
   .room_control{
     &.error{
-      border-radius:6px;
-      border: 2px solid #e74c3c;
+
+      input{
+        border-radius:6px;
+        border: 2px solid #e74c3c;
+        }
       .fa-exclamation-circle {
         color: #e74c3c;
         display: block;
@@ -169,6 +178,15 @@
       }
     }
   }
+
+    .space-desc-cont{
+      &.error{
+        .space-Box{
+          border-radius:6px;
+          border: 2px solid #e74c3c;
+        }
+      }
+    }
 
 // .room-config_details{
 //   margin-top: 1rem;
