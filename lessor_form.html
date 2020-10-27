@@ -59,8 +59,8 @@
 
         </div>
 
-          <div class="form_control username">
-            <input type="text" placeholder="Please Enter Your Name" class="text-input" autocomplete="off" id ="username">
+          <div class="form_control username-Box">
+            <input type="text" placeholder="Please Enter Your Name" class="text-input" autocomplete="off" id ="Username">
 
             <span class="confirmation">
               <i class="fas fa-check-circle"></i>
@@ -70,8 +70,8 @@
             <span class="error-msg">Error Msg</span>
 
           </div>
-          <div class="form_control email">
-            <input type="email" placeholder="Please Enter Your Email Address" class="text-input" autocomplete="off" id="email">
+          <div class="form_control email-Box">
+            <input type="email" placeholder="Please Enter Your Email Address" class="text-input" autocomplete="off" id="Email">
 
             <span class="confirmation">
               <i class="fas fa-check-circle"></i>
@@ -83,7 +83,7 @@
           </div>
 
           <div class="form_control">
-            <input type="text" placeholder="Please Enter Your Phone Number" class="text-input" autocomplete="off" id="phonenumber">
+            <input type="tel" pattern="[0-9]{1}" placeholder="Please Enter Your Phone Number" class="text-input" autocomplete="off" id="Phone Number">
 
             <span class="confirmation">
               <i class="fas fa-check-circle"></i>
@@ -128,6 +128,18 @@
         <div class="form_section address-details">
           <h3 class="section-heading mt--md mb--sm">Address Details</h3>
 
+          <div class="form_control houseName">
+            <input type="text" id="House Name" class="text-input" autocomplete="off" placeholder="Please Enter Your House name (if house name is not there, use (surname)'s house)">
+
+            <span class="confirmation">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+
+            <span class="error-msg">Error Msg</span>
+
+          </div>
+
           <div class="form_control houseNumber">
             <input type="text" id="House Number" class="text-input" autocomplete="off" placeholder="Please Enter Your House Number">
 
@@ -139,6 +151,7 @@
             <span class="error-msg">Error Msg</span>
 
           </div>
+
           <div class="form_control streetName">
             <input type="text" id="Street Name" class="text-input" autocomplete="off" placeholder="Please Enter Your Street Name">
 
@@ -174,7 +187,7 @@
           </div>
 
           <div class="form_control pincode">
-            <input type="text" id="Pincode" class="text-input" autocomplete="off" placeholder="Please Enter Your Pincode">
+            <input type="number" id="Pincode" class="text-input" autocomplete="off" placeholder="Please Enter Your Pincode">
 
             <span class="confirmation">
               <i class="fas fa-check-circle"></i>
@@ -318,8 +331,8 @@
             <li class="holder-item">Some Instructions for Lessee</li>
           </ul>
         </span>
-        <div class="form_control">
-          <textarea name="aboutspace" value="" id="Space Description" cols="30" rows="10" class="space-desc mt--md" placeholder="Tell Lessee about Your space..."></textarea>
+        <div class="form_control space-desc-cont">
+          <textarea name="aboutspace" value="" class="space-Box" id="Space Description" cols="30" rows="10" class="space-desc mt--md" placeholder="Tell Lessee about Your space..."></textarea>
           <span class="confirmation">
             <i class="fas fa-check-circle price-icon"></i>
             <i class="fas fa-exclamation-circle price-icon"></i>
@@ -331,7 +344,7 @@
 
         <div class="form_control room-rent mt--md mb--md">
           <h3 class="section-heading mb--sm">Rent / month</h3>
-            <input type="text" id="Price" class="text-input" autocomplete="off" placeholder="Please enter rent you expect including all maintenance cost">
+            <input type="number" id="Price" class="text-input" autocomplete="off" placeholder="Please enter rent you expect including all maintenance cost">
             <span class="confirmation">
               <i class="fas fa-check-circle price-icon"></i>
               <i class="fas fa-exclamation-circle price-icon"></i>
