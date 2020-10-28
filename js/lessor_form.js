@@ -15,7 +15,13 @@ const housename = document.getElementById('House Name');
 const houseNumber = document.getElementById('House Number');
 const streetName = document.getElementById('Street Name');
 const landmarks = document.getElementById('Landmark');
-const city = document.getElementById('City');
+const selectBox = document.getElementById('selectBox');
+const cityOptionCont = document.getElementById('city-option-cont');
+const selectedOption = document.getElementById('selectedOption');
+const menuIcon = document.getElementById('fas');
+const menuIconCont = document.getElementById('select-icon');
+let selectedCitySpan = selectedOption.querySelector('.cityclicked');
+
 const pincode = document.getElementById('Pincode');
 
 //amenities checkbox btn
@@ -27,126 +33,90 @@ const spaceDec = document.getElementById('Space Description');
 const price = document.getElementById('Price');
 const vacancy = document.getElementById('occupancy-state');
 
-
-const usernameVal = username.value.trim();
-const emailVal = email.value.trim();
-const phoneNumberVal = phoneNumber.value.trim();
-const houseNameVal = housename.value.trim();
-const houseNumberVal = houseNumber.value.trim();
-const streetNameVal = streetName.value.trim()
-const landmarksVal = landmarks.value.trim();
-
-// const cityVal = city.value.trim()
-const pincodeVal = pincode.value.trim();
-const spaceDecVal = spaceDec.value.trim();
-const priceVal = price.value.trim();
-
-
-const checkMore = inpID => {
-
-switch(inpID){
-
-case 'Username': {
- if (usernameVal.length <= 2) {
-setErrorMessage(username, 'Username must have minimum 3 characters');
-// return false;
-} else {
-  setSuccessMessage(username);
-  // return true;
-}
-}
-
-
-case 'Email': {
-if (!isEmailValid(emailVal)) {
-setErrorMessage(email, 'Email is not valid.');
-// return false;
-} else {
-setSuccessMessage(email);}
-  // return true;
+//city selection
+selectBox.addEventListener('click', e => {
+  // console.log(e.target);
+  if(e.target.classList.contains('select-icon') || e.target.classList.contains('fas')){
+    cityOptionCont.classList.toggle('active');
+    menuIcon.classList.toggle('active');
   }
 
-
-case 'Phone Number': {
-if (phoneNumberVal.length !== 10) {
-setErrorMessage(phoneNumber, 'Phone Number must be of 10 digits.');
-// return false;
-} else {
-setSuccessMessage(phoneNumber);
-// return true;
-}
-}
-
-
-case 'pincode': {
-if (pincodeVal.length !== 6) {
-setErrorMessage(pincode, 'Pincode is not valid');
-// return false;
-} else {
-setSuccessMessage(pincode);
-// return true;
-}
-}
-
- }
-}
-
-
-form.addEventListener('submit', e => {
-e.preventDefault();
-validate();
+  if(e.target.classList.contains('city-Name')){
+    let selectedCity = e.target.innerText;
+    selectedCitySpan.innerHTML = `${selectedCity}`;
+    selectedCitySpan.classList.add('active');
+    cityOptionCont.classList.remove('active');
+    menuIcon.classList.remove('active');
+    }
 })
 
+//form execution function
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    validate();
+  })
+
+//validation function
 const validate = () => {
 
-//checking if individual input are empty
+  const usernameVal = username.value.trim();
+  const emailVal = email.value.trim();
+  const phoneNumberVal = phoneNumber.value.trim();
+  const houseNameVal = housename.value.trim();
+  const houseNumberVal = houseNumber.value.trim();
+  const streetNameVal = streetName.value.trim()
+  const landmarksVal = landmarks.value.trim();
+  const pincodeVal = pincode.value.trim();
+  const spaceDecVal = spaceDec.value.trim();
+  const priceVal = price.value.trim();
 
 //checking whether user is owner or agent
 let radioOptions = Array.from(userCont.querySelectorAll('input[type="radio"]'));
 if (!radioOptions.some(isChecked)) {
 userCont.classList.add('error');
+setTimeout( () =>{
+  userCont.classList.remove('error');
+}, 1500);
 }
-
 
 //checking room type
 let roomOptions = Array.from(roomType.querySelectorAll('input[type="radio"]'));
 if (!roomOptions.some(isChecked)) {
 roomType.classList.add('error');
+setTimeout( () =>{
+  roomType.classList.remove('error');
+}, 2000);
 }
 
 //checking username for being empty
 empty(usernameVal, username);
-// if (usernameVal.length <= 2) {
-// setErrorMessage(username, 'Username must have minimum 3 characters');
-// // return false;
-// } else {
-//  setSuccessMessage(username);
-//  // return true;
-// }
-checkMore(username);
+
+if (usernameVal.length <= 2) {
+setErrorMessage(username, 'Username must have minimum 3 characters');
+}else {
+ setSuccessMessage(username);
+
+}
+
 
 //checking username for being empty
+
 empty(emailVal, email);
-// if (!isEmailValid(emailVal)) {
-// setErrorMessage(email, 'Email is not valid.');
-// // return false;
-// } else {
-// setSuccessMessage(email);
-//   // return true;
-// }
-checkMore(email);
+if (!isEmailValid(emailVal)) {
+setErrorMessage(email, 'Email is not valid.');
+} else {
+setSuccessMessage(email);
+}
+
 
 //checking username for being empty
 empty(phoneNumberVal, phoneNumber);
+if (phoneNumberVal.length !== 10) {
+setErrorMessage(phoneNumber, 'Phone Number must be of 10 digits.');
+} else {
+setSuccessMessage(phoneNumber);
+}
 
-// if (phoneNumberVal.length !== 10) {
-// setErrorMessage(phoneNumber, 'Phone Number must be of 10 digits.');
-// // return false;
-// } else {
-// setSuccessMessage(phoneNumber);
-// // return true;
-// }
-checkMore(phoneNumber);
 
 //checking house name for being empty
 empty(houseNameVal, housename);
@@ -157,8 +127,24 @@ empty(houseNumberVal, houseNumber);
 //checking streetName for being empty
 empty(streetNameVal, streetName);
 
-// //checking city for being empty
-// empty(cityVal, city);
+//checking city for being empty
+if(selectedCitySpan.innerHTML === "Please Select a City"){
+
+  let parentElement = selectedCitySpan.parentElement.parentElement.parentElement;
+  let errorMsgBox = parentElement.querySelector('.error-msg');
+
+    parentElement.classList.add('error');
+    errorMsgBox.innerHTML = "CITY CANNOT BE BLANK";
+    selectedOption.style.border = '2px solid #e74c3c';
+
+    setTimeout( () =>{
+      // console.log(selectedCitySpan.parentElement);
+      selectedOption.style.border = '1px solid #3c4647';
+      parentElement.classList.remove('error');
+    }, 2800);
+}else{
+  selectedOption.style.border = '2px solid #2ecc71';
+}
 
 //checking city for being empty
 empty(landmarksVal, landmarks);
@@ -167,13 +153,10 @@ empty(landmarksVal, landmarks);
 empty(pincodeVal, pincode);
 
 if (pincodeVal.length !== 6) {
-// setErrorMessage(pincode, 'Pincode is not valid');
-// // return false;
-// } else {
-// setSuccessMessage(pincode);
-// // return true;
-// }
-checkMore(pincode);
+setErrorMessage(pincode, 'Pincode is not valid');
+} else {
+setSuccessMessage(pincode);
+}
 
 //checking textarea for being empty
 empty(spaceDecVal, spaceDec);
@@ -182,8 +165,6 @@ empty(spaceDecVal, spaceDec);
 empty(priceVal, price);
 
 }
-}
-
 
 //checking whether radio button is checked
 const isChecked = opt => {
@@ -194,9 +175,11 @@ return opt.checked;
 const empty = (val, inp) => {
 if(val === ""){
   let inputTag = inp.id;
-  setErrorMessage(inp, `${inputTag} cannot be blank.`)
+  setErrorMessage(inp, `${inputTag} cannot be blank.`);
+  return false;
 }else{
    setSuccessMessage(inp);
+   return true;
   }
 }
 
@@ -223,18 +206,17 @@ return true;
 
 const setErrorMessage = (input, msg) => {
 let inputParent = input.parentElement;
+inputParent.classList.remove('success');
 inputParent.classList.add('error');
 let errorMsgBox = inputParent.querySelector('.error-msg');
 
 errorMsgBox.innerHTML = `${msg}`;
-//
-// setTimeout(()=>{
-//   inputParent.classList.remove('error');
-//   errorMsgBox.innerHTML = "";
-//   input.innerHTML = "";
-//   input.focus();
-// }, 2000);
 
+setTimeout(()=>{
+  inputParent.classList.remove('error');
+  inputParent.classList.remove('success');
+  errorMsgBox.innerHTML = "";
+}, 2800);
 }
 
 // setSuccessMessage definition
@@ -242,10 +224,9 @@ errorMsgBox.innerHTML = `${msg}`;
 const setSuccessMessage = input => {
 let inputParent = input.parentElement;
 inputParent.classList.add('success');
-// // inputParent.className = 'form_control success';
-// setTimeout(()=>{
-//   inputParent.classList.add('success');
-// }, 1000);
+setTimeout(()=>{
+  inputParent.classList.add('success');
+}, 1000);
 }
 
 
@@ -330,7 +311,7 @@ reader.readAsDataURL(imgfiles);
 delBtn.forEach(btn => {
 btn.addEventListener('click', (e) => {
 // btn.classList.add('show');
-console.log(e.target);
+// console.log(e.target);
 let previousImg = btn.previousElementSibling;
 previousImg.src = "";
 previousImg.style.display = 'none';

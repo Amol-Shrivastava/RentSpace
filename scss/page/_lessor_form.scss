@@ -40,8 +40,6 @@
     }
   }
 
-  &_section {}
-
   &_section + &_section {
     margin-top: 1.6rem;
     border-top: 1px solid #23251f;
@@ -133,6 +131,135 @@
   }
 }
 
+.city{
+  &-Box{
+    &.error{
+    .fa-exclamation-circle {
+      color: #e74c3c;
+      display: block;
+    }
+
+    .error-msg {
+      display: block;
+    }
+  }
+  &.success{
+    .fa-check-circle {
+      color: #2ecc71;
+      display: block;
+    }
+  }
+}
+
+  &-select-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+
+    .selected{
+      cursor: pointer;
+      order: 1;
+      border: 1px solid #3c4647;
+      padding: .4rem;
+      @include flex(row, space-between);
+      border-radius: 6px;
+      .cityclicked{
+        color: #4a504d;
+        font-family: 'Poppins', serif;
+        letter-spacing: 1px;
+        font-weight: normal;
+        font-size: 0.7rem;
+        &.active{
+          color: #0e1413;
+          font-weight: bold;
+          font-size: 1rem;
+          font-family:'Source Serif Pro', serif;
+      }
+    }
+  }
+      .select-icon{
+        width: 27px;
+        height: 27px;
+        cursor: pointer;
+        @include flex(column);
+        i{
+          position: relative;
+          left: 0px;
+          top: 0px;
+          color: #717283;
+          display: inline-block;
+          font-size: 15px;
+          transform: rotateX(0deg);
+          &.active{
+            transform: rotateX(180deg);
+          }
+          &.secondActive{
+            margin-top: -.3rem;
+            transform: rotateX(180deg);
+          }
+        }
+      }
+    }
+
+    &-option-cont{
+    order: 5;
+    width: 100%;
+    background-color: #fbf9fe;
+    transition: transform .3s linear;
+    border: 1px solid #3c4647;
+    border-radius: 6px;
+    opacity: 0;
+    max-height: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    position: relative;
+    z-index: 60;
+    transform-origin: top;
+    &.active{
+      max-height: 100%;
+      visibility: visible;
+      margin-top: 6px;
+      opacity: 1;
+      transform: scaleY(1);
+    }
+    &.error {
+      border: 2px solid #e74c3c;
+    }
+    .city-option{
+      width: 100%;
+      cursor: pointer;
+      // padding: .3rem 0;
+      input{
+        width: 100%;
+        display:none;
+      }
+      &:hover{
+        .city-Name{
+          background: #625d67;
+          color: #f0ecec;
+        }
+      }
+    }
+
+    .city-option + .city-option{
+      margin-top: .4rem;
+    }
+
+    .city-Name{
+      padding: .3rem;
+      border-radius: 6px;
+      display: block;
+      cursor: pointer;
+      color: #303538;
+      text-transform: uppercase;
+      font-size: .8rem;
+      letter-spacing: 1px;
+      font-family: 'Source Serif Pro', serif;
+    }
+  }
+}
+
 .radio_control{
   &.error{
     .radio_input{
@@ -155,6 +282,7 @@
 .space-Box{
   width: 100%;
   margin-top: .5rem;
+  padding-top: .3rem;
 }
   .room_control{
     &.error{

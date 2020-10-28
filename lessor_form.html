@@ -60,7 +60,7 @@
         </div>
 
           <div class="form_control username-Box">
-            <input type="text" placeholder="Please Enter Your Name" class="text-input" autocomplete="off" id ="Username">
+            <input type="text" placeholder="Please Enter Your Name" class="text-input" autocomplete="off" value="" id ="Username">
 
             <span class="confirmation">
               <i class="fas fa-check-circle"></i>
@@ -83,7 +83,7 @@
           </div>
 
           <div class="form_control">
-            <input type="tel" pattern="[0-9]{1}" placeholder="Please Enter Your Phone Number" class="text-input" autocomplete="off" id="Phone Number">
+            <input type="tel" placeholder="Please Enter Your Phone Number" class="text-input" autocomplete="off" id="Phone Number">
 
             <span class="confirmation">
               <i class="fas fa-check-circle"></i>
@@ -174,8 +174,36 @@
             <span class="error-msg">Error Msg</span>
 
           </div>
-          <div class="form_control cityName">
-            <input type="text" id="City" class="text-input" autocomplete="off" placeholder="Please Enter Your City">
+          <div class="form_control city-Box">
+              <div class="city-select-box" id="selectBox" required>
+
+              <div class="city-option-cont" id="city-option-cont">
+
+                <div class="city-option">
+                  <input type="radio" name="city" id="bhopal">
+                  <label for="bhopal" class = "city-Name">Bhopal</label>
+                </div>
+
+                <div class="city-option">
+                  <input type="radio" name="city" id="Indore">
+                  <label for="Indore" class = "city-Name">Indore</label>
+                </div>
+
+                <div class="city-option">
+                  <input type="radio" name="city" id="jabalpur">
+                  <label for="jabalpur" class = "city-Name">Jabalpur</label>
+                </div>
+
+                <div class="city-option">
+                  <input type="radio" name="city" id="sagar">
+                  <label for="sagar" class = "city-Name">Sagar</label>
+                </div>
+              </div>
+
+              <div class="selected" id="selectedOption">
+                <span class="cityclicked">Please Select a City</span>
+                <span class="select-icon icon-down" id="select-icon"><i class="fas fa-chevron-down" id="fas"></i></span>              </div>
+            </div>
 
             <span class="confirmation">
               <i class="fas fa-check-circle"></i>
@@ -187,7 +215,7 @@
           </div>
 
           <div class="form_control pincode">
-            <input type="number" id="Pincode" class="text-input" autocomplete="off" placeholder="Please Enter Your Pincode">
+            <input type="tel" id="Pincode" class="text-input" autocomplete="off" placeholder="Please Enter Your Pincode">
 
             <span class="confirmation">
               <i class="fas fa-check-circle"></i>
@@ -199,7 +227,7 @@
           </div>
 
           <div class="form_control stateName">
-            <input type="text" id="State" class="text-input  autocomplete="off"stateInfo" placeholder="Madhya Pradesh" disabled>
+            <input type="text" id="State" class="text-input stateInfo" autocomplete="off" placeholder="Madhya Pradesh" disabled>
           </div>
         </div>
 
