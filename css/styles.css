@@ -403,6 +403,103 @@ ul {
   align-items: center;
   justify-content: center; }
 
+.house-name {
+  display: inline-block;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: 'Poppins', serif;
+  border-bottom: 1px solid #d78b2e;
+  padding: .3rem .3rem .2rem;
+  color: #2b2f2f; }
+
+.indi-heading {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-family: 'Poppins', serif;
+  padding: .3rem .3rem .11rem;
+  margin-left: .2rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+
+.indi-cost,
+.offer {
+  margin-left: .2rem;
+  letter-spacing: 1.1px;
+  padding: 0 .3rem;
+  font-family: 'Poppins', serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #434044;
+  margin-top: .2rem; }
+
+.offer {
+  margin-top: .7rem;
+  opacity: 0;
+  visibility: hidden; }
+  .offer.show {
+    opacity: 1;
+    visibility: visible; }
+
+.address-details {
+  font-family: 'Poppins', serif; }
+
+.ad {
+  font-family: 'Poppins', serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-left: .4rem;
+  margin-top: .2rem;
+  line-height: 1.5;
+  color: #434044; }
+
+.owner_name, .owner_phone, .owner_email {
+  margin-left: .4rem;
+  margin-top: .7rem;
+  font-family: 'Poppins', serif;
+  color: #585b62; }
+
+.owner_name {
+  font-size: 1.2rem;
+  font-weight: bold; }
+
+.owner_phone {
+  font-size: 1.1rem;
+  letter-spacing: 1px; }
+
+.owner_email {
+  margin-top: .5rem;
+  margin-bottom: 1rem; }
+  .owner_email .own_email {
+    font-size: 1rem;
+    color: #b52147; }
+    .owner_email .own_email:hover {
+      color: #2aa187; }
+    .owner_email .own_email:focus {
+      outline: 3px dotted #b52147;
+      outline-offset: 2px; }
+
+.act_desc {
+  font-family: 'Poppins', serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  margin-left: .4rem; }
+
+.fac-type {
+  font-size: .75rem;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.reviewerText {
+  font-size: .84rem;
+  line-height: 1.3;
+  letter-spacing: 1.1px;
+  font-family: 'Poppins', serif; }
+
 .mt--lg {
   margin-top: 2.5rem; }
 
@@ -420,6 +517,9 @@ ul {
 
 .mb--sm {
   margin-bottom: .5rem; }
+
+.ml--sm {
+  margin-left: 1rem; }
 
 .view-deal {
   padding: .5rem 1rem;
@@ -673,6 +773,75 @@ ul {
   z-index: 99; }
   .del-btn .cut {
     font-size: 1rem; }
+
+.sbtn {
+  position: absolute;
+  top: 40%;
+  z-index: 60;
+  background: rgba(99, 92, 98, 0.6);
+  padding: 1rem .7rem;
+  border: none;
+  color: #f5f5f5;
+  cursor: pointer; }
+  .sbtn:hover {
+    background: rgba(99, 92, 98, 0.8); }
+  .sbtn:focus {
+    outline: 5px dotted #e26d31;
+    outline-offset: 3px; }
+  .sbtn-left {
+    left: 1.2rem; }
+  .sbtn-right {
+    right: 1.2rem; }
+
+.review-btn {
+  padding: .5rem .9rem;
+  transform: skew(8deg);
+  background: #db1809;
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer; }
+  .review-btn:hover {
+    box-shadow: none; }
+  .review-btn:focus {
+    outline: 3px dotted #d20d0d;
+    outline-offset: 3px; }
+  .review-btn .upload-text {
+    display: inline-block;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    transform: skew(-8deg); }
+
+.move-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-90%);
+  right: 1rem;
+  z-index: 6;
+  border: none;
+  box-shadow: 0 4px #e68b1e rgba(0, 0, 0, 0.7);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid rgba(86, 87, 81, 0.6);
+  background: rgba(86, 87, 81, 0.6);
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform .3s ease; }
+  .move-right:hover {
+    transform: scale(1.05);
+    background: rgba(86, 87, 81, 0.8); }
+  .move-right:focus {
+    outline: none;
+    border: 1px solid #eee;
+    background: #fff;
+    color: rgba(86, 87, 81, 0.8); }
 
 .hover-link {
   position: relative; }
@@ -1143,7 +1312,7 @@ ul {
     background-position: center bottom;
     background-repeat: no-repeat; }
   .main-content .item-9 {
-    background-image: url("../images/option-houses/house-9.jpg");
+    background-image: url("../images/indi-house&interiors/first_house/house-main-img.jpg");
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat; }
@@ -1544,3 +1713,305 @@ ul {
 
 .posting_owner {
   margin-bottom: .6rem; }
+
+.slider {
+  position: relative;
+  margin-top: 3rem; }
+  .slider-cont {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    overflow: hidden; }
+    .slider-cont .indi-slide {
+      width: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      position: absolute; }
+      .slider-cont .indi-slide .indi-house-img {
+        width: 100%;
+        height: 70vh;
+        object-fit: cover; }
+
+.cover-cont {
+  position: absolute;
+  border: 10px solid rgba(255, 255, 255, 0.6);
+  width: 22rem;
+  height: 15rem;
+  bottom: -9.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); }
+
+.cover-img {
+  width: 100%; }
+
+.abouthouse {
+  position: relative;
+  top: 10rem;
+  display: block;
+  margin: 0 0 10rem 2rem; }
+
+.owner-name {
+  padding: .5rem; }
+
+.details {
+  display: grid;
+  grid-template-columns: 40rem 20rem;
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+  grid-gap: 1rem;
+  border-bottom: 1px solid #bbb; }
+  @media only screen and (max-width: 1000px) {
+    .details {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content min-content; } }
+  .details .ad_rentBox {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1.5rem; }
+    .details .ad_rentBox .address-box,
+    .details .ad_rentBox .rent-box {
+      border: 1px dashed #222;
+      padding: 0 0.7rem; }
+  .details .icon-box {
+    border: 1px dashed #222;
+    align-self: flex-start;
+    display: grid;
+    grid-template-columns: 140px 60px 60px;
+    grid-gap: .8rem;
+    align-items: center;
+    padding: 1rem;
+    justify-content: flex-end; }
+    @media only screen and (max-width: 1000px) {
+      .details .icon-box {
+        justify-content: center; } }
+    .details .icon-box .indi-vc {
+      font-family: 'Poppins' , serif;
+      font-size: 1.2rem;
+      color: #373132;
+      margin-right: .4rem; }
+    .details .icon-box .indi-vc-box,
+    .details .icon-box .indi-basket-box,
+    .details .icon-box .indi-share-box {
+      text-align: center; }
+      .details .icon-box .indi-vc-box i,
+      .details .icon-box .indi-basket-box i,
+      .details .icon-box .indi-share-box i {
+        font-size: 1.1rem; }
+      .details .icon-box .indi-vc-box .icon,
+      .details .icon-box .indi-basket-box .icon,
+      .details .icon-box .indi-share-box .icon {
+        cursor: pointer;
+        transition: transform .2s ease;
+        transform: scale(1); }
+        .details .icon-box .indi-vc-box .icon:hover,
+        .details .icon-box .indi-basket-box .icon:hover,
+        .details .icon-box .indi-share-box .icon:hover {
+          transform: scale(1.07); }
+    .details .icon-box .indi-basket-box .icon,
+    .details .icon-box .indi-share-box .icon {
+      fill: #515752;
+      width: 1.6rem;
+      height: 1.6rem; }
+    .details .icon-box .indi-share-box {
+      margin-left: 0rem; }
+    .details .icon-box .indi-basket-box .icon {
+      text-align: left;
+      stroke: #799592;
+      stroke-width: .5px; }
+
+.owner_details {
+  margin: 1rem 0;
+  border-bottom: 1px solid #bbb; }
+  .owner_details .own_details_box {
+    border: 1px dashed #222; }
+
+.house-description {
+  border-bottom: 1px solid #bbb;
+  margin: 1rem 0;
+  padding-bottom: 1rem; }
+
+.amenities {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 1rem; }
+  .amenities .faci-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(165px, 170px));
+    justify-content: center;
+    padding-bottom: 1rem; }
+    @media only screen and (min-width: 450px) {
+      .amenities .faci-cont {
+        justify-content: center;
+        grid-gap: .5rem; } }
+  .amenities .faci-box {
+    margin-bottom: .4rem;
+    border: 1px solid grey;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    grid-gap: .8rem;
+    padding: .3rem;
+    opacity: 0;
+    visibility: hidden; }
+    .amenities .faci-box i {
+      text-align: center;
+      font-size: 24px; }
+    .amenities .faci-box.show {
+      opacity: 1;
+      visibility: visible; }
+
+.fas.fa-fan {
+  color: #805a19; }
+
+.fas.fa-shower {
+  color: #27adb0; }
+
+.fas.fa-bed {
+  color: #da5327; }
+
+.fas.fa-th-large {
+  color: #394d24; }
+
+.fas.fa-couch {
+  color: #3e2605; }
+
+.fas.fa-chair {
+  color: #4d310b; }
+
+.fas.fa-parking {
+  color: #fb1010; }
+
+.fas.fa-shield-alt {
+  color: #ff524b; }
+
+.roomImgs {
+  padding: 1rem .7rem 2rem;
+  border-bottom: 1px solid #bbb; }
+
+.indi_room_pics_cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 15rem));
+  justify-content: space-evenly;
+  grid-gap: 1rem; }
+
+.indi_room_pics_box {
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+  transition: transform .3s ease-out; }
+  .indi_room_pics_box:hover {
+    transform: scale(1.09); }
+
+.indi_room_img {
+  object-fit: cover; }
+
+.post_review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #bbb;
+  padding: 1rem 1rem; }
+
+.indi_review_cont {
+  width: 100%;
+  max-width: 65rem;
+  margin: 1rem auto; }
+
+.indi_review {
+  display: flex;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  border: 1px dashed #222;
+  padding: .3rem .7rem;
+  margin: 1rem 0; }
+  @media only screen and (max-width: 900px) {
+    .indi_review {
+      flex-direction: column; } }
+  .indi_review .reviewerImgBox {
+    width: 4rem;
+    height: 4rem;
+    min-width: 4rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    order: 1;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); }
+    @media only screen and (max-width: 900px) {
+      .indi_review .reviewerImgBox {
+        width: 5rem;
+        height: 5rem;
+        margin-top: .5rem;
+        margin-bottom: 1rem; } }
+    .indi_review .reviewerImgBox .review_face {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      object-fit: cover; }
+      @media only screen and (max-width: 900px) {
+        .indi_review .reviewerImgBox .review_face {
+          width: 5rem;
+          height: 5rem; } }
+  .indi_review .reviewerText {
+    order: 5; }
+    @media only screen and (max-width: 900px) {
+      .indi_review .reviewerText {
+        margin-bottom: 1rem; } }
+
+.related-search {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  grid-gap: .7rem;
+  justify-items: center;
+  position: relative;
+  padding: 1rem 0; }
+  .related-search--box {
+    background: #fff;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .related-search--imgbox {
+    width: 100%; }
+  .related-search--txtbox {
+    margin-top: auto;
+    background: #fff;
+    width: 100%; }
+    .related-search--txtbox .related-search--options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      grid-gap: .5rem;
+      padding: 0 .3rem; }
+    .related-search--txtbox .indi-price-cont,
+    .related-search--txtbox .indi-room-config,
+    .related-search--txtbox .indi-loc-cont {
+      border: 1px solid #bbb;
+      padding: 0 .3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .related-search--txtbox .indi-price-cont .indi-option--value,
+      .related-search--txtbox .indi-room-config .indi-option--value,
+      .related-search--txtbox .indi-loc-cont .indi-option--value {
+        color: #181415; }
+      .related-search--txtbox .indi-price-cont .indian-rupee,
+      .related-search--txtbox .indi-room-config .indian-rupee,
+      .related-search--txtbox .indi-loc-cont .indian-rupee {
+        width: .9rem;
+        height: .9rem;
+        margin-left: .1rem;
+        margin-bottom: -2px; }
+      .related-search--txtbox .indi-price-cont .icon,
+      .related-search--txtbox .indi-room-config .icon,
+      .related-search--txtbox .indi-loc-cont .icon {
+        width: 1.1rem;
+        height: 1.1rem;
+        fill: #6c6f78; }
+    .related-search--txtbox .price-symb {
+      transform: translateY(3px); }
+    .related-search--txtbox .indi-expl-btn-cont {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }

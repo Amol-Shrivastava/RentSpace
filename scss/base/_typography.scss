@@ -274,3 +274,122 @@
   color: #9c9f93;
   @include flex();
 }
+
+//individual house typography
+.house-name{
+  display: inline-block;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: 'Poppins', serif;
+  border-bottom: 1px solid #d78b2e;
+  // @include shadow(.3, 5px);
+  padding: .3rem .3rem .2rem;
+  color: #2b2f2f;
+}
+
+.indi-heading{
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-family: 'Poppins', serif;
+  padding: .3rem .3rem .11rem;
+  margin-left: .2rem;
+  text-transform: uppercase;
+  // border-bottom: 1px solid #d78b2e;
+  @include flex();
+}
+
+.indi-cost,
+.offer{
+  margin-left: .2rem;
+  // font-size: 1.5rem;
+  // color: #1a1f1f;
+  letter-spacing: 1.1px;
+  padding: 0 .3rem;
+  font-family: 'Poppins', serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #434044;
+  margin-top: .2rem;
+}
+
+.offer{
+  margin-top: .7rem;
+  opacity: 0;
+  visibility: hidden;
+  &.show{
+    opacity:1;
+    visibility: visible;
+  }
+}
+
+.address-details{
+  font-family: 'Poppins', serif;
+}
+.ad{
+  font-family: 'Poppins', serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-left: .4rem;
+  margin-top: .2rem;
+  line-height: 1.5;
+  color: #434044;
+}
+
+.owner{
+  &_name,
+  &_phone,
+  &_email{
+    margin-left: .4rem;
+    margin-top: .7rem;
+    font-family: 'Poppins', serif;
+    color: #585b62;
+  }
+  &_name{
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  &_phone{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  &_email{
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+      .own_email{
+      font-size: 1rem;
+      color: #b52147;
+      &:hover{
+        color: #2aa187;
+      }
+      &:focus{
+        outline: 3px dotted #b52147;
+        outline-offset: 2px;
+      }
+    }
+
+  }
+}
+
+.act_desc{
+    font-family: 'Poppins', serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    margin-left: .4rem;
+  }
+
+.fac-type{
+  font-size: .75rem;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.reviewerText{
+  // transform: skew(-8deg);
+  font-size: .84rem;
+  line-height: 1.3;
+  letter-spacing: 1.1px;
+  font-family: 'Poppins', serif;
+  // max-width: 600px;
+}

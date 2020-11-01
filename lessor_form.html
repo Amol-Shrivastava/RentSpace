@@ -254,6 +254,16 @@
             <label for="cupboards" class="space-type-label">Cupboards</label>
             <span class="overlay-checkbox"></span>
           </div>
+          <div class="form_control full-fur">
+            <input type="checkbox" name="fullFur" id="fullFur" class="checkbox-input">
+            <label for="fullFur" class="space-type-label">Fully Furnished</label>
+            <span class="overlay-checkbox"></span>
+          </div>
+          <div class="form_control Semi-fur">
+            <input type="checkbox" name="Semi-fur" id="Semi-fur" class="checkbox-input">
+            <label for="Semi-fur" class="space-type-label">Semi-Furnished</label>
+            <span class="overlay-checkbox"></span>
+          </div>
 
           <div class="form_control park">
             <input type="checkbox" name="parking" id="parking" class="checkbox-input">
@@ -360,7 +370,7 @@
           </ul>
         </span>
         <div class="form_control space-desc-cont">
-          <textarea name="aboutspace" value="" class="space-Box" id="Space Description" cols="30" rows="10" class="space-desc mt--md" placeholder="Tell Lessee about Your space..."></textarea>
+          <textarea name="aboutspace" value="" id="Space Description" cols="30" rows="10" class="space-desc mt--md" placeholder="Tell Lessee about Your space..."></textarea>
           <span class="confirmation">
             <i class="fas fa-check-circle price-icon"></i>
             <i class="fas fa-exclamation-circle price-icon"></i>
@@ -372,7 +382,7 @@
 
         <div class="form_control room-rent mt--md mb--md">
           <h3 class="section-heading mb--sm">Rent / month</h3>
-            <input type="number" id="Price" class="text-input" autocomplete="off" placeholder="Please enter rent you expect including all maintenance cost">
+            <input type="tel" id="Price" class="text-input" autocomplete="off" placeholder="Please enter rent you expect including all maintenance cost">
             <span class="confirmation">
               <i class="fas fa-check-circle price-icon"></i>
               <i class="fas fa-exclamation-circle price-icon"></i>
@@ -388,8 +398,6 @@
               occupancy state to occupied in order to avoid notifications from Lessees.</span>
             <br><label for="state" class="switch">
               <span class="state-text">Vaccant</span>
-              <!-- <input type="checkbox" name="" id="occupancy-state" checked class="checkbox-input">
-              <span class="slider-round"></span> -->
               <span class="vaccantBox">
                 <i class="fas fa-check-square"></i>
               </span>

@@ -327,3 +327,89 @@
     font-size: 1rem;
   }
 }
+
+//individual house buttons
+
+//slider button
+.sbtn{
+  position:absolute;
+  top: 40%;
+  z-index: 60;
+  background: rgba(99, 92, 98, .6);
+  padding: 1rem .7rem;
+  border: none;
+  color: #f5f5f5;
+  cursor: pointer;
+  &:hover{
+    background: rgba(99, 92, 98, .8);
+  }
+  &:focus{
+    outline: 5px dotted #e26d31;
+    outline-offset: 3px;
+  }
+  //transform: translateY(-50%);
+  &-left{
+    left: 1.2rem;
+  }
+  &-right{
+    right: 1.2rem;
+  }
+}
+
+//review button
+.review-btn{
+  padding: .5rem .9rem;
+  transform: skew(8deg);
+  background: #db1809;
+  color: #fff;
+  border: none;
+  @include shadow(.3, 8px);
+  cursor: pointer;
+  &:hover{
+      // @include shadow();
+      box-shadow:none;
+  }
+  &:focus{
+    outline: 3px dotted #d20d0d;
+    outline-offset: 3px;
+  }
+
+  .upload-text{
+    display: inline-block;
+    font-size:.8rem;
+    letter-spacing: 1px;
+    transform: skew(-8deg);
+  }
+}
+
+.move-right{
+  position:absolute;
+  top: 50%;
+  transform: translateY(-90%);
+  right: 1rem;
+  z-index:6;
+  border: none;
+  @include shadow(.7, rgb(230, 139, 30));
+  // border: 1px solid green;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  padding: 1.2rem;
+  @include flex();
+  color: #fff;
+  border: 1px solid rgba(86, 87, 81, .6);
+  background: rgba(86, 87, 81, .6);
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform .3s ease;
+  &:hover{
+    transform:scale(1.05);
+    background: rgba(86, 87, 81, .8);
+  }
+  &:focus{
+    outline: none;
+    border: 1px solid #eee;
+    background: #fff;
+    color: rgba(86, 87, 81, .8);
+  }
+}
