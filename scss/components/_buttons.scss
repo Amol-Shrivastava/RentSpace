@@ -384,32 +384,77 @@
 
 .move-right{
   position:absolute;
-  top: 50%;
-  transform: translateY(-90%);
-  right: 1rem;
-  z-index:6;
+  bottom: -3rem;
+  left: 45%;
+  transform: translateX(-50%);
+  @media only screen and (max-width: 800px){
+    left: 38%;
+  }
   border: none;
-  @include shadow(.7, rgb(230, 139, 30));
-  // border: 1px solid green;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  padding: 1.2rem;
+  @include shadow(.4, 6px);
+  padding: .6rem 1rem;
+  border-radius: 3px;
   @include flex();
   color: #fff;
-  border: 1px solid rgba(86, 87, 81, .6);
-  background: rgba(86, 87, 81, .6);
+  background: #fc1d1d;
   cursor: pointer;
   transform: scale(1);
   transition: transform .3s ease;
+  transform: skew(8deg);
+  .rightBtn-text{
+    margin-right: .5rem;
+    font-size: 1rem;
+    transform: skew(-8deg);
+  }
   &:hover{
-    transform:scale(1.05);
-    background: rgba(86, 87, 81, .8);
+    box-shadow: none;
+    background: #fc1d1d;
   }
   &:focus{
     outline: none;
-    border: 1px solid #eee;
+    border: 1px solid #fc1d1d;
     background: #fff;
-    color: rgba(86, 87, 81, .8);
+    color: #fc1d1d;
+  }
+  i{
+    font-size: 1.1rem;
+    transform: skew(-8deg);
+  }
+}
+
+//modal img slide button
+.ibtn{
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  padding: .3rem;
+  font-size: 1.1rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  background: rgba(#ff4300, 0.7);
+  color: #fff;
+  border-radius: 50%;
+  transition: transform .3s ease-in;
+  transform: scale(1);
+  // pointer-events: auto;
+  .fas{
+    pointer-events: none;
+  }
+  &-left{
+    left: .8rem;
+  }
+  &-right{
+    right: .8rem;
+  }
+  &:hover{
+    transform: scale(1.1);
+  }
+  &:focus{
+    outline: 3px dotted #ff4300;
+    outline-offset: 4px;
   }
 }

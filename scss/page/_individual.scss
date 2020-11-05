@@ -1,17 +1,13 @@
 
 .slider{
   position:relative;
-  // border: 5px solid yellow;
   margin-top: 3rem;
   &-cont{
     position:relative;
     width: 100vw;
     height: 70vh;
     overflow:hidden;
-    // border: 9px solid red;
-    // padding-top: .3rem;
-  .indi{
-    &-slide{
+    .indi-1{
       width: 100%;
       // height:100%;
       object-fit: cover;
@@ -25,34 +21,26 @@
         height: 70vh;
         object-fit: cover;
         }
-      }
+        &.noImage{
+          background: #aaadb0;
+          height: 70vh;
+          color:#415049;
+          @include flex();
+          font-size: 3rem;
+          font-family: 'Lobster', serif;
+          letter-spacing: 1.1px;
+        }
+
     }
   }
 }
 
-.cover{
-  &-cont{
-    position: absolute;
-    border: 10px solid rgba(#fff, .6);
-    width: 22rem;
-    height: 15rem;
-    bottom: -9.1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    @include shadow(0.3, 5px);
-}
-  &-img{
-    width: 100%;
-  }
-}
-
 .abouthouse{
-  // border: 3px solid green;
-  // background: #f0f5e6;
   position:relative;
-  top: 10rem;
+  top: 3rem;
   display: block;
-  margin: 0 0 10rem 2rem;
+  // margin: 0 10rem;
+  margin: 0 1rem 6rem;
 }
 
 //1st section styling address rent and share********************************
@@ -127,6 +115,8 @@
 
     .indi-basket-box,
     .indi-share-box{
+      // border: 2px solid green;
+      cursor: pointer;
       .icon{
         fill: #515752;
         width: 1.6rem;
@@ -135,13 +125,24 @@
     }
     .indi-share-box{
       margin-left: 0rem;
+      // border: 2px solid green;
+      .icon{
+        pointer-events: none;
+      }
     }
 
     .indi-basket-box{
       .icon{
+        fill:#8e8e8e;
         text-align: left;
-        stroke:  #799592;
+        transition: transform .2s linear;
+        transform: scale(1);
         stroke-width: .5px;
+        &.active{
+          transform: scale(1.2);
+          fill: #e93434;
+          // stroke:  #aa0909;
+        }
       }
     }
 
@@ -152,7 +153,6 @@
 .owner_details{
   margin: 1rem 0;
   border-bottom: 1px solid #bbb;
-  //border: 2px solid red;
   .own_details_box{
      border: 1px dashed #222;
     // display: inline-block;
@@ -240,6 +240,11 @@
     grid-template-columns: repeat(auto-fit, minmax(12rem, 15rem));
     justify-content: space-evenly;
     grid-gap: 1rem;
+    &.noImage{
+      background: #2d342f;
+      color: #e3eff1;
+      font-size: 1rem;
+    }
   }
   &_pics_box{
     cursor: pointer;
@@ -249,10 +254,13 @@
     &:hover{
       transform: scale(1.09);
     }
+    .indi_room_img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
-  &_img{
-    object-fit: cover;
-  }
+
 }
 
 //6th section styling reviews ****************
@@ -315,8 +323,10 @@
 }
 
 //7th section styling related search
+.related-search_cont{
+  position:relative;
+}
 .related-search{
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
   grid-gap: .7rem;
@@ -331,13 +341,10 @@
 
   &--imgbox{
     width: 100%;
-    // height: 75%;
-    // border-bottom: 4px solid #98a2af;
   }
 
   &--txtbox{
     margin-top: auto;
-    // background: #e0e6ed;
     background: #fff;
     width: 100%;
     .related-search--options{
@@ -346,10 +353,7 @@
       grid-gap: .5rem;
       padding: 0 .3rem;
     }
-    // position:relative;
-    // justify-content: center;
 
-      // height: 25%;
     .indi-price-cont,
     .indi-room-config,
     .indi-loc-cont{
@@ -381,5 +385,192 @@
     .indi-expl-btn-cont{
         @include flex();
       }
+  }
+}
+
+//8th section styling modal
+.modal{
+  &-cont{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+  display: grid;
+  place-items: center;
+  z-index: 8;
+  opacity: 0;
+  visibility: hidden;
+  cursor:pointer;
+  transition: opacity .2s ease-in;
+  &.active{
+    opacity: 1;
+    visibility: visible;
+  }
+ }
+
+ &-body{
+   position:relative;
+   width: 80%;
+   max-width: 870px;
+   height: 70%;
+   background: #fff;
+   border-radius: 10px;
+   @include shadow(.3, 7px);
+   .imageAbsent{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color:#e9fff5;
+     font-size: 2rem;
+     font-family: 'Lobster', serif;
+     letter-spacing: 1.1px;
+   }
+   &.noImageText{
+     background: #aaadb0;
+     @include flex();
+   }
+  }
+
+   &-pic{
+     width: 100%;
+     height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+    position:relative;
+   }
+}
+
+//9th section modal Message
+.modal-msg-body{
+  position:absolute;
+  width: 70vw;
+  max-width: 700px;
+  height: 100px;
+  background: #fff;
+  // background: yellow;
+  border-radius: 10px;
+  @include flex();
+  .message{
+    @include flex();
+    .icon-msg{
+      width: 3rem;
+      height: 3rem;
+      margin-right: 1.5rem;
+      &.liked{
+        fill: #d71111;
+      }
+      &.unliked{
+        fill: #6c6f78;
+      }
+    }
+  }
+
+  .msgText{
+    font-size: 1.6rem;
+    font-family: 'Lobster', serif;
+    letter-spacing: 1px;
+  }
+}
+
+//10. share message body
+.share{
+  &-modalBody{
+    height: 100px;
+    width: 600px;
+    @include flex();
+    border-radius: 10px;
+    @include shadow(.3, 15px);
+    background: #f9f7ef;
+    .share-text{
+      color: #0f0f03;
+      font-size: 2rem;
+      font-family: 'Lobster', serif;
+      letter-spacing: 1.1px;
+      .cartoon{
+        position:relative;
+        top: -5.4px;
+        left: -4px;
+      }
+    }
+  }
+
+  &-ModalUni{
+    width: 50vw;
+    max-width: 550px;
+    height: 280px;
+    @media only screen and (max-width: 760px){
+      height: 320px;
+    }
+    border-radius: 14px;
+    background: #f7fdfe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // @include flex(column, space-between);
+    .shareBtnCont{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      grid-gap: 1.3rem;
+      align-items: center;
+      padding: 1rem;
+
+    .share-btn{
+      border: none;
+      height: 3.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transform: scale(1);
+      color: #fff;
+      transition: transform .4s ease-out;
+        &:hover{
+          transform: scale(1.04);
+        }
+      font-size: 1rem;
+      font-family: 'Source Serif Pro', serif;
+    }
+
+    .button{
+      i{
+        font-size: 5rem;
+        margin-right: .3rem;
+      }
+      &-fb{
+        background: #3b5998;
+        &:focus{
+          outline: 4px dotted #3b5998;
+          outline: 3px;
+        }
+      }
+      &-em{
+        background: #6f757d;
+        &:focus{
+          outline: 4px dotted #6f757d;
+          outline: 3px;
+        }
+      }
+      &-wh{
+        background: #25D366;
+        &:focus{
+          outline: 4px dotted #25D366;
+          outline: 3px;
+        }
+      }
+      &-pi{
+        background: #BD081C;
+        &:focus{
+          outline: 4px dotted #BD081C;
+          outline: 3px;
+        }
+      }
+
+      i{
+        font-size: 5rem;
+        margin-right: .3rem;
+      }
+    }
+    }
   }
 }
