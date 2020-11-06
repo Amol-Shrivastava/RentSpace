@@ -12,6 +12,15 @@ const nextBtn = document.getElementById('next');
 const comprevBtn = document.getElementById('comprev');
 const comnextBtn = document.getElementById('comnext');
 
+//login Modal and button
+const loginModal = document.querySelector('#loginModal');
+const loginbtn = document.querySelector('.logIn');
+
+//sign up modal functionality
+const signModal = document.querySelector('#signupModal');
+const signupbtn = document.querySelector('.signUp');
+
+
 // navbar animation
 const navOptions = {
   // root: hero,
@@ -155,4 +164,31 @@ comnextBtn.addEventListener('click', () => {
     counterReviews = -1;
   }
   showRightCom();
+})
+
+
+//login form functionality
+
+loginbtn.addEventListener('click', () => {
+  loginModal.classList.add('show');
+})
+
+loginModal.addEventListener('click', et =>{
+  if(et.target.id === 'loginModal'){
+    loginModal.classList.remove('show');
+  }
+})
+
+//signup functionality
+signupbtn.addEventListener('click', () => {
+  signModal.classList.add('show');
+})
+
+signModal.addEventListener('click', en => {
+  console.log(en.target);
+
+  if(en.target.id === 'signupModal'){
+    signModal.classList.remove('show');
+  }
+
 })

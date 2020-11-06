@@ -458,3 +458,35 @@
     outline-offset: 4px;
   }
 }
+
+.loginformbtn,
+.signformbtn{
+  padding: .3rem .6rem;
+  font-size: 1rem;
+  background: #00BFA6;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  @include shadow(.3, 5px);
+  cursor: pointer;
+  &:hover{
+    box-shadow: none;
+  }
+  &:focus{
+    border:none;
+    outline: 3px dotted #00BFA6;
+    outline-offset: 3px;
+  }
+  @media only screen and (max-width: 700px) {
+    margin-bottom: 3rem;
+  }
+
+}
+
+.signformbtn{
+  background: #ff4300;
+  &:focus{
+    outline: 3px dotted #ff4300;
+  }
+}

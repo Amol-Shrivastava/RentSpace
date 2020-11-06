@@ -29,6 +29,14 @@ const iconsvg = document.querySelector('.icon-heart2');
 const modalMsg = document.querySelector('#messageModal');
 const msgBody = document.querySelector('.modal-msg-body');
 
+//login Modal and button
+const loginModal = document.querySelector('#loginModal');
+const loginbtn = document.querySelector('.logIn');
+
+//sign up modal functionality
+const signModal = document.querySelector('#signupModal');
+const signupbtn = document.querySelector('.signUp');
+
 
 //1 Image functionality**************************************************
 //checking for no images
@@ -37,16 +45,6 @@ if(mainImg == null){
   mainImgCont.classList.add('noImage');
   mainImgCont.innerHTML = 'No Image to Preview';
 }
-
-// roomImgs.forEach( (img, index) => {
-// console.log(img);
-//   // if(img == null){
-//   //   console.log(roomsImgsCont[index]);
-//   //   roomsImgsCont[index].classList.add('noImage');
-//   //   // mainImgCont.classList.add('noImage');
-//   //   // mainImgCont.innerHTML = 'No Image to Preview';
-//   // }
-// })
 
 mainImgCont.addEventListener('click', e => {
   if(mainImg !== null){
@@ -235,4 +233,32 @@ shareModal.addEventListener('click', e => {
   if(!e.target.classList.contains('share-ModalUni')){
     shareModal.classList.remove('active');
   }
+})
+
+
+
+//login form functionality
+
+loginbtn.addEventListener('click', () => {
+  loginModal.classList.add('show');
+})
+
+loginModal.addEventListener('click', et =>{
+  if(et.target.id === 'loginModal'){
+    loginModal.classList.remove('show');
+  }
+})
+
+//signup functionality
+signupbtn.addEventListener('click', () => {
+  signModal.classList.add('show');
+})
+
+signModal.addEventListener('click', en => {
+  console.log(en.target);
+
+  if(en.target.id === 'signupModal'){
+    signModal.classList.remove('show');
+  }
+
 })

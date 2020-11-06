@@ -26,8 +26,13 @@
     <nav class="nav">
       <ul class="nav_list">
         <li class="nav_list--items"><a href="index.html" class="nav_list--links nav-logo">RentSpace</a></li>
-        <li class="nav_list--items"><span class="nav_list--links login hover-link">LogIn</span></li>
-        <li class="nav_list--items"><span class="nav-list-links join">JOIN</span></li>
+        <li class="nav_list--items logIn"><span class="nav_list--links login hover-link">LogIn</span></li>
+        <li class="nav_list--items signUp"><span class="nav-list-links join">JOIN</span></li>
+        <li class="nav_list--items user-icon"><span class="nav-list-links">
+            <figure class="userCont">
+              <img src="./images/indi_reviewer/reviewer-1.jpg" alt="" class="userImg">
+            </figure>
+          </span></li>
     </nav>
     <section class="hero">
 
@@ -549,6 +554,53 @@
 </div>
       <div class="trans-btn cmnt-btn next-btn" id="comnext">
         <span class="icon icon-arrow-right">&#11162;</span>
+      </div>
+
+
+      <!-- Login modal -->
+      <div class="loginModal-cont" id="loginModal">
+
+        <div class="loginModal-body">
+
+          <div class="content-section">
+            <h2 class="loginheading">Sign In Your Account
+              <div class="headingshadow"></div>
+            </h2>
+
+            <form action="" class="loginForm">
+              <input type="email" name="email" id="" placeholder="Enter your Email address">
+              <input type="password" name="password" id="" placeholder="Enter your Password">
+              <button type="submit" class="loginformbtn">Sign In</button>
+            </form>
+
+          </div>
+
+          <div class="svg-section"></div>
+
+        </div>
+      </div>
+
+      <!-- signup modal -->
+      <div class="loginModal-cont" id="signupModal">
+        <div class="signModal-body">
+          <div class="signcontent-section">
+            <h2 class="signheading">Create Your Account
+              <div class="signheadingshadow"></div>
+            </h2>
+
+            <form action="" class="signForm">
+              <input type="text" name="username" id="" placeholder="Enter your name">
+              <input type="email" name="email" id="" placeholder="Enter your Email address">
+              <input type="tel" pattern ="[0-9]{1}" name="email" id="" placeholder="Enter your Phone number">
+              <input type="text" name="password" id="" placeholder="Create your Password">
+              <button type="submit" class="signformbtn">Sign Up</button>
+            </form>
+
+          </div>
+
+          <div class="signsvg-section"></div>
+
+        </div>
       </div>
 
     </section>

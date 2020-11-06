@@ -33,6 +33,41 @@ const spaceDec = document.getElementById('Space Description');
 const price = document.getElementById('Price');
 const vacancy = document.getElementById('occupancy-state');
 
+//login Modal and button
+const loginModal = document.querySelector('#loginModal');
+const loginbtn = document.querySelector('.logIn');
+
+//sign up modal functionality
+const signModal = document.querySelector('#signupModal');
+const signupbtn = document.querySelector('.signUp');
+
+//login form functionality
+
+loginbtn.addEventListener('click', () => {
+  loginModal.classList.add('show');
+})
+
+loginModal.addEventListener('click', et =>{
+  if(et.target.id === 'loginModal'){
+    loginModal.classList.remove('show');
+  }
+})
+
+//signup functionality
+signupbtn.addEventListener('click', () => {
+  signModal.classList.add('show');
+})
+
+signModal.addEventListener('click', en => {
+  console.log(en.target);
+
+  if(en.target.id === 'signupModal'){
+    signModal.classList.remove('show');
+  }
+
+})
+
+
 //city selection
 selectBox.addEventListener('click', e => {
   // console.log(e.target);

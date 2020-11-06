@@ -398,7 +398,35 @@
   text-align: center;
   display: block;
   margin-top: 1.4rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   letter-spacing: 1.1px;
   font-family: 'Lobster', serif;
 }
+
+//login modal heading
+.loginheading,
+.signheading{
+  // display: inline-block;
+  margin: 2rem auto 4rem;
+  position: relative;
+  top: 6rem;
+  // border: 26 dotted red;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: 'Source Serif Pro', serif;
+  color: #595a60;
+  @include flex(column, center);
+  @media only screen and (max-width: 700px) {
+    top: 0;
+  }
+}
+
+.signheading{
+  top: 1rem;
+  // margin-bottom: 0;
+  @media only screen and (max-width: 750px) {
+    top: 0;
+  }
+}
+
+  // @include shadow(.1, 7px);

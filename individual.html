@@ -26,16 +26,20 @@
     <nav class="other-page-navbar">
       <ul class="nav_list">
         <li class="nav_list--items"><a href="index.html" class="nav_list--links nav-logo">RentSpace</a></li>
-        <li class="nav_list--items"><span class="nav_list--links login hover-link">LogIn</span></li>
-        <li class="nav_list--items"><span class="nav-list-links join">JOIN</span></li>
+        <li class="nav_list--items logIn"><span class="nav_list--links login hover-link">LogIn</span></li>
+        <li class="nav_list--items signUp"><span class="nav-list-links join">JOIN</span></li>
+        <li class="nav_list--items user-icon"><span class="nav-list-links">
+            <figure class="userCont">
+              <img src="./images/indi_reviewer/reviewer-1.jpg" alt="" class="userImg">
+            </figure>
+          </span></li>
     </nav>
 
     <section class="slider">
       <div class="slider-cont">
 
         <div class="indi-1">
-          <img src="./images/indi-house&interiors/first_house/house-main-img.jpg"
-          alt="" class="indi-house-img">
+          <img src="./images/indi-house&interiors/first_house/house-main-img.jpg" alt="" class="indi-house-img">
         </div>
 
       </div>
@@ -558,21 +562,68 @@
     </div>
 
     <!-- Message displaying modal -->
-      <div class="modal-cont" id="messageModal"></div>
+    <div class="modal-cont" id="messageModal"></div>
 
     <!-- share webpage modal -->
     <div class="modal-cont" id="share-Modal">
       <div class="share-ModalUni">
         <h4 class="share-ModalHeading">Share Link</h4>
         <div class="shareBtnCont">
-        <button class="share-btn button-fb" data-sharer="facebook" data-hashtag="hashtag" data-url=""><i class="fab fa-facebook"></i> Share on Facebook</button>
-        <!-- <button class="share-btn button-em" data-sharer="email" data-title="" data-url="" data-subject="Hey! Check out this URL" data-to="amolshrivastava448@gmail.com"><i class="fas fa-envelope"></i> Share via Email</button> -->
+          <button class="share-btn button-fb" data-sharer="facebook" data-hashtag="hashtag" data-url=""><i class="fab fa-facebook"></i> Share on Facebook</button>
+          <!-- <button class="share-btn button-em" data-sharer="email" data-title="" data-url="" data-subject="Hey! Check out this URL" data-to="amolshrivastava448@gmail.com"><i class="fas fa-envelope"></i> Share via Email</button> -->
 
-        <button class="share-btn button-wh" data-sharer="whatsapp" data-title="" data-url="" data-image=""><i class="fab fa-whatsapp"></i> Share on Whatsapp</button>
-        <button class="share-btn button-pi" data-sharer="pinterest" data-url="" data-image=""><i class="fab fa-pinterest"></i> Share on Pinterest</button>
+          <button class="share-btn button-wh" data-sharer="whatsapp" data-title="" data-url="" data-image=""><i class="fab fa-whatsapp"></i> Share on Whatsapp</button>
+          <button class="share-btn button-pi" data-sharer="pinterest" data-url="" data-image=""><i class="fab fa-pinterest"></i> Share on Pinterest</button>
         </div>
       </div>
     </div>
+
+    <!-- Login modal -->
+    <div class="loginModal-cont" id="loginModal">
+
+      <div class="loginModal-body">
+
+        <div class="content-section">
+          <h2 class="loginheading">Sign In Your Account
+            <div class="headingshadow"></div>
+          </h2>
+
+          <form action="" class="loginForm">
+            <input type="email" name="email" id="" placeholder="Enter your Email address">
+            <input type="password" name="password" id="" placeholder="Enter your Password">
+            <button type="submit" class="loginformbtn">Sign In</button>
+          </form>
+
+        </div>
+
+        <div class="svg-section"></div>
+
+      </div>
+    </div>
+
+    <!-- signup modal -->
+    <div class="loginModal-cont" id="signupModal">
+      <div class="signModal-body">
+        <div class="signcontent-section">
+          <h2 class="signheading">Create Your Account
+            <div class="signheadingshadow"></div>
+          </h2>
+
+          <form action="" class="signForm">
+            <input type="text" name="username" id="" placeholder="Enter your name">
+            <input type="email" name="email" id="" placeholder="Enter your Email address">
+            <input type="tel" pattern ="[0-9]{1}" name="email" id="" placeholder="Enter your Phone number">
+            <input type="text" name="password" id="" placeholder="Create your Password">
+            <button type="submit" class="signformbtn">Sign Up</button>
+          </form>
+
+        </div>
+
+        <div class="signsvg-section"></div>
+
+      </div>
+    </div>
+
 
   </div>
 

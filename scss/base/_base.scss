@@ -1,14 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   height: 100%;
 }
 
-body{
+body {
   font-size: 0.625rem; //1rem = 10px
   font-family: var(--font-family);
   overflow-x: hidden;
@@ -17,20 +17,20 @@ body{
   flex-direction: column;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
-a{
+a {
   // font-family: inherit;
   text-decoration: none;
 }
 
-ul{
+ul {
   list-style: none;
 }
-
 //navbar styling
+
 .nav,
 .other-page-navbar {
   --logo-clr: #fefeff;
@@ -66,24 +66,20 @@ ul{
   background: #07080f;
   margin-bottom: 2rem;
 }
-
 //Intersection Observer API classes Styling
-
 .nav-scrolled {
   --logo-clr: #c4e4c9;
   --login-clr: #b0b7d6;
   @include shadow(0.3, 14px);
   background: #07080f;
 }
-
-
 //footer section styling
-
 .footer {
   margin-top: auto;
   color: #fff;
   padding: 2rem 1rem;
   background-color: rgba(#2e2e34, 1);
+
   &-options {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
@@ -106,22 +102,24 @@ ul{
     padding: 0.4rem 0.8rem;
   }
 
-  &-disclaimer{
+  &-disclaimer {
     display: block;
-    margin: 0 0;
-    width:100%;
-    position:relative;
+    margin: 0;
+    width: 100%;
+    position: relative;
     line-height: 1.4;
-    font-size: .7rem;
+    font-size: 0.7rem;
     letter-spacing: 1.1px;
     color: #c1ccc9;
-    .disclaimer{
-      font-size:.8rem;
-      letter-spacing:1.1px;
+
+    .disclaimer {
+      font-size: 0.8rem;
+      letter-spacing: 1.1px;
       color: #f1e8e7;
     }
-    &::before{
-      position:absolute;
+
+    &::before {
+      position: absolute;
       content: '';
       top: -14px;
       left: 50%;
@@ -130,7 +128,7 @@ ul{
       height: 2px;
       border-radius: 20px;
       background-color: #d2eede;
-      }
+    }
   }
 
   &-ack {
@@ -140,9 +138,7 @@ ul{
     padding: 0.6rem;
   }
 }
-
 //navbar section typography
-
 .nav-logo {
   font-size: 2.4rem;
   letter-spacing: 1px;
@@ -151,7 +147,7 @@ ul{
   color: var(--logo-clr);
 }
 
-.login{
+.login {
   font-size: 1.1rem;
   color: var(--login-clr);
   letter-spacing: 1px;
@@ -165,14 +161,257 @@ ul{
   color: #fff;
   border-radius: 22px;
   padding: 0.2rem 0.8rem;
-  &:hover{
+
+  &:hover {
     color: #e3662a;
     background: #fff;
   }
 }
+//user icon styling
 
+.userCont {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+
+  .userImg {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+    transform: scale(1.04);
+  }
+
+  &:hover {
+    .userImg {
+      transform: scale(1.01);
+    }
+  }
+}
+//login Modal
+
+.loginModal {
+  &-cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include flex();
+    transform: translateY(-150%);
+    transition: transform .4s ease-out;
+
+    &.show{
+      transform: translateY(0);
+    }
+  }
+
+  &-body {
+    width: 90vw;
+    max-width: 800px;
+    min-height: 500px;
+    background: #fff;
+    @include shadow(0.3, 12px);
+    border-radius: 8px;
+    padding: 0 0.4rem;
+    display: grid;
+    position: relative;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "content svgsect";
+    grid-template-rows: 1fr;
+    @media only screen and (max-width: 700px) {
+      top: 5rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: 43% 60%;
+      grid-template-areas: "svgsect" "content";
+    }
+
+    .content-section {
+      grid-area: content;
+      padding: 0 0.2rem 2rem;
+      position: relative;
+      border-right: 3px dashed #141113;
+      @include flex(column);
+      @media only screen and (max-width: 700px) {
+        border-right: none;
+      }
+
+      .headingshadow
+      {
+        position: absolute;
+        z-index: 6;
+        top: 1.4rem;
+        width: 79%;
+        max-width: 150px;
+        height: 60px;
+        border-radius: 60%;
+        transform: rotateX(80deg);
+        background: #e9e5f0;
+      }
+
+      .loginForm{
+        width: 100%;
+        height: 100%;
+        padding: 0 .3rem;
+        // border: 2px dashed red;
+        position:relative;
+        top: 1rem;
+        flex: 1;
+        @include flex(column, center);
+
+        input{
+          width: 100%;
+          max-width: 400px;
+          padding:.3rem;
+          margin-bottom: 1.5rem;
+          border-radius: 3px;
+          font-size: 1rem;
+          color: #000;
+          font-weight: bold;
+          letter-spacing:1px;
+          font-family: 'Poppins', serif;
+          border: 1px solid #3a444f;
+          &::placeholder{
+            font-size: .8rem;
+            color:#8d8c8e;
+            font-weight: normal;
+          }
+          &:focus{
+            border:none;
+            outline: 3px solid #00BFA6;
+          }
+        }
+        // grid-template-columns: 400px;
+        // grid-template-rows: 1fr 1fr 1fr;
+      }
+    }
+
+    .svg-section {
+      grid-area: svgsect;
+      background: url("../images/login.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      @media only screen and (max-width: 700px) {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+.signModal{
+  &-cont{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+@include flex();
+transform: translateY(-100%);
+transition: transform .4s ease-out;
+}
+
+&-body{
+    margin-top: 2rem;
+    width: 80vw;
+    max-width: 860px;
+    min-height: 500px;
+    background-color: #fff;
+    @include shadow(.5, 9px);
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "signcontent-section signsvg-section";
+    @media only screen and (max-width: 750px) {
+      position:relative;
+      top: 5rem;
+      height: 600px;
+      margin-bottom: 5rem;
+      overflow-y: visible;
+      grid-template-columns: 1fr;
+      grid-template-rows: 40% 60%;
+      grid-template-areas: "signsvg-section"
+                            "signcontent-section";
+
+    }
+    .signcontent-section{
+      position:relative;
+      grid-area: signcontent-section;
+      border-right: 2px dashed #090506;
+      display: flex;
+      flex-direction: column;
+      @media only screen and (max-width: 750px) {
+          margin-top: -1.5rem;
+          border-right: none;
+      }
+      .signForm{
+      width: 100%;
+      padding: 0 .5rem;
+      flex: 1;
+      // border: 2px dashed red;
+      position: relative;
+      padding-bottom: 1rem;
+      // top: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content : space-around;
+      @media only screen and (max-width: 750px) {
+          // margin-top: 1rem;
+          margin-bottom: 3rem;
+      }
+      input{
+        width: 100%;
+        padding: .3rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #110b10;
+        font-family: 'Poppins', serif;
+        border: 1px solid #91908d;
+        margin-bottom: -.3rem;
+        &:focus{
+          outline: 2px solid #DA450B;
+        }
+        &::placeholder{
+          font-size: .8rem;
+          color: #63625a;
+          font-weight: normal;
+        }
+
+        @media only screen and (max-width: 750px) {
+            margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+    .signheadingshadow{
+        position:absolute;
+        top:.3rem;
+        width: 150px;
+        height: 100px;
+        border-radius: 60%;
+        transform: rotateX(80deg);
+        background: #e9e5f0;
+      }
+
+    .signsvg-section{
+      grid-area: signsvg-section;
+      background: url('../images/signup.svg');
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      @media only screen and (max-width: 750px) {
+        background-size: 100% 90%;
+      }
+    }
+}
+}
 
 //footer section typography
+
 .footer {
   &-links {
     font-size: 1rem;
