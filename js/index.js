@@ -178,9 +178,11 @@ loginbtn.addEventListener('click', () => {
 })
 
 loginModal.addEventListener('click', et =>{
+  console.log(et.target);
   if(et.target.id === 'loginModal'){
     loginModal.classList.remove('show');
   }
+  // console.log(et.target);
 })
 
 //signup functionality

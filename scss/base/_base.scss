@@ -29,6 +29,7 @@ a {
 ul {
   list-style: none;
 }
+
 //navbar styling
 
 .nav,
@@ -202,12 +203,19 @@ ul {
     width: 100%;
     height: 100%;
     @include flex();
-    transform: translateY(-200%);
     transition: transform .4s linear;
     z-index: 500;
     opacity: 0;
-    &.show{
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: transform .9s ease, opacity .2s linear;
+  &.show{
       transform: translateY(0);
+      .loginModal-body,
+      .signModal-body{
+        transform: translateY(0);
+        opacity: 1;
+      }
       opacity: 1;
     }
   }
@@ -224,6 +232,9 @@ ul {
     position: relative;
     grid-template-columns: 40% 60%;
     grid-template-areas: "content svgsect";
+    transform: translateY(-100%);
+    opacity:0;
+    // transition: transform .3s linear, opacity .1s ease;
     grid-template-rows: 1fr;
     @media only screen and (max-width: 700px) {
       top: 5rem;
@@ -318,11 +329,14 @@ transition: transform .4s ease-out;
 &-body{
     // margin-top: .5rem;
     // margin-top: -1rem;
+    transition: transform .3s linear, opacity .1s ease;
+    transform: translateY(-100%);
     width: 80vw;
     max-width: 860px;
     min-height: 500px;
     background-color: #fff;
     @include shadow(.5, 9px);
+    opacity:0;
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: 1fr;
@@ -419,10 +433,10 @@ transition: transform .4s ease-out;
   width: 100%;
   height: 100%;
   z-index: 600;
-
-  opacity: 0;
+  transform: translateY(-200%);
   // opacity:0;
   &.show{
+    transform: translateY(0);
     .userBody{
       transform: translateY(0);
       opacity: 1;
