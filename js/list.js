@@ -34,12 +34,15 @@ const loginbtn = document.querySelector('.logIn');
 const signModal = document.querySelector('#signupModal');
 const signupbtn = document.querySelector('.signUp');
 
+//user functionality
+const userModal = document.querySelector('#userModal');
+const userIcon = document.querySelector('.user-icon');
 
 
 //login form functionality
 
 loginbtn.addEventListener('click', () => {
-  loginModal.classList.add('show');
+  loginModal.classList.toggle('show');
 })
 
 loginModal.addEventListener('click', et =>{
@@ -50,7 +53,7 @@ loginModal.addEventListener('click', et =>{
 
 //signup functionality
 signupbtn.addEventListener('click', () => {
-  signModal.classList.add('show');
+  signModal.classList.toggle('show');
 })
 
 signModal.addEventListener('click', en => {
@@ -61,6 +64,18 @@ signModal.addEventListener('click', en => {
   }
 
 })
+
+userIcon.addEventListener('click', () => {
+    userModal.classList.toggle('show');
+})
+
+userModal.addEventListener('click', ep => {
+  // console.log(ep.target);
+  if(ep.target.id === 'userModal'){
+    userModal.classList.remove('show');
+  }
+})
+
 
 
 togglebtn.addEventListener('click', () => {
