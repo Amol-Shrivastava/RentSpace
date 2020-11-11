@@ -1,0 +1,108 @@
+:root{
+  --acc-sidebar-width: 13rem;
+  --acc-sidebar-cont-width: var(--acc-sidebar-width);
+}
+
+.acc-container{
+  margin-top: 3rem;
+  min-height: 100vh;
+  display: grid;
+  position: relative;
+  grid-template-rows:1fr;
+  grid-template-columns: var(--acc-sidebar-cont-width) calc(100% - var(--acc-sidebar-cont-width));
+  grid-template-areas: "sidebar content";
+  font-size: 1.2rem;
+  grid-gap: 1rem;
+  @media only screen and (max-width: 1000px){
+    grid-gap: 0;
+  }
+  //sidebar styling section
+  &--sidebar{
+    grid-area: sidebar;
+    position: relative;
+    //sidebar box styling
+    &-box{
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 13rem;
+      height: 100%;
+      // background: rgb(74, 65, 45);
+      @include shadow(.9, 4px);
+      background: rgb(238, 235, 235);
+      z-index: 8;
+    }
+  }
+
+  //content section styling
+  &--content{
+    grid-area: content;
+    position:relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+      width: .5rem;
+    }
+    &::-webkit-scrollbar-track{
+      border-radius: 5px;
+      background: rgba(0, 0 ,0 ,.5);
+    }
+    &::-webkit-scrollbar-thumb{
+      border-radius: 5px;
+      background: #9aadac;
+    }
+    // &::-webkit-scroll
+  }
+
+  //toggle btn styling
+  &--toggle-btn{
+    position: absolute;
+    top: .3rem;
+    left: 0;
+    grid-area: toggle;
+    &.toggle{
+      outline: 3px dotted #ee5e19;
+      outline-offset: 4px;
+    }
+    // @include flex();
+    // border: 2px dashed red;
+    // display: block;
+  }
+}
+
+.start--content{
+  width: 100%;
+  height: 100%;
+  background: url('../images/acc-content.svg');
+  background-size: 60% 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1000px){
+  :root{
+    --acc-sidebar-width: 0;
+    // --acc-sidebar-cont-width: var(--acc-sidebar-width);
+  }
+  .acc-container{
+    grid-template-rows: 3.5rem calc(100% - 3.5rem);
+    grid-template-columns: 0 100%;
+    grid-template-areas: ". ."
+                        "sidebar content";
+    &--sidebar{
+        &-box{
+          transition: transform .3s ease;
+          transform: translateX(-130%);
+          &.show{
+            transform: translateX(0);
+          }
+        }
+
+      }
+
+      &--toggle-btn{
+       @include flex();
+       pointer-events: auto;
+      }
+  }
+}

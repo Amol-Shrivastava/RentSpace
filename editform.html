@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Post Your Property >> RentSpace</title>
+  <title>Edit Your Property >> RentSpace</title>
 
   <!-- google-font -->
   <link
@@ -401,14 +401,25 @@
             <span class="asterick">*</span>
             <span class="occupancy-text">When your property will be, please update
               occupancy state to occupied in order to avoid notifications from Lessees.</span>
-            <br><label for="state" class="switch">
-              <span class="state-text">Vaccant</span>
-              <span class="vaccantBox">
-                <i class="fas fa-check-square"></i>
-              </span>
-            </label>
+            <br>
+            <div class="toggleswitchCont mb--lg">
+            <div class="post--switch  mt--md mb--md">
+              <span class="switch--text">Vaccant</span>
+              <label for="vaccant" class="sliderToggle">
+                <span class="circle"></span>
+              </label>
+              <input type="checkbox" name="" id="vaccant">
+            </div>
+
+            <div class="post--switch occupied">
+              <span class="switch--text occp">Occupied</span>
+              <label for="occ" class="sliderToggle slideback">
+                <span class="circle sliderev"></span>
+              </label>
+              <input type="checkbox" name="" id="occ">
+            </div>
+          </div>
           </span>
-        </div>
 
         <div class="form_control">
           <button type="submit" class="sub-btn"> Upload </button>
@@ -517,6 +528,6 @@
   </div>
 </div>
   <script src="./js/lessor_form.js"></script>
-</body>
+  </body>
 
 </html>

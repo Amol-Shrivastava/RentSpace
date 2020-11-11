@@ -74,6 +74,7 @@ ul {
   @include shadow(0.1, 3px);
   background: #07080f;
 }
+
 //footer section styling
 .footer {
   margin-top: auto;
@@ -511,11 +512,17 @@ transition: transform .4s ease-out;
   &-links {
     font-size: 1rem;
     color: #c6c8c9;
-
-    &:hover {
+    &:hover{
       outline: 3px dotted var(--link-hover-clr-1);
       outline-offset: 7px;
     }
+
+    &:focus {
+      outline: 3px dotted #c6c8c9;
+      outline-offset: 7px;
+    }
+
+
 
     &-logo {
       font-size: 2rem;

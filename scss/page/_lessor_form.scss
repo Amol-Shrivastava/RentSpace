@@ -438,3 +438,70 @@
 .posting_owner{
   margin-bottom: .6rem;
 }
+
+//edit form Styling
+.edit--occup{
+  // border: 2px dashed red;
+}
+
+.post{
+  &--switch{
+    .switch--text{
+      margin-right: 1rem;
+      font-size: 1.2rem;
+      font-family: 'Source Serif Pro', serif;
+      font-weight: bolder;
+      &.slide{
+        font-weight: lighter;
+        color: #acabb3;
+      }
+    }
+    .occp{
+      font-weight: lighter;
+      color: #acabb3;
+      &.slide{
+        font-weight: bolder;
+        color: #000000;
+      }
+    }
+
+    input{
+      display: none;
+    }
+    // border: 2px dashed red;
+    .sliderToggle{
+      border-radius: 15px;
+      border: 1px solid grey;
+      background: #f16a64;
+      padding:.1rem 1.5rem;
+      position: relative;
+      cursor:pointer;
+
+      .circle,
+      .sliderev{
+        transition: transform .4s ease;
+        position: absolute;
+        cursor:pointer;
+        top: 0;
+        left: .05rem;
+        width: 15px;
+        height: 100%;
+        border-radius: 50%;
+        background: #eaecf1;
+      }
+      .circle{
+        transform: translateX(210%);
+        &.slide{
+          transform: translateX(0);
+        }
+      }
+
+      .sliderev{
+        transform: translateX(0%);
+        &.slide{
+          transform: translateX(210%);
+        }
+      }
+    }
+  }
+}

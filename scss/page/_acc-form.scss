@@ -1,0 +1,278 @@
+.acc-cont{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  width: calc(100% - 13rem);
+  height: 97.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // border: 3px solid red;
+  @media only screen and (min-width: 1000px){
+    top: 2.4rem;
+  }
+  @media only screen and (max-width: 1000px){
+      width: calc(100% - 13rem);
+  }
+}
+
+// Form styling section***************
+.formblock{
+  position: absolute;
+  top: 1rem;
+  display:none;
+  &.show{
+  @include flex(column, flex-start);
+  }
+}
+
+.profile--head{
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Source Serif Pro', serif;
+  border-bottom: 1px solid #333;
+  width: 60%;
+  max-width: 600px;
+  letter-spacing: 1.1px;
+  color: #5a6657;
+}
+.profile--form{
+  position: relative;
+  width: 60%;
+  max-width: 800px;
+}
+
+#picbtn{
+  display: none;
+}
+
+.pic{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #222;
+  cursor: pointer;
+  width: 5.4rem;
+  height: 5.4rem;
+  border-radius: 50%;
+  @include flex();
+  .userImage{
+    display:none;
+  }
+}
+
+.other-details{
+  margin-top: 6rem;
+  // border: 3px solid green;
+  display: block;
+  width: 100%;
+  // max-width: 700px;
+}
+
+.input--det{
+  width: 100%;
+    &:nth-child(2){
+      margin: 1.1rem 0;
+    }
+    .acc--label{
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+    .acc-input{
+      border: 1px solid #222;
+      width: 100%;
+      font-size: 1rem;
+      font-family: 'Source Serif Pro', serif;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: .3rem .4rem;
+      margin-top: .2rem;
+      &:focus{
+        outline:none;
+        border-bottom: 3px solid #e86e4e;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        &:invalid{
+          border: 1px solid #bf0505;
+          box-shadow: 0 4px 10px rgba(194, 10, 7, .4);
+        }
+      }
+    }
+}
+
+.updateBtn{
+  width: 100%;
+  margin: 2.1rem 0;
+  padding: .4rem;
+  background: #d23207;
+  color: #fff;
+  border: none;
+  @include shadow(.4, 8px);
+  cursor: pointer;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-family: 'Source Serif Pro', serif;
+  &:hover{
+    box-shadow: none;
+  }
+  &:focus{
+    outline: 2px dashed #d23207;
+    outline-offset: 3px;
+  }
+}
+
+
+//Collection section styling********************
+.collection{
+  width: 100%;
+  padding: 0 0 0 .8rem;
+  display:none;
+  &.show{
+  @include flex(column, flex-start);
+  }
+  &-cont{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .collection-box{
+      position:relative;
+      border: 1px solid #222;
+      // min-height: 400px;
+      background-color: rgba(0, 0, 0, .7);
+      margin-bottom: .5rem;
+      flex: 0 1 calc(50% - 1rem);
+      &:not(:last-child){
+        margin-right: 1rem;
+      }
+      @media only screen and (min-width: 750px){
+        flex: 0 0 calc(33% - 1rem);
+        justify-content: space-between;
+        // max-height: 20rem;
+      }
+
+      @media only screen and (max-width: 930px) and (min-width: 650px){
+        flex: 0 0 calc(50% - 1rem);
+      }
+
+      @media only screen and (max-width: 650px){
+        flex: 0 1 calc(100% - 1rem);
+      }
+
+      .txtbox{
+        position: absolute;
+        bottom: .3rem;
+        padding: .5rem .4rem;
+        background-color: rgba(0, 0, 0, .7);
+        color: #fff;
+        @include flex(row, space-between);
+        flex-wrap: wrap;
+        font-family: 'Source Serif Pro', serif;
+        width: 100%;
+        z-index:5;
+        @media only screen and (max-width: 1200px) and (min-width: 930px){
+          text-align: center;
+        }
+        .collection--item{
+          @media only screen and (max-width: 1200px) and (min-width: 930px){
+            font-size: 1rem;
+            flex: 0 0 100%;
+            &:nth-child(2){
+              position: relative;
+              left: -.6rem;
+            }
+            &:not(:last-child){
+              margin-bottom: .4rem;
+            }
+          }
+        }
+        .indian-rupee{
+          width: .9rem;
+          height: .9rem;
+          fill: #fff;
+        }
+        .collection--city{
+          margin: 0 .5rem;
+        }
+      }
+
+      .options{
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: .7;
+        border-radius: 50%;
+        @include flex();
+        &:hover{
+          opacity: 1;
+        }
+        .icon{
+          width: 1rem;
+          height: 1rem;
+          pointer-events: none;
+          fill: #fff;
+        }
+
+        &_list--cont{
+          position: absolute;
+          right: 0.3rem;
+          top: 2.0rem;
+          border: 1px solid #333;
+          font-size: .8rem;
+          width: 80px;
+          height: 63px;
+          background: #fff;
+          text-align: center;
+          // transform: translateY(-100%);
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity .3s ease;
+          &.show{
+            // transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+          }
+          font-family: 'Source Serif Pro', serif;
+          .options--list{
+            // padding: .rem 0;
+            @include flex(column, space-between);
+            height: 100%;
+            .options--link{
+              height: 100%;
+              width: 100%;
+              color: #000;
+            }
+            .options--items{
+              height: 100%;
+              width: 100%;
+              @include flex();
+              &:nth-child(1){
+                border-bottom: 1px dashed #a293a2;
+              }
+              &:hover{
+                background: #eee;
+                font-size: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//posts section styling
+.posts{
+  width: 100%;
+  margin-left: .5rem;
+  display:none;
+  &.show{
+  @include flex(column, flex-start);
+  }
+}

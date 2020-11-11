@@ -45,6 +45,15 @@ const signupbtn = document.querySelector('.signUp');
 const userModal = document.querySelector('#userModal');
 const userIcon = document.querySelector('.user-icon');
 
+//slide toggle--vacant
+const slideLabel = document.querySelector('.switch--text');
+const sliderTrack = document.querySelector('.sliderToggle');
+const sliCircle = document.querySelector('.circle');
+
+//slide toggle--Occupied
+const occp = document.querySelector('.occp');
+const slideback = document.querySelector('.slideback');
+const sliderev = document.querySelector('.sliderev');
 
 //login form functionality
 
@@ -369,4 +378,23 @@ previousImg.style.display = 'none';
 btn.nextElementSibling.style.display = 'flex';
 btn.classList.remove('show');
 })
+})
+
+//switch toggle functionality
+
+sliderTrack.addEventListener('click', e =>{
+    sliCircle.classList.toggle('slide');
+    slideLabel.classList.toggle('slide');
+
+    // sliderev.classList.add('slide');
+    // occp.classList.add('slide');
+})
+
+slideback.addEventListener('click', () => {
+
+    sliderev.classList.toggle('slide');
+    occp.classList.toggle('slide');
+
+    // sliCircle.classList.add('slide');
+    // slideLabel.classList.add('slide');
 })

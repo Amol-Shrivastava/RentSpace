@@ -1,0 +1,31 @@
+//sidebar content Styling
+//1. SIDEBAR
+.acc{
+  &-list{
+    @include flex(column, flex-start);
+    height: 100%;
+  }
+    &-items{
+      width: 100%;
+      padding: 1rem 0 1rem .7rem;
+      text-align: center;
+      border-bottom: 2px dashed #ee5e19;
+      cursor: pointer;
+      @include flex(row, space-between);
+      &:hover{
+        background: #c1c1b2;
+        color: #fff;
+      }
+      .arrow{
+        border-top: .45rem solid transparent;
+        border-bottom: .45rem solid transparent;
+        border-right: .45rem solid #ee5e19;
+        position: relative;
+        z-index: 90;
+        display: none;
+        &.show{
+          display: block;
+        }
+      }
+    }
+}
