@@ -33,8 +33,11 @@
     &-container{
       grid-area: sidebar;
       position:relative;
+      // border: 3px solid green;
+      min-height: 100vh;
     }
     &-sidebar{
+      min-height: 100vh;
       background-color: #e6eeee;
       position: absolute;
       top: 0;
@@ -43,34 +46,20 @@
       width: 15rem;
       z-index: 50;
       @include shadow(.2, 11px);
-      display: grid;
-      grid-template-rows: minmax(60px, min-content) repeat(4, minmax(170px, min-content));
-      grid-gap: 1rem;
-      grid-template-areas: "selection"
-                            "city"
-                            "room-config"
-                            "rent";
-
-      align-items: center;
-
+      display: flex;
+      flex-direction: column;
 
     .selection-cont{
       position:relative;
-      grid-area: selection;
-      // border: 2px solid red;
+      min-height: 50px;
+      margin-bottom: 1rem;
     }
     .cities-cont{
-      grid-area: city;
-      // border: 2px solid yellow;
+      padding: 0 0 1rem 0;
     }
     .room-config{
-      grid-area: room-config;
+      padding: 0 0 1rem 0;
     }
-    .rates-cont{
-      grid-area: rent;
-      // border: 2px solid blue;
-    }
-
   }
 }
 
@@ -78,6 +67,7 @@
   background-color: rgba(#e6eeee, 0.5);
   grid-area: main;
   // margin-top: .6rem;
+  min-height: 100vh;
   margin-left: .6rem;
   margin-bottom: .6rem;
   @media only screen and (max-width: 650px){

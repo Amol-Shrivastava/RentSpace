@@ -1327,9 +1327,11 @@ ul {
 
 .sidebar-container {
   grid-area: sidebar;
-  position: relative; }
+  position: relative;
+  min-height: 100vh; }
 
 .sidebar-sidebar {
+  min-height: 100vh;
   background-color: #e6eeee;
   position: absolute;
   top: 0;
@@ -1338,24 +1340,21 @@ ul {
   width: 15rem;
   z-index: 50;
   box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
-  display: grid;
-  grid-template-rows: minmax(60px, min-content) repeat(4, minmax(170px, min-content));
-  grid-gap: 1rem;
-  grid-template-areas: "selection" "city" "room-config" "rent";
-  align-items: center; }
+  display: flex;
+  flex-direction: column; }
   .sidebar-sidebar .selection-cont {
     position: relative;
-    grid-area: selection; }
+    min-height: 50px;
+    margin-bottom: 1rem; }
   .sidebar-sidebar .cities-cont {
-    grid-area: city; }
+    padding: 0 0 1rem 0; }
   .sidebar-sidebar .room-config {
-    grid-area: room-config; }
-  .sidebar-sidebar .rates-cont {
-    grid-area: rent; }
+    padding: 0 0 1rem 0; }
 
 .main-content-container {
   background-color: rgba(230, 238, 238, 0.5);
   grid-area: main;
+  min-height: 100vh;
   margin-left: .6rem;
   margin-bottom: .6rem; }
   @media only screen and (max-width: 650px) {
@@ -1738,62 +1737,42 @@ ul {
     border-bottom: 2px solid #b6160e; }
 
 .main-content {
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
-  grid-gap: 2rem; }
+  display: flex;
+  flex-wrap: wrap; }
   .main-content-items {
     position: relative;
     height: 285px;
     border: 1px solid black;
     background-size: cover;
     overflow: hidden; }
+    @media only screen and (min-width: 1280px) {
+      .main-content-items {
+        flex: 0 1 calc(33% - 2rem); }
+        .main-content-items:not(:last-child) {
+          margin-right: 2rem;
+          margin-bottom: 2rem; } }
+    @media only screen and (min-width: 750px) and (max-width: 1280px) {
+      .main-content-items {
+        flex: 0 0 calc(50% - 2rem); }
+        .main-content-items:not(:last-child) {
+          margin-right: 2rem;
+          margin-bottom: 2rem; } }
+    @media only screen and (max-width: 750px) {
+      .main-content-items {
+        flex: 0 0 100%;
+        margin-bottom: 2rem;
+        height: 320px; } }
+    .main-content-items:not(:last-child) {
+      margin-right: 2rem; }
     .main-content-items:hover .overlay-cont {
       transform: translateY(0); }
-  .main-content .item-1 {
-    background-image: url("../images/option-houses/house-1.jpg");
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat; }
-  .main-content .item-2 {
-    background-image: url("../images/option-houses/house-2.jpg");
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat; }
-  .main-content .item-3 {
-    background-image: url("../images/option-houses/house-3.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
-  .main-content .item-4 {
-    background-image: url("../images/option-houses/house-4.jpg");
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat; }
-  .main-content .item-5 {
-    background-image: url("../images/option-houses/house-5.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
-  .main-content .item-6 {
-    background-image: url("../images/option-houses/house-6.jpg");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat; }
-  .main-content .item-7 {
-    background-image: url("../images/option-houses/house-7.jpg"); }
-  .main-content .item-8 {
-    background-image: url("../images/option-houses/house-8.jpg");
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat; }
-  .main-content .item-9 {
-    background-image: url("../images/indi-house&interiors/first_house/house-main-img.jpg");
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat; }
-  .main-content .item-10 {
-    background-image: url("../images/option-houses/house-10.jpg"); }
+    .main-content-items .item-imgCont {
+      width: 100%;
+      height: 100%; }
+      .main-content-items .item-imgCont img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
 
 .overlay-cont {
   position: absolute;

@@ -38,13 +38,35 @@
 
 //main-content container styling
 .main-content{
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
-  grid-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+
   &-items{
     position:relative;
     height: 285px;
+    @media only screen and (min-width: 1280px){
+    flex: 0 1 calc(33% - 2rem);
+    &:not(:last-child){
+      margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+    }
+    @media only screen and (min-width: 750px) and (max-width: 1280px){
+    flex: 0 0 calc(50% - 2rem);
+    &:not(:last-child){
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+    }
+    }
+    @media only screen and (max-width: 750px){
+    flex: 0 0 100%;
+    margin-bottom: 2rem;
+    height: 320px;
+    }
+
+    &:not(:last-child){
+      margin-right: 2rem;
+    }
     border: 1px solid black;
     background-size: cover;
     overflow: hidden;
@@ -53,48 +75,57 @@
         transform: translateY(0);
       }
     }
+    .item-imgCont{
+      width: 100%;
+      height: 100%;
+        img{
+         width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 
-  .item-1{
-    // height: 260px;
-    background-image: url('../images/option-houses/house-1.jpg');
-    @include background(center, bottom);
-  }
-  .item-2{
-    background-image: url('../images/option-houses/house-2.jpg');
-    @include background(center, bottom);
-  }
-  .item-3{
-    background-image: url('../images/option-houses/house-3.jpg');
-    @include background();
-  }
-  .item-4{
-    background-image: url('../images/option-houses/house-4.jpg');
-    @include background(center, bottom);
-    // height: 340px;
-  }
-  .item-5{
-    background-image: url('../images/option-houses/house-5.jpg');
-    @include background();
-  }
-  .item-6{
-    background-image: url('../images/option-houses/house-6.jpg');
-    @include background(center, top);
-  }
-  .item-7{
-    background-image: url('../images/option-houses/house-7.jpg');
-  }
-  .item-8{
-    background-image: url('../images/option-houses/house-8.jpg');
-    @include background(center, bottom);
-  }
-  .item-9{
-    background-image: url('../images/indi-house&interiors/first_house/house-main-img.jpg');
-    @include background(center, bottom);
-  }
-  .item-10{
-    background-image: url('../images/option-houses/house-10.jpg');
-  }
+  // .item-1{
+  //   // height: 260px;
+  //   background-image: url('../images/option-houses/house-1.jpg');
+  //   @include background(center, bottom);
+  // }
+  // .item-2{
+  //   background-image: url('../images/option-houses/house-2.jpg');
+  //   @include background(center, bottom);
+  // }
+  // .item-3{
+  //   background-image: url('../images/option-houses/house-3.jpg');
+  //   @include background();
+  // }
+  // .item-4{
+  //   background-image: url('../images/option-houses/house-4.jpg');
+  //   @include background(center, bottom);
+  //   // height: 340px;
+  // }
+  // .item-5{
+  //   background-image: url('../images/option-houses/house-5.jpg');
+  //   @include background();
+  // }
+  // .item-6{
+  //   background-image: url('../images/option-houses/house-6.jpg');
+  //   @include background(center, top);
+  // }
+  // .item-7{
+  //   background-image: url('../images/option-houses/house-7.jpg');
+  // }
+  // .item-8{
+  //   background-image: url('../images/option-houses/house-8.jpg');
+  //   @include background(center, bottom);
+  // }
+  // // .item-9{
+  // //   background-image: url('../images/indi-house&interiors/first_house/house-main-img.jpg');
+  // //   @include background(center, bottom);
+  // // }
+  // .item-10{
+  //   background-image: url('../images/option-houses/house-10.jpg');
+  // }
 }
 
 
@@ -176,16 +207,6 @@
   &__name{
     padding:0 .8rem;
     cursor: pointer;
-      // .icon{
-      // width: .8rem;
-      // height: .8rem;
-      // &-star_rate{
-      //   fill: #eec02b;
-      // }
-      // &-star_outline{
-      //   // outline: 2px solid red;
-      //   stroke-width: 1px;
-      // }
       .option{
         font-size: .8rem;
         letter-spacing: 1px;
