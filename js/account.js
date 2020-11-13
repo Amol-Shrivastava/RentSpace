@@ -29,9 +29,8 @@ const collection = document.querySelector('.collection');
 const posts = document.querySelector('.posts');
 
 //pic preview
-const picInput = document.querySelector('.picInt');
-const picLabel = document.querySelector('.pic');
-const picPreview = document.querySelector('.userImage');
+const picBtn = document.querySelector('.picInt');
+const picPreview = document.querySelector('.userPic');
 
 userIcon.addEventListener('click', () => {
     userModal.classList.toggle('show');
@@ -39,7 +38,6 @@ userIcon.addEventListener('click', () => {
 
 //userModal
 userModal.addEventListener('click', ep => {
-  // //console.log(ep.target);
   if(ep.target.id === 'userModal'){
     userModal.classList.remove('show');
   }
@@ -127,13 +125,12 @@ item_3.addEventListener('click', () => {
   showContent(posts, profileForm, collection);
 });
 
-// //pic preview functionality
-// picInput.addEventListener('change', et => {
-//   if(et.target.files.length > 0){
-//     picPreview.style.display = "block";
-//     let firstImg = URL.createObjectURL(et.target.files[0]);
-//     picPreview.src = firstImg;
-//   }
-//
-// })
-picLabel
+//pic preview functionality
+picBtn.addEventListener('change', () => {
+  // console.log('yes');
+  let imgfile = picBtn.files[0];
+  // console.log(imgfile);
+  let src = URL.createObjectURL(imgfile);
+  // picPreview.style.display = "block";
+  picPreview.src = src;
+})

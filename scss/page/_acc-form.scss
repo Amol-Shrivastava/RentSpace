@@ -40,35 +40,56 @@
 }
 .profile--form{
   position: relative;
-  width: 60%;
+  width: 80%;
   max-width: 800px;
+  border: 2px solid #555;
+  // padding: 0 .5rem;
 }
 
-#picbtn{
-  display: none;
-}
+.profilePicCont{
+  border-bottom: 1px solid #777;
+  padding: 1.4rem .5rem;
+  @include flex(row, space-between);
+  #picbtn{
+    display: none;
+  }
 
-.pic{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 1px solid #222;
-  cursor: pointer;
-  width: 5.4rem;
-  height: 5.4rem;
-  border-radius: 50%;
-  @include flex();
-  .userImage{
-    display:none;
+  .pic-Btn{
+    border: 1px dashed #234;
+    padding: .2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    @include shadow(.3, 7px);
+    &:hover{
+      box-shadow:none;
+    }
+  }
+
+  .proprev{
+    border: 3px solid blue;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid #555;
+    .userPic{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      // display: none;
+      object-fit: cover;
+      // &.show{
+      //   @include flex();
+      // }
+    }
   }
 }
 
 .other-details{
-  margin-top: 6rem;
-  // border: 3px solid green;
+  margin-top: 1.4rem;
   display: block;
   width: 100%;
-  // max-width: 700px;
+  padding: 0 .5rem;
 }
 
 .input--det{

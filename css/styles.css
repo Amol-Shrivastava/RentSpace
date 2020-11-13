@@ -2780,32 +2780,45 @@ ul {
 
 .profile--form {
   position: relative;
-  width: 60%;
-  max-width: 800px; }
+  width: 80%;
+  max-width: 800px;
+  border: 2px solid #555; }
 
-#picbtn {
-  display: none; }
-
-.pic {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 1px solid #222;
-  cursor: pointer;
-  width: 5.4rem;
-  height: 5.4rem;
-  border-radius: 50%;
+.profilePicCont {
+  border-bottom: 1px solid #777;
+  padding: 1.4rem .5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; }
-  .pic .userImage {
+  justify-content: space-between; }
+  .profilePicCont #picbtn {
     display: none; }
+  .profilePicCont .pic-Btn {
+    border: 1px dashed #234;
+    padding: .2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3); }
+    .profilePicCont .pic-Btn:hover {
+      box-shadow: none; }
+  .profilePicCont .proprev {
+    border: 3px solid blue;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid #555; }
+    .profilePicCont .proprev .userPic {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover; }
 
 .other-details {
-  margin-top: 6rem;
+  margin-top: 1.4rem;
   display: block;
-  width: 100%; }
+  width: 100%;
+  padding: 0 .5rem; }
 
 .input--det {
   width: 100%; }
