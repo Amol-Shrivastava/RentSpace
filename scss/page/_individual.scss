@@ -573,3 +573,61 @@
     }
   }
 }
+
+//11. review section modal
+.reviewModal_Cont{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, .4);
+  @include flex();
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease;
+  z-index: 70;
+  &.show{
+    opacity: 1;
+    visibility: visible;
+  }
+  .reviewModalBody{
+    width: 80vw;
+    // min-width: 500px;
+    max-width: 750px;
+    background-color: rgb(18, 35, 46);
+    // background: #164A41;
+    height: 450px;
+    @include shadow(.4, 12px);
+    padding: 0 2rem;
+    position:relative;
+    .reviewBox{
+      display: block;
+      width: 100%;
+      height: 65%;
+      resize: none;
+      background: rgb(32, 54, 71);
+      // background: #4D774E;
+      margin-top: 1rem;
+      font-family: 'Source Serif Pro', sans;
+      font-size:  1.3rem;
+      font-weight: bold;
+      color: rgb(239, 251, 251);
+      letter-spacing: 1.2px;
+      line-height: 1.3;
+      padding: .2rem;
+      &:focus-within{
+        outline: 3px solid #fff;
+      }
+    }
+    .letterReview{
+      position: absolute;
+      border: 2px dashed #fff;
+      right: 2rem;
+      padding: 0 .2rem;
+      transform: translateY(.5rem);
+      color: rgb(239, 251, 251);
+      font-size:  1rem;
+    }
+  }
+}

@@ -490,3 +490,34 @@
     outline: 3px dotted #ff4300;
   }
 }
+
+//review section button
+.postReview,
+.cancelReview{
+  padding: .3rem 1rem;
+  cursor: pointer;
+  color: rgb(239, 251, 251);
+  border: none;
+  letter-spacing:  1.1px;
+  font-size: .9rem;
+  outline-offset: 3px;
+  @include shadow(.3, 4px);
+  &:hover{
+    box-shadow: none;
+  }
+
+}
+.postReview{
+  margin-right: .8rem;
+  background: #6e4812;
+  &:focus{
+    outline: 2px dashed #6e4812;
+  }
+}
+
+.cancelReview{
+  color: #181a16;
+  &:focus{
+    outline: 2px dashed rgb(239, 251, 251);
+  }
+}

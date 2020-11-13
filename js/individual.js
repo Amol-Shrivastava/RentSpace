@@ -41,6 +41,16 @@ const signupbtn = document.querySelector('.signUp');
 const userModal = document.querySelector('#userModal');
 const userIcon = document.querySelector('.user-icon');
 
+//review functionality
+const reviewModal = document.querySelector('.reviewModal_Cont');
+const reviewBtn = document.querySelector('.review-btn');
+const reviewBox = document.querySelector('.reviewBox');
+const reviewHeadHouse = document.querySelector('.Rhousename');
+const postReview = document.querySelector('.postReview');
+const cancelReview = document.querySelector('.cancelReview');
+const lettersWritten = document.querySelector('.lettersWritten');
+
+
 //1 Image functionality**************************************************
 //checking for no images
 
@@ -276,3 +286,39 @@ userModal.addEventListener('click', ep => {
     userModal.classList.remove('show');
   }
 })
+
+//3. Review functionality
+reviewBtn.addEventListener('click', () => {
+  reviewModal.classList.add('show');
+  reviewHeadHouse.innerText = titleName.innerText;
+})
+
+postReview.addEventListener('click', ep => {
+  ep.preventDefault();
+})
+
+reviewBox.addEventListener('keyup', () => {
+  let review = reviewBox.value;
+  let reviewLength = review.length;
+  let remainingLetters = 800 - reviewLength;
+  let extraLetters = reviewLength - 800;
+  if(remainingLetters > 0){
+    lettersWritten.innerHTML = reviewLength;
+  }else{
+    extraLetters = '';
+    lettersWritten.innerText = 'Exceeded Limit';
+    reviewBox.blur();
+  }
+})
+
+//close Review Modal
+const closeModal = () => reviewModal.classList.remove('show');
+
+reviewModal.addEventListener('click', et => {
+  // console.log(et.target);
+  if(et.target.id === 'reviewModal'){
+    closeModal();
+  }
+})
+
+cancelReview.addEventListener('click', closeModal);
