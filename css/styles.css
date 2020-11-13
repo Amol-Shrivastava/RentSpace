@@ -2761,7 +2761,8 @@ ul {
 .formblock {
   position: absolute;
   top: 1rem;
-  display: none; }
+  display: none;
+  min-width: 30rem; }
   .formblock.show {
     display: flex;
     flex-direction: column;

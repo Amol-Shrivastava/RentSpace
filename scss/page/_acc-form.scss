@@ -23,6 +23,7 @@
   position: absolute;
   top: 1rem;
   display:none;
+  min-width: 30rem;
   &.show{
   @include flex(column, flex-start);
   }
