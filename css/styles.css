@@ -1361,10 +1361,11 @@ ul {
 .sidebar-container {
   grid-area: sidebar;
   position: relative;
-  min-height: 100vh; }
+  z-index: 50;
+  background-color: #e6eeee; }
 
 .sidebar-sidebar {
-  min-height: 100vh;
+  height: 100%;
   background-color: #e6eeee;
   position: absolute;
   top: 0;
@@ -1377,12 +1378,16 @@ ul {
   flex-direction: column; }
   .sidebar-sidebar .selection-cont {
     position: relative;
-    min-height: 50px;
     margin-bottom: 1rem; }
   .sidebar-sidebar .cities-cont {
+    background-color: #e6eeee;
     padding: 0 0 1rem 0; }
   .sidebar-sidebar .room-config {
+    background-color: #e6eeee;
     padding: 0 0 1rem 0; }
+  .sidebar-sidebar .rates-cont {
+    background-color: #e6eeee;
+    padding: 0 0 .8rem 0; }
 
 .main-content-container {
   background-color: rgba(230, 238, 238, 0.5);

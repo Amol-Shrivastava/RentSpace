@@ -33,11 +33,11 @@
     &-container{
       grid-area: sidebar;
       position:relative;
-      // border: 3px solid green;
-      min-height: 100vh;
+      z-index: 50;
+      background-color: #e6eeee;
     }
     &-sidebar{
-      min-height: 100vh;
+      height: 100%;
       background-color: #e6eeee;
       position: absolute;
       top: 0;
@@ -48,17 +48,22 @@
       @include shadow(.2, 11px);
       display: flex;
       flex-direction: column;
-
+      // border: 3px solid purple;
     .selection-cont{
       position:relative;
-      min-height: 50px;
       margin-bottom: 1rem;
     }
     .cities-cont{
+      background-color: #e6eeee;
       padding: 0 0 1rem 0;
     }
     .room-config{
+      background-color: #e6eeee;
       padding: 0 0 1rem 0;
+    }
+    .rates-cont{
+      background-color: #e6eeee;
+      padding: 0 0 .8rem 0;
     }
   }
 }

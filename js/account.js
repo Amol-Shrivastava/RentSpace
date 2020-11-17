@@ -32,17 +32,6 @@ const posts = document.querySelector('.posts');
 const picBtn = document.querySelector('.picInt');
 const picPreview = document.querySelector('.userPic');
 
-userIcon.addEventListener('click', () => {
-    userModal.classList.toggle('show');
-})
-
-//userModal
-userModal.addEventListener('click', ep => {
-  if(ep.target.id === 'userModal'){
-    userModal.classList.remove('show');
-  }
-})
-
 //toggle sidebar
 toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.toggle('toggle');
