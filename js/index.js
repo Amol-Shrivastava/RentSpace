@@ -178,7 +178,7 @@ loginbtn.addEventListener('click', () => {
 })
 
 loginModal.addEventListener('click', et =>{
-  console.log(et.target);
+  // console.log(et.target);
   if(et.target.id === 'loginModal'){
     loginModal.classList.remove('show');
   }
