@@ -10,10 +10,11 @@ html {
 
 body {
   font-size: 0.625rem; //1rem = 10px
-  font-family: var(--font-family);
+  font-family: var(--pr-font-family);
   overflow-x: hidden;
   display: flex;
   min-height: 100%;
+  min-width: 100vw;
   flex-direction: column;
 }
 
@@ -38,13 +39,13 @@ ul {
   --login-clr: #dfe4eb;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 999;
   padding: 0 0.9rem;
-
+  // border: 2px solid blue;
   &_list {
     display: flex;
-
+    align-items: center;
     &--items {
       cursor: pointer;
 
@@ -122,7 +123,7 @@ ul {
 
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       top: -14px;
       left: 50%;
       transform: translateX(-50%);
@@ -140,35 +141,7 @@ ul {
     padding: 0.6rem;
   }
 }
-//navbar section typography
-.nav-logo {
-  font-size: 2.4rem;
-  letter-spacing: 1px;
-  font-family: 'Source Serif Pro', serif;
-  font-weight: 700;
-  color: var(--logo-clr);
-}
 
-.login {
-  font-size: 1.1rem;
-  color: var(--login-clr);
-  letter-spacing: 1px;
-}
-
-.join {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 1.1rem;
-  background: #e3662a;
-  color: #fff;
-  border-radius: 22px;
-  padding: 0.2rem 0.8rem;
-
-  &:hover {
-    color: #e3662a;
-    background: #fff;
-  }
-}
 //user icon styling
 
 .userCont {
@@ -204,16 +177,16 @@ ul {
     width: 100%;
     height: 100%;
     @include flex();
-    transition: transform .4s linear;
+    transition: transform 0.4s linear;
     z-index: 500;
     opacity: 0;
     transform: translateY(-200%);
     opacity: 0;
-    transition: transform .9s ease, opacity .2s linear;
-  &.show{
+    transition: transform 0.9s ease, opacity 0.2s linear;
+    &.show {
       transform: translateY(0);
       .loginModal-body,
-      .signModal-body{
+      .signModal-body {
         transform: translateY(0);
         opacity: 1;
       }
@@ -234,7 +207,7 @@ ul {
     grid-template-columns: 40% 60%;
     grid-template-areas: "content svgsect";
     transform: translateY(-100%);
-    opacity:0;
+    opacity: 0;
     // transition: transform .3s linear, opacity .1s ease;
     grid-template-rows: 1fr;
     @media only screen and (max-width: 700px) {
@@ -254,8 +227,7 @@ ul {
         border-right: none;
       }
 
-      .headingshadow
-      {
+      .headingshadow {
         position: absolute;
         z-index: 6;
         top: 1.4rem;
@@ -267,36 +239,36 @@ ul {
         background: #e9e5f0;
       }
 
-      .loginForm{
+      .loginForm {
         width: 100%;
         height: 100%;
-        padding: 0 .3rem;
+        padding: 0 0.3rem;
         // border: 2px dashed red;
-        position:relative;
+        position: relative;
         top: 1rem;
         flex: 1;
         @include flex(column, center);
 
-        input{
+        input {
           width: 100%;
           max-width: 400px;
-          padding:.3rem;
+          padding: 0.3rem;
           margin-bottom: 1.5rem;
           border-radius: 3px;
           font-size: 1rem;
           color: #000;
           font-weight: bold;
-          letter-spacing:1px;
-          font-family: 'Poppins', serif;
+          letter-spacing: 1px;
+          font-family: "Poppins", serif;
           border: 1px solid #3a444f;
-          &::placeholder{
-            font-size: .8rem;
-            color:#8d8c8e;
+          &::placeholder {
+            font-size: 0.8rem;
+            color: #8d8c8e;
             font-weight: normal;
           }
-          &:focus{
-            border:none;
-            outline: 3px solid #00BFA6;
+          &:focus {
+            border: none;
+            outline: 3px solid #00bfa6;
           }
         }
       }
@@ -314,109 +286,109 @@ ul {
     }
   }
 }
-.signModal{
-  &-cont{
-position: fixed;
-top: 0;
-z-index: 700;
-left: 0;
-width: 100%;
-height: 100%;
-@include flex();
-transform: translateY(-100%);
-transition: transform .4s ease-out;
-}
+.signModal {
+  &-cont {
+    position: fixed;
+    top: 0;
+    z-index: 700;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include flex();
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-out;
+  }
 
-&-body{
+  &-body {
     // margin-top: .5rem;
     // margin-top: -1rem;
-    transition: transform .3s linear, opacity .1s ease;
+    transition: transform 0.3s linear, opacity 0.1s ease;
     transform: translateY(-100%);
     width: 80vw;
     max-width: 860px;
     min-height: 500px;
     background-color: #fff;
-    @include shadow(.5, 9px);
-    opacity:0;
+    @include shadow(0.5, 9px);
+    opacity: 0;
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: 1fr;
     grid-template-areas: "signcontent-section signsvg-section";
     @media only screen and (max-width: 750px) {
-      position:relative;
+      position: relative;
       top: 5rem;
       height: 600px;
       margin-bottom: 5rem;
       overflow-y: visible;
       grid-template-columns: 1fr;
       grid-template-rows: 40% 60%;
-      grid-template-areas: "signsvg-section"
-                            "signcontent-section";
-
+      grid-template-areas:
+        "signsvg-section"
+        "signcontent-section";
     }
-    .signcontent-section{
-      position:relative;
+    .signcontent-section {
+      position: relative;
       grid-area: signcontent-section;
       border-right: 2px dashed #090506;
       display: flex;
       flex-direction: column;
       @media only screen and (max-width: 750px) {
-          margin-top: -1.5rem;
-          border-right: none;
+        margin-top: -1.5rem;
+        border-right: none;
       }
-      .signForm{
-      width: 100%;
-      padding: 0 .5rem;
-      flex: 1;
-      // border: 2px dashed red;
-      position: relative;
-      padding-bottom: 1rem;
-      // top: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content : space-around;
-      @media only screen and (max-width: 750px) {
+      .signForm {
+        width: 100%;
+        padding: 0 0.5rem;
+        flex: 1;
+        // border: 2px dashed red;
+        position: relative;
+        padding-bottom: 1rem;
+        // top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @media only screen and (max-width: 750px) {
           // margin-top: 1rem;
           margin-bottom: 3rem;
-      }
-      input{
-        width: 100%;
-        padding: .3rem;
-        font-size: 1rem;
-        font-weight: bold;
-        color: #110b10;
-        font-family: 'Poppins', serif;
-        border: 1px solid #91908d;
-        margin-bottom: -.3rem;
-        &:focus{
-          outline: 2px solid #DA450B;
         }
-        &::placeholder{
-          font-size: .8rem;
-          color: #63625a;
-          font-weight: normal;
-        }
+        input {
+          width: 100%;
+          padding: 0.3rem;
+          font-size: 1rem;
+          font-weight: bold;
+          color: #110b10;
+          font-family: "Poppins", serif;
+          border: 1px solid #91908d;
+          margin-bottom: -0.3rem;
+          &:focus {
+            outline: 2px solid #da450b;
+          }
+          &::placeholder {
+            font-size: 0.8rem;
+            color: #63625a;
+            font-weight: normal;
+          }
 
-        @media only screen and (max-width: 750px) {
+          @media only screen and (max-width: 750px) {
             margin-bottom: 1rem;
+          }
         }
       }
     }
-  }
 
-    .signheadingshadow{
-        position:absolute;
-        top:.3rem;
-        width: 150px;
-        height: 100px;
-        border-radius: 60%;
-        transform: rotateX(80deg);
-        background: #e9e5f0;
-      }
+    .signheadingshadow {
+      position: absolute;
+      top: 0.3rem;
+      width: 150px;
+      height: 100px;
+      border-radius: 60%;
+      transform: rotateX(80deg);
+      background: #e9e5f0;
+    }
 
-    .signsvg-section{
+    .signsvg-section {
       grid-area: signsvg-section;
-      background: url('../images/signup.svg');
+      background: url("../images/signup.svg");
       background-size: contain;
       background-position: center center;
       background-repeat: no-repeat;
@@ -424,44 +396,44 @@ transition: transform .4s ease-out;
         background-size: 100% 90%;
       }
     }
-}
+  }
 }
 
-.userModal-cont{
-  position:fixed;
-  top:0;
-  left:0;
+.userModal-cont {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 600;
   transform: translateY(-200%);
   // opacity:0;
-  &.show{
+  &.show {
     transform: translateY(0);
-    .userBody{
+    .userBody {
       transform: translateY(0);
       opacity: 1;
     }
     opacity: 1;
   }
 }
-.userBody{
-  position:absolute;
+.userBody {
+  position: absolute;
   top: 3.7rem;
   right: 1rem;
   width: 100px;
   height: 60px;
-  background-color:#fff;
+  background-color: #fff;
   z-index: 20;
-  @include shadow(.3, 9px);
-  transition: transform .3s linear, opacity .1s ease;
+  @include shadow(0.3, 9px);
+  transition: transform 0.3s linear, opacity 0.1s ease;
   transform: translateY(-100%);
   opacity: 0;
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
-    top: -.6rem;
-    right: .3rem;
+    top: -0.6rem;
+    right: 0.3rem;
     width: 11px;
     height: 11px;
     background-color: #eff113;
@@ -469,42 +441,40 @@ transition: transform .4s ease-out;
     z-index: -1;
   }
 }
-.userlist{
+.userlist {
   position: relative;
-  z-index:6;
-  background-color:#fff;
+  z-index: 6;
+  background-color: #fff;
   border: 2px dashed #000;
   height: 100%;
   @include flex(column, space-between);
-  .pro{
+  .pro {
     width: 100%;
   }
-  .useritems{
+  .useritems {
     width: 100%;
     cursor: pointer;
-    font-size: .9rem;
-    font-family:'Source Serif Pro', serif;
+    font-size: 0.9rem;
+    font-family: "Source Serif Pro", serif;
     text-align: center;
-    transition: transform .3s ease;
+    transition: transform 0.3s ease;
     // transform: scale(.95);
     @include flex();
-      color: #9c5f02;
-    &:first-child{
+    color: #9c5f02;
+    &:first-child {
       border-bottom: 2px dashed #a293a2;
-      padding: .25rem 0;
-  }
-    &:nth-child(2){
+      padding: 0.25rem 0;
+    }
+    &:nth-child(2) {
       // padding-bottom: .25rem;
       height: 100%;
     }
-    &:hover{
+    &:hover {
       background: #eee;
       // transform: scale(1);
     }
   }
 }
-
-
 
 //footer section typography
 
@@ -512,7 +482,10 @@ transition: transform .4s ease-out;
   &-links {
     font-size: 1rem;
     color: #c6c8c9;
-    &:hover{
+    @media (max-width: 400px) {
+      font-size: 0.8rem;
+    }
+    &:hover {
       outline: 3px dotted var(--link-hover-clr-1);
       outline-offset: 7px;
     }
@@ -522,14 +495,15 @@ transition: transform .4s ease-out;
       outline-offset: 7px;
     }
 
-
-
     &-logo {
       font-size: 2rem;
-      color: #c4e4c9;
+      color: var(--rentspace-clr);
       letter-spacing: 1px;
       font-weight: 700;
-      font-family: 'Source Serif Pro';
+      font-family: var(--pr-font-family);
+      // @media (max-width: 400px) {
+      //   font-size: rem;
+      // }
     }
   }
 
@@ -538,6 +512,9 @@ transition: transform .4s ease-out;
     color: #fff;
     letter-spacing: 2px;
     border-bottom: var(--border-bottom);
+    @media (max-width: 400px) {
+      font-size: 1rem;
+    }
   }
 
   &-ack {
@@ -546,6 +523,6 @@ transition: transform .4s ease-out;
     background: #060506;
     padding: 0.6rem;
     font-size: 0.9rem;
-    font-family: 'Source Serif Pro', serif;
+    font-family: "Source Serif Pro", serif;
   }
 }

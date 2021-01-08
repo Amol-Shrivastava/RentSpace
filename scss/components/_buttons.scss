@@ -1,177 +1,181 @@
 //show deal*******************************
-.view-deal{
-  padding: .5rem 1rem;
+.view-deal {
+  padding: 0.5rem 1rem;
   margin: 1rem 0;
   cursor: pointer;
-  background:#139c9c;
+  background: #139c9c;
   color: #fff;
   border: none;
-  @include shadow(.3, 9px);
+  @include shadow(0.3, 9px);
   text-align: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
   letter-spacing: 1px;
-  &:hover{
-    background:#095b5b;
-
+  &:hover {
+    background: #095b5b;
   }
 }
 
-
-
 //show more sample spaces****************************
-.show-more{
+.show-more {
   background-color: #16213c;
   border: none;
-  padding: .7rem .9rem;
+  padding: 0.7rem 0.9rem;
   margin: 1rem 0;
-  @include shadow(.3, 11px);
-  cursor:pointer;
+  @include shadow(0.3, 11px);
+  cursor: pointer;
   text-align: center;
-  &:hover{
+  &:hover {
     background-color: #080d1a;
-    .icon{
+    .icon {
       opacity: 1;
       visibility: visible;
       transform: scale(1);
     }
-    .text{
+    .text {
       transform: translateX(0);
     }
   }
 
-  &:focus{
+  &:focus {
     outline: 2px solid var(--link-hover-clr-1);
     outline-offset: 3px;
   }
 
-  .icon{
+  .icon {
     display: inline-block;
     width: 1.1rem;
     height: 1.1rem;
     fill: #fff;
     opacity: 0;
     visibility: hidden;
-    &-home{
-      transition: transform .2s ease,
-      opacity .4s ease;
+    &-home {
+      transition: transform 0.2s ease, opacity 0.4s ease;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(.1rem) scale(0);
+      transform: translateY(0.1rem) scale(0);
       transform-origin: bottom;
-      margin-left: .2rem;
+      margin-left: 0.2rem;
     }
   }
 }
 
-.text{
-  transition: transform .2s ease;
+.text {
+  transition: transform 0.2s ease;
   display: inline-block;
-  transform: translateX(.6rem);
+  transform: translateX(0.6rem);
   border: none;
   font-size: 1rem;
   text-transform: CamelCase;
   letter-spacing: 1px;
-  margin-left: .2rem;
+  margin-left: 0.2rem;
   color: #f4eaf3;
 }
 
-.load-btn{
-  padding: .5rem 1.3rem;
-  border:none;
+.load-btn {
+  padding: 0.5rem 1.3rem;
+  border: none;
   background: #0b82a3;
   color: #fff;
   font-size: 1.3rem;
-  // font-family: 'Poppins', serif;
-  letter-spacing: 1px;
-  transition: transform .2s ease-in;
-  cursor:pointer;
+  font-family: var(--sec-font-family);
+  letter-spacing: 2px;
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
   // @include shadow(0.3, 15px);
   &:hover,
-  &:focus{
+  &:focus {
     outline: 5px dashed var(--link-hover-clr-1);
     outline-offset: 10px;
+  }
+  @media (max-width: 400px) {
+    // padding: 0.4rem 1.3rem;
+    font-size: 0.5rem;
   }
 }
 
 //trans-btns*****************************
-.trans-btn{
+.trans-btn {
   position: absolute;
-  top:50%;
-  z-index:6;
+  top: 50%;
+  z-index: 6;
   transform: translateY(-50%);
   display: inline-block;
   background: rgba(#000, 1);
   opacity: 0.6;
-  padding: 1.3rem .5rem;
+  padding: 1.3rem 0.5rem;
   cursor: pointer;
+  @media (max-width: 400px) {
+    padding: 0.8rem 0.3rem;
+  }
 }
 
-.icon{
+.icon {
   display: inline-block;
   font-size: 48px;
   color: #eee;
   filter: brightness(100%);
+  font-size: 22px;
 }
 
-.prev-btn{
-  left:0;
+.prev-btn {
+  left: 0;
   // border: 2px solid yellow;
-  &:hover{
-    .icon-arrow-left{
+  &:hover {
+    .icon-arrow-left {
       color: #fff;
       filter: brightness(250%);
     }
   }
 }
-.cmnt-btn{
-  .icon{
+.cmnt-btn {
+  .icon {
     font-size: 35px;
   }
 }
-.next-btn{
+.next-btn {
   // border: 2px solid yellow;
   right: 0;
-  &:hover{
-    .icon-arrow-right{
-        color: #fff;
-        filter: brightness(250%);
+  &:hover {
+    .icon-arrow-right {
+      color: #fff;
+      filter: brightness(250%);
     }
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .cmnt-btn{
-    padding: 1rem .2rem;
-    .icon{
+  .cmnt-btn {
+    padding: 1rem 0.2rem;
+    .icon {
       font-size: 20px;
     }
   }
 }
 
 //toggle- btn**************
-.togglebtn{
-  position:absolute;
+.togglebtn {
+  position: absolute;
   top: 50%;
   transform: translateY(-20%);
-  margin-top: .8rem;
-  margin-left: .9rem;
+  margin-top: 0.8rem;
+  margin-left: 0.9rem;
   margin-right: 1rem;
   display: none;
   pointer-events: none;
   cursor: pointer;
 
-.icon{
-  display: inline-block;
-  width: 1.7rem;
-  height: 1.7rem;
-  padding: .2rem;
-  fill: #7c6e6e;
-  border: 1px solid #cfc6ce;
-}
+  .icon {
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0.2rem;
+    fill: #7c6e6e;
+    border: 1px solid #cfc6ce;
+  }
 }
 
-.remove-btn{
-  margin-right: .4rem;
+.remove-btn {
+  margin-right: 0.4rem;
   background-color: transparent;
   border: 1px solid #d62828;
   width: 1rem;
@@ -182,131 +186,130 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  opacity: .7;
-  cursor:pointer;
-  &:hover{
+  opacity: 0.7;
+  cursor: pointer;
+  &:hover {
     opacity: 1;
   }
-  &:focus{
+  &:focus {
     outline: none;
   }
 }
 
 //search-submit btn *****************************
-  .search{
-  &-submit-btn{
+.search {
+  &-submit-btn {
     background-color: #edf2ec;
-    border:none;
+    border: none;
     border: 1px solid #dad6f2;
     cursor: pointer;
-    transition: transform .2s ease;
-    transform: scale(.9);
-      @include shadow(.1, 4px);
-    .icon{
-      padding: .1rem .2rem;
+    transition: transform 0.2s ease;
+    transform: scale(0.9);
+    @include shadow(0.1, 4px);
+    .icon {
+      padding: 0.1rem 0.2rem;
       width: 1.7rem;
       height: 1.7rem;
-       &-search{
+      &-search {
         fill: #8f8c9e;
       }
     }
 
     &:hover,
-    &:focus{
-          box-shadow:none;
+    &:focus {
+      box-shadow: none;
     }
   }
 }
 
 // upload btn styling
-.upload-btn{
-    position:absolute;
-    top: 59%;
-    right:1rem;
-    padding: .5rem;
-    text-align: center;
-    border: none;
-    background: #eb0c0c;
-    color: #f0f2f7;
-    display: flex;
-    align-items: center;
-    letter-spacing: 1px;
-    cursor: pointer;
+.upload-btn {
+  position: absolute;
+  top: 59%;
+  right: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  border: none;
+  background: #eb0c0c;
+  color: #f0f2f7;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  cursor: pointer;
 
-    .add{
-      margin-right: .3rem;
-      font-size:1rem;
-      font-weight: bold;
-    }
-
-    .upload-text{
-      font-size: .8rem;
-    }
-
-    &:hover{
-      background:#d70012;
-    }
+  .add {
+    margin-right: 0.3rem;
+    font-size: 1rem;
+    font-weight: bold;
   }
 
-  @media only screen and (max-width:650px){
-    .upload-btn{
-      bottom: 0;
-      left: 0;
-      margin-top: 3rem;
-      padding: .9rem;
-      margin-left: .9rem;
-    }
+  .upload-text {
+    font-size: 0.8rem;
   }
+
+  &:hover {
+    background: #d70012;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .upload-btn {
+    bottom: 0;
+    left: 0;
+    margin-top: 3rem;
+    padding: 0.9rem;
+    margin-left: 0.9rem;
+  }
+}
 
 //details upload button
 
-.file-input{
+.file-input {
   display: none;
 }
 
-.overlay-img-button{
+.overlay-img-button {
   // border: 2px solid red;
-  margin-top: .55rem;
-  padding: .3rem .9rem;
+  margin-top: 0.55rem;
+  padding: 0.3rem 0.9rem;
   width: 22px;
   height: 22px;
   border-radius: 6px;
   background: #d4a821;
   color: #fff;
-  font-size: .8rem;
-  font-family: 'Source Serif Pro', serif;
+  font-size: 0.8rem;
+  font-family: "Source Serif Pro", serif;
   letter-spacing: 1px;
   border: none;
-  cursor:pointer;
-  &:hover{
-    background:#a68611;
+  cursor: pointer;
+  &:hover {
+    background: #a68611;
   }
 }
 
-
-.sub-btn{
+.sub-btn {
   display: block;
   margin: 0 auto;
   width: 100%;
-  padding: .4rem;
+  padding: 0.4rem;
   text-align: center;
   border: none;
-  background-color:#f24539;
+  background-color: #f24539;
   color: #fff;
   font-size: 1.1rem;
   text-transform: uppercase;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: #cf4040;
   }
 
-  &:focus{
+  &:focus {
     outline: 4px dotted #dd3232;
     outline-offset: 3px;
   }
 }
 
-.del-btn{
+.del-btn {
   position: absolute;
   top: 4px;
   right: 2px;
@@ -315,7 +318,7 @@
   height: 18px;
   // border: 2px solid red;
   border-radius: 50%;
-  background-color:#525c53;
+  background-color: #525c53;
   color: #fff;
   text-align: center;
   font-weight: bold;
@@ -323,7 +326,7 @@
   opacity: 0;
   visibility: hidden;
   z-index: 99;
-  .cut{
+  .cut {
     font-size: 1rem;
   }
 }
@@ -331,106 +334,106 @@
 //individual house buttons
 
 //slider button
-.sbtn{
-  position:absolute;
+.sbtn {
+  position: absolute;
   top: 40%;
   z-index: 60;
-  background: rgba(99, 92, 98, .6);
-  padding: 1rem .7rem;
+  background: rgba(99, 92, 98, 0.6);
+  padding: 1rem 0.7rem;
   border: none;
   color: #f5f5f5;
   cursor: pointer;
-  &:hover{
-    background: rgba(99, 92, 98, .8);
+  &:hover {
+    background: rgba(99, 92, 98, 0.8);
   }
-  &:focus{
+  &:focus {
     outline: 5px dotted #e26d31;
     outline-offset: 3px;
   }
   //transform: translateY(-50%);
-  &-left{
+  &-left {
     left: 1.2rem;
   }
-  &-right{
+  &-right {
     right: 1.2rem;
   }
 }
 
 //review button
-.review-btn{
-  padding: .5rem .9rem;
+.review-btn {
+  padding: 0.5rem 0.9rem;
   transform: skew(8deg);
   background: #db1809;
   color: #fff;
   border: none;
-  @include shadow(.3, 8px);
+  @include shadow(0.3, 8px);
   cursor: pointer;
-  &:hover{
-      // @include shadow();
-      box-shadow:none;
+  &:hover {
+    // @include shadow();
+    box-shadow: none;
   }
-  &:focus{
+  &:focus {
     outline: 3px dotted #d20d0d;
     outline-offset: 3px;
   }
 
-  .upload-text{
+  .upload-text {
     display: inline-block;
-    font-size:.8rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
     transform: skew(-8deg);
   }
 }
 
-.move-right{
-  position:absolute;
+.move-right {
+  position: absolute;
   bottom: -3rem;
   left: 45%;
   transform: translateX(-50%);
-  @media only screen and (max-width: 800px){
+  @media only screen and (max-width: 800px) {
     left: 38%;
   }
   border: none;
-  @include shadow(.4, 6px);
-  padding: .6rem 1rem;
+  @include shadow(0.4, 6px);
+  padding: 0.6rem 1rem;
   border-radius: 3px;
   @include flex();
   color: #fff;
   background: #fc1d1d;
   cursor: pointer;
   transform: scale(1);
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
   transform: skew(8deg);
-  .rightBtn-text{
-    margin-right: .5rem;
+  .rightBtn-text {
+    margin-right: 0.5rem;
     font-size: 1rem;
     transform: skew(-8deg);
   }
-  &:hover{
+  &:hover {
     box-shadow: none;
     background: #fc1d1d;
   }
-  &:focus{
+  &:focus {
     outline: none;
     border: 1px solid #fc1d1d;
     background: #fff;
     color: #fc1d1d;
   }
-  i{
+  i {
     font-size: 1.1rem;
     transform: skew(-8deg);
   }
 }
 
 //modal img slide button
-.ibtn{
-  position:absolute;
+.ibtn {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   border: none;
   width: 2rem;
   height: 2rem;
-  padding: .3rem;
+  padding: 0.3rem;
   font-size: 1.1rem;
   display: grid;
   place-items: center;
@@ -438,86 +441,84 @@
   background: rgba(#ff4300, 0.7);
   color: #fff;
   border-radius: 50%;
-  transition: transform .3s ease-in;
+  transition: transform 0.3s ease-in;
   transform: scale(1);
   // pointer-events: auto;
-  .fas{
+  .fas {
     pointer-events: none;
   }
-  &-left{
-    left: .8rem;
+  &-left {
+    left: 0.8rem;
   }
-  &-right{
-    right: .8rem;
+  &-right {
+    right: 0.8rem;
   }
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
-  &:focus{
+  &:focus {
     outline: 3px dotted #ff4300;
     outline-offset: 4px;
   }
 }
 
 .loginformbtn,
-.signformbtn{
-  padding: .3rem .6rem;
+.signformbtn {
+  padding: 0.3rem 0.6rem;
   font-size: 1rem;
-  background: #00BFA6;
+  background: #00bfa6;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1px;
   border: none;
-  @include shadow(.3, 5px);
+  @include shadow(0.3, 5px);
   cursor: pointer;
-  &:hover{
+  &:hover {
     box-shadow: none;
   }
-  &:focus{
-    border:none;
-    outline: 3px dotted #00BFA6;
+  &:focus {
+    border: none;
+    outline: 3px dotted #00bfa6;
     outline-offset: 3px;
   }
   @media only screen and (max-width: 700px) {
     margin-bottom: 3rem;
   }
-
 }
 
-.signformbtn{
+.signformbtn {
   background: #ff4300;
-  &:focus{
+  &:focus {
     outline: 3px dotted #ff4300;
   }
 }
 
 //review section button
 .postReview,
-.cancelReview{
-  padding: .3rem 1rem;
+.cancelReview {
+  padding: 0.3rem 1rem;
   cursor: pointer;
   color: rgb(239, 251, 251);
   border: none;
-  letter-spacing:  1.1px;
-  font-size: .9rem;
+  letter-spacing: 1.1px;
+  font-size: 0.9rem;
   outline-offset: 3px;
-  @include shadow(.3, 4px);
-  &:hover{
+  @include shadow(0.3, 4px);
+  &:hover {
     box-shadow: none;
   }
-
 }
-.postReview{
-  margin-right: .8rem;
+.postReview {
+  margin-right: 0.8rem;
   background: #6e4812;
-  &:focus{
+  &:focus {
     outline: 2px dashed #6e4812;
   }
 }
 
-.cancelReview{
+.cancelReview {
   color: #181a16;
-  &:focus{
+  &:focus {
     outline: 2px dashed rgb(239, 251, 251);
   }
 }

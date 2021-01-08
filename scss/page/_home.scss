@@ -6,43 +6,43 @@
 //hero section styling
 
 .hero {
-  position:relative;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
-
-.sliders{
-   height: 100vh;
-   position:relative;
+.sliders {
+  height: 100vh;
 }
 
-.slide{
-  height: 100%;
-  position:relative;
+.slide {
+  height: 100vh;
   background-blend-mode: multiply;
-  transition: transform .4s ease-in-out;
-  &-1{
-    background:#8a9491 url('../images/houses/hero.jpg');
-      @include background(100%);
-   }
+  transition: transform 0.4s ease-in-out;
+  &-1 {
+    background: #8a9491 url("../images/houses/hero.jpg");
+    @include background(100%);
+  }
 
-  &-2{
-        background:#bbb url('../images/houses/hero-lor.jpg');
-        @include background(100%);
-              }
+  &-2 {
+    background: #bbb url("../images/houses/hero-lor.jpg");
+    @include background(100%);
+  }
 
-  &-3{
-      background:#bbb url('../images/houses/hero-less.jpg');
-      @include background(100%);
-        }
+  &-3 {
+    background: #bbb url("../images/houses/hero-less.jpg");
+    @include background(100%);
+  }
 }
 
 //services section styling
 .services {
-  padding: 2rem 0 0;
+  margin: 4rem 0 2rem;
   text-align: center;
+  // border: 2px solid yellow;
 
   &_lessor {
-      padding: 2rem 0;
+    margin: 2rem 0;
   }
 
   &_lessee {
@@ -52,6 +52,7 @@
   .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-gap: 1.2rem;
   }
 
   &-customer {
@@ -75,9 +76,12 @@
     height: 3rem;
     border-radius: 50%;
     padding: 0.3rem 0;
-    // stroke-width: 0;
     stroke: currentColor;
     fill: white;
+    @media (max-width: 400px) {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
     //lessee svg icons
     &-bullseye {
       background-color: #df1e2d;
@@ -115,33 +119,41 @@
   }
 }
 
-.faded{
+.faded {
   opacity: 0;
-  transition: opacity .3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 
-.faded.appear{
+.faded.appear {
   opacity: 1;
 }
 
 //sample space styling
 
 .sample-space {
-  padding: 0.2rem;
+  padding: 4rem 0.2rem 2rem;
   text-align: center;
-  background-color: rgba(225, 225, 225, .25);
+  background-color: rgba(225, 225, 225, 0.25);
 }
 
 .space {
   &-container {
-    position:relative;
+    // padding: 2rem 0.2rem 2rem;
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 1rem;
+    // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    // grid-gap: 1.5rem;
     align-items: center;
-    margin-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
     justify-content: space-between;
-}
+    @media (max-width: 400px) {
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+    // border: 4px solid blue;
+  }
+
   //description section styling
   &-desc-cont {
     background-color: #fff;
@@ -158,6 +170,12 @@
     grid-gap: 0.2rem;
     text-align: center;
   }
+  &-desc {
+    @media (max-width: 400px) {
+      font-family: var(--sec-font-family);
+      font-size: 0.8rem;
+    }
+  }
 
   &-feat {
     .icon {
@@ -171,12 +189,21 @@
       &-hash {
         fill: #db7932;
       }
+      @media (max-width: 400px) {
+        width: 1rem;
+        height: 1rem;
+      }
 
       &-tag {
         width: 0.8rem;
         height: 0.8rem;
-        transform: translateX(-4.1rem) translateY(.4rem);
+        transform: translateX(-4.1rem) translateY(0.4rem);
         fill: #829d8c;
+        @media (max-width: 400px) {
+          width: 0.8rem;
+          height: 0.8rem;
+          transform: translateX(-3.4rem) translateY(0.5rem);
+        }
       }
 
       &-rupees-symb {
@@ -190,7 +217,7 @@
   &-img-cont {
     position: relative;
     display: flex;
-}
+  }
 
   &-img {
     width: 100%;
@@ -217,65 +244,66 @@
     @media only screen and (min-width: 1200px) {
       left: 4.4rem;
     }
+
+    @media (max-width: 400px) {
+      // left: 4.4rem;
+      width: 120px;
+      height: 38px;
+    }
   }
 }
 
-.txtLeft{
+.txtLeft {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
-.txtRight{
+.txtRight {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
 
-
-.imgRight{
+.imgRight {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
 
-.imgLeft{
+.imgLeft {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
 
-.from-left{
- transform: translateX(-50%);
+.from-left {
+  transform: translateX(-50%);
 }
 
-.from-right{
+.from-right {
   transform: translateX(50%);
 }
 
 .from-left,
-.from-right{
-  transition: opacity .3s ease-in,
-              transform .4s ease-in;
+.from-right {
+  transition: opacity 0.3s ease-in, transform 0.4s ease-in;
   opacity: 0;
   transform: translateX(0);
 }
 
 .from-left.appear,
-.from-right.appear{
+.from-right.appear {
   opacity: 1;
 }
 
-
-
 @media only screen and (max-width: 1000px) {
   .imgRight,
-  .imgLeft{
+  .imgLeft {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-   }
-
- .txtRight,
- .txtLeft{
-   grid-column: 1 / 3;
-   grid-row: 2 / 3;
   }
 
+  .txtRight,
+  .txtLeft {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
 }
 
 //review section styling
@@ -284,20 +312,19 @@
   // border: 3px solid blue;
   background: #fff;
   position: relative;
-  height: 78vh;
+  // height: 78vh;
   text-align: center;
   @include flex(column, space-between);
+  padding-bottom: 2rem;
 }
 
 .review {
   border: 1px solid #bebcb8;
-  top: -3rem;
   position: relative;
   background: #fff;
-  // height: 53vh;
-  width: 80vh;
-  @include flex(column, space-evenly);
-  padding:1.1rem .2rem .8rem;
+  // top: -10rem;
+  @include flex(column, space-between);
+  padding: 1.1rem 0.2rem 0.8rem;
   @include shadow(0.3, 8px);
 }
 
@@ -305,10 +332,14 @@
   &-img-Cont {
     width: 100px;
     height: 100px;
-    margin: -1rem auto .4rem;
+    margin: -1rem auto 0.4rem;
     border: 3px solid #eee;
     border-radius: 50%;
     position: relative;
+    @media (max-width: 400px) {
+      width: 70px;
+      height: 70px;
+    }
 
     .icon {
       position: absolute;
@@ -322,6 +353,10 @@
         height: 1.7rem;
         padding: 0.2rem;
         fill: #fff;
+        @media (max-width: 400px) {
+          width: 1rem;
+          height: 1rem;
+        }
       }
     }
   }
