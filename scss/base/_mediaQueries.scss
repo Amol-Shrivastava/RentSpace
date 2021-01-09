@@ -1,154 +1,207 @@
-@media (max-width: 500px) {
-  //navbar section typography
-  .nav-logo {
+//navbar section typography
+.nav-logo {
+  @media (max-width: 500px) {
     font-size: 1rem;
   }
+}
 
-  .login {
+.login {
+  @media (max-width: 500px) {
     font-size: 0.6rem;
   }
+}
 
-  .join {
+.join {
+  @media (max-width: 500px) {
     font-size: 0.6rem;
   }
+}
 
-  //Footer mediaQuery for <400px
-  .footer {
-    &-links {
+//Footer mediaQuery for <400px
+.footer {
+  &-links {
+    @media (max-width: 500px) {
       font-size: 0.8rem;
     }
+  }
 
-    &-list-heading {
+  &-list-heading {
+    @media (max-width: 500px) {
       font-size: 1rem;
     }
   }
+}
 
-  //***********************PAGES***********************
+//***********************PAGES***********************
 
-  //***********HOME PAGE**************
+//***********HOME PAGE**************
 
-  //hero-section CTA
-  .load-btn {
+//hero-section CTA
+.load-btn {
+  @media (max-width: 500px) {
     font-size: 0.5rem;
   }
+}
 
-  //slider btns
-  .trans-btn {
+//slider btns
+.trans-btn {
+  @media (max-width: 500px) {
     padding: 0.8rem 0.3rem;
   }
+}
 
-  //Services
-  .icon {
+//Services
+.icon {
+  @media (max-width: 500px) {
     width: 2.2rem;
     height: 2.2rem;
   }
+}
 
-  //Sample Spaces
-  .space {
-    &-container {
+//Sample Spaces
+.space {
+  &-container {
+    @media (max-width: 500px) {
       &:not(:last-child) {
         margin-bottom: 3rem;
       }
     }
+  }
 
-    &-desc {
+  &-desc {
+    @media (max-width: 500px) {
       font-family: var(--sec-font-family);
       font-size: 0.8rem;
     }
+  }
 
-    &-feat {
-      .icon {
+  &-feat {
+    .icon {
+      @media (max-width: 500px) {
         width: 1rem;
         height: 1rem;
+      }
 
-        &-tag {
+      &-tag {
+        @media (max-width: 500px) {
           width: 0.8rem;
           height: 0.8rem;
           transform: translateX(-3.4rem) translateY(0.5rem);
         }
       }
     }
+  }
 
-    &-intro {
+  &-intro {
+    @media (max-width: 500px) {
       width: 120px;
       height: 38px;
     }
   }
+}
 
-  //Reviewer
-  .reviewer {
-    &-img-Cont {
+//Reviewer
+.reviewer {
+  &-img-Cont {
+    @media (max-width: 500px) {
       width: 70px;
       height: 70px;
-
-      .icon {
-        &-quotes-left {
+    }
+    .icon {
+      &-quotes-left {
+        @media (max-width: 500px) {
           width: 1rem;
           height: 1rem;
         }
       }
     }
   }
+}
 
-  //index page typography
-  .hero {
-    &_heading {
+//index page typography
+.hero {
+  &_heading {
+    @media (max-width: 500px) {
       font-size: 2.4rem;
     }
+  }
 
-    &_desc {
+  &_desc {
+    @media (max-width: 500px) {
       font-size: 0.8rem;
     }
   }
+}
 
-  .services {
-    &-heading {
+.services {
+  &-heading {
+    @media (max-width: 500px) {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.space {
+  &-name {
+    @media (max-width: 500px) {
       font-size: 1.1rem;
     }
   }
 
-  .space {
-    &-name {
-      font-size: 1.1rem;
-    }
-
-    .price {
-      font-size: 0.9rem;
-    }
-
-    .address,
-    .rooms {
-      font-size: 0.9rem;
-    }
-
-    .address {
-      font-size: 0.9rem;
-    }
-
-    .cost {
+  .price {
+    @media (max-width: 500px) {
       font-size: 0.9rem;
     }
   }
 
-  .reviewer {
-    &_name {
+  .address,
+  .rooms {
+    @media (max-width: 500px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .address {
+    @media (max-width: 500px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .cost {
+    @media (max-width: 500px) {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.reviewer {
+  &_name {
+    @media (max-width: 500px) {
       font-size: 1rem;
     }
+  }
 
-    &_city {
+  &_city {
+    @media (max-width: 500px) {
       font-size: 0.7rem;
     }
+  }
 
-    &_text {
+  &_text {
+    @media (max-width: 500px) {
       font-size: 0.8rem;
     }
   }
+}
 
-  .primary_heading {
+.primary_heading {
+  @media (max-width: 500px) {
     font-size: 1rem;
   }
+}
 
-  .secondary-heading {
+.secondary-heading {
+  @media (max-width: 500px) {
     font-size: 0.8rem;
   }
 }
