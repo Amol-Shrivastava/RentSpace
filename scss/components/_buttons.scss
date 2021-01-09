@@ -81,15 +81,10 @@
   letter-spacing: 2px;
   transition: transform 0.2s ease-in;
   cursor: pointer;
-  // @include shadow(0.3, 15px);
   &:hover,
   &:focus {
     outline: 5px dashed var(--link-hover-clr-1);
     outline-offset: 10px;
-  }
-  @media (max-width: 400px) {
-    // padding: 0.4rem 1.3rem;
-    font-size: 0.5rem;
   }
 }
 
@@ -104,9 +99,6 @@
   opacity: 0.6;
   padding: 1.3rem 0.5rem;
   cursor: pointer;
-  @media (max-width: 400px) {
-    padding: 0.8rem 0.3rem;
-  }
 }
 
 .icon {

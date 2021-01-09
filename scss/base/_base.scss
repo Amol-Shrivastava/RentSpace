@@ -13,8 +13,6 @@ body {
   font-family: var(--pr-font-family);
   overflow-x: hidden;
   display: flex;
-  min-height: 100%;
-  min-width: 100vw;
   flex-direction: column;
 }
 
@@ -482,9 +480,7 @@ ul {
   &-links {
     font-size: 1rem;
     color: #c6c8c9;
-    @media (max-width: 400px) {
-      font-size: 0.8rem;
-    }
+
     &:hover {
       outline: 3px dotted var(--link-hover-clr-1);
       outline-offset: 7px;
@@ -501,9 +497,6 @@ ul {
       letter-spacing: 1px;
       font-weight: 700;
       font-family: var(--pr-font-family);
-      // @media (max-width: 400px) {
-      //   font-size: rem;
-      // }
     }
   }
 
@@ -512,9 +505,6 @@ ul {
     color: #fff;
     letter-spacing: 2px;
     border-bottom: var(--border-bottom);
-    @media (max-width: 400px) {
-      font-size: 1rem;
-    }
   }
 
   &-ack {

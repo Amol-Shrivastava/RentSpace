@@ -78,10 +78,7 @@
     padding: 0.3rem 0;
     stroke: currentColor;
     fill: white;
-    @media (max-width: 400px) {
-      width: 2.2rem;
-      height: 2.2rem;
-    }
+
     //lessee svg icons
     &-bullseye {
       background-color: #df1e2d;
@@ -138,26 +135,16 @@
 
 .space {
   &-container {
-    // padding: 2rem 0.2rem 2rem;
     position: relative;
     display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    // grid-gap: 1.5rem;
     align-items: center;
-    // margin-bottom: 1.5rem;
     justify-content: space-between;
-    @media (max-width: 400px) {
-      &:not(:last-child) {
-        margin-bottom: 3rem;
-      }
-    }
     // border: 4px solid blue;
   }
 
   //description section styling
   &-desc-cont {
     background-color: #fff;
-    // width: 100%;
   }
 
   &-feat-cont {
@@ -169,12 +156,6 @@
     padding: 0.4rem;
     grid-gap: 0.2rem;
     text-align: center;
-  }
-  &-desc {
-    @media (max-width: 400px) {
-      font-family: var(--sec-font-family);
-      font-size: 0.8rem;
-    }
   }
 
   &-feat {
@@ -189,21 +170,12 @@
       &-hash {
         fill: #db7932;
       }
-      @media (max-width: 400px) {
-        width: 1rem;
-        height: 1rem;
-      }
 
       &-tag {
         width: 0.8rem;
         height: 0.8rem;
         transform: translateX(-4.1rem) translateY(0.4rem);
         fill: #829d8c;
-        @media (max-width: 400px) {
-          width: 0.8rem;
-          height: 0.8rem;
-          transform: translateX(-3.4rem) translateY(0.5rem);
-        }
       }
 
       &-rupees-symb {
@@ -243,12 +215,6 @@
 
     @media only screen and (min-width: 1200px) {
       left: 4.4rem;
-    }
-
-    @media (max-width: 400px) {
-      // left: 4.4rem;
-      width: 120px;
-      height: 38px;
     }
   }
 }
@@ -336,11 +302,6 @@
     border: 3px solid #eee;
     border-radius: 50%;
     position: relative;
-    @media (max-width: 400px) {
-      width: 70px;
-      height: 70px;
-    }
-
     .icon {
       position: absolute;
       bottom: 1px;
@@ -353,10 +314,6 @@
         height: 1.7rem;
         padding: 0.2rem;
         fill: #fff;
-        @media (max-width: 400px) {
-          width: 1rem;
-          height: 1rem;
-        }
       }
     }
   }

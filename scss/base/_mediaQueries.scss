@@ -1,0 +1,154 @@
+@media (max-width: 400px) {
+  //navbar section typography
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .login {
+    font-size: 0.6rem;
+  }
+
+  .join {
+    font-size: 0.6rem;
+  }
+
+  //Footer mediaQuery for <400px
+  .footer {
+    &-links {
+      font-size: 0.8rem;
+    }
+
+    &-list-heading {
+      font-size: 1rem;
+    }
+  }
+
+  //***********************PAGES***********************
+
+  //***********HOME PAGE**************
+
+  //hero-section CTA
+  .load-btn {
+    font-size: 0.5rem;
+  }
+
+  //slider btns
+  .trans-btn {
+    padding: 0.8rem 0.3rem;
+  }
+
+  //Services
+  .icon {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  //Sample Spaces
+  .space {
+    &-container {
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &-desc {
+      font-family: var(--sec-font-family);
+      font-size: 0.8rem;
+    }
+
+    &-feat {
+      .icon {
+        width: 1rem;
+        height: 1rem;
+
+        &-tag {
+          width: 0.8rem;
+          height: 0.8rem;
+          transform: translateX(-3.4rem) translateY(0.5rem);
+        }
+      }
+    }
+
+    &-intro {
+      width: 120px;
+      height: 38px;
+    }
+  }
+
+  //Reviewer
+  .reviewer {
+    &-img-Cont {
+      width: 70px;
+      height: 70px;
+
+      .icon {
+        &-quotes-left {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+  }
+
+  //index page typography
+  .hero {
+    &_heading {
+      font-size: 2.4rem;
+    }
+
+    &_desc {
+      font-size: 0.8rem;
+    }
+  }
+
+  .services {
+    &-heading {
+      font-size: 1.1rem;
+    }
+  }
+
+  .space {
+    &-name {
+      font-size: 1.1rem;
+    }
+
+    .price {
+      font-size: 0.9rem;
+    }
+
+    .address,
+    .rooms {
+      font-size: 0.9rem;
+    }
+
+    .address {
+      font-size: 0.9rem;
+    }
+
+    .cost {
+      font-size: 0.9rem;
+    }
+  }
+
+  .reviewer {
+    &_name {
+      font-size: 1rem;
+    }
+
+    &_city {
+      font-size: 0.7rem;
+    }
+
+    &_text {
+      font-size: 0.8rem;
+    }
+  }
+
+  .primary_heading {
+    font-size: 1rem;
+  }
+
+  .secondary-heading {
+    font-size: 0.8rem;
+  }
+}

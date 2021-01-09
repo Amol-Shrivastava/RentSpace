@@ -3,20 +3,13 @@
   font-size: 2.4rem;
   letter-spacing: 1px;
   font-family: var(--pr-font-family);
-  // font-weight: 700;
   color: var(--logo-clr);
-  @media (max-width: 400px) {
-    font-size: 1rem;
-  }
 }
 
 .login {
   font-size: 1.1rem;
   color: var(--login-clr);
   letter-spacing: 1px;
-  @media (max-width: 400px) {
-    font-size: 0.6rem;
-  }
 }
 
 .join {
@@ -27,9 +20,6 @@
   color: #fff;
   border-radius: 22px;
   padding: 0.2rem 0.8rem;
-  @media (max-width: 400px) {
-    font-size: 0.6rem;
-  }
 
   &:hover {
     color: #e3662a;
@@ -63,9 +53,6 @@
     @media (max-width: 950px) {
       font-size: 2rem;
     }
-    @media (max-width: 400px) {
-      font-size: 2.4rem;
-    }
   }
 
   &_desc {
@@ -76,9 +63,6 @@
     font-weight: normal;
     max-width: 650px;
     color: #e7e5e2;
-    @media (max-width: 400px) {
-      font-size: 0.8rem;
-    }
   }
 }
 
@@ -94,9 +78,6 @@
   color: #000205;
   border-bottom: var(--border-bottom);
   display: inline-block;
-  @media (max-width: 400px) {
-    font-size: 1rem;
-  }
 }
 
 .secondary-heading {
@@ -107,9 +88,6 @@
   // margin-bottom: 1.2rem;
   font-weight: bolder;
   display: inline-block;
-  @media (max-width: 400px) {
-    font-size: 0.8rem;
-  }
 }
 //service section typography
 
@@ -123,9 +101,7 @@
     letter-spacing: 1.1px;
     transition: transform 0.5s ease;
     transform-origin: right;
-    @media (max-width: 400px) {
-      font-size: 1.1rem;
-    }
+
     &-about {
       margin-top: 0.5rem;
     }
@@ -147,15 +123,14 @@
     color: #403e49;
     display: inline-block;
     font-weight: 400;
-    // margin: 1rem auto 0;
     width: 300px;
     font-size: 0.9rem;
     word-wrap: wrap;
     line-height: 1.7;
   }
 }
-//explore section typography
 
+//explore section typography
 .space {
   &-name {
     font-family: var(--sec-font-family);
@@ -165,9 +140,6 @@
     color: #050303;
     display: inline-block;
     border-bottom: var(--border-bottom);
-    @media (max-width: 400px) {
-      font-size: 1.1rem;
-    }
   }
 
   &-desc {
@@ -187,9 +159,6 @@
   font-size: 1.2rem;
   color: #c6390d;
   transform: translateY(-0.6rem);
-  @media (max-width: 400px) {
-    font-size: 0.9rem;
-  }
 }
 
 .address,
@@ -200,16 +169,10 @@
   font-size: 1.2rem;
   font-family: var(--sec-font-family);
   color: #140804;
-  @media (max-width: 400px) {
-    font-size: 0.9rem;
-  }
 }
 
 .address {
   font-size: 1.1rem;
-  @media (max-width: 400px) {
-    font-size: 0.9rem;
-  }
 }
 
 .cost {
@@ -217,10 +180,6 @@
   position: relative;
   font-size: 1.2rem;
   color: #140804;
-  @media (max-width: 400px) {
-    font-size: 0.9rem;
-  }
-  // top: -.1rem;
 }
 //reviewer section typography
 
@@ -233,10 +192,6 @@
     font-weight: bold;
     letter-spacing: 1px;
     font-family: var(--pr-font-family);
-    // display: inline-block;
-    @media (max-width: 400px) {
-      font-size: 1rem;
-    }
   }
 
   &_city {
@@ -246,9 +201,6 @@
     color: #91a899;
     font-size: 1.1rem;
     text-transform: uppercase;
-    @media (max-width: 400px) {
-      font-size: 0.7rem;
-    }
   }
 
   &_text {
@@ -260,9 +212,6 @@
     letter-spacing: 1px;
     color: #000000;
     font-family: var(--sec-font-family);
-    @media (max-width: 400px) {
-      font-size: 0.8rem;
-    }
   }
 }
 

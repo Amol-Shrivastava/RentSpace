@@ -27,8 +27,6 @@ body {
   font-family: var(--pr-font-family);
   overflow-x: hidden;
   display: flex;
-  min-height: 100%;
-  min-width: 100vw;
   flex-direction: column; }
 
 img {
@@ -422,9 +420,6 @@ ul {
 .footer-links {
   font-size: 1rem;
   color: #c6c8c9; }
-  @media (max-width: 400px) {
-    .footer-links {
-      font-size: 0.8rem; } }
   .footer-links:hover {
     outline: 3px dotted var(--link-hover-clr-1);
     outline-offset: 7px; }
@@ -443,9 +438,6 @@ ul {
   color: #fff;
   letter-spacing: 2px;
   border-bottom: var(--border-bottom); }
-  @media (max-width: 400px) {
-    .footer-list-heading {
-      font-size: 1rem; } }
 
 .footer-ack {
   text-align: center;
@@ -455,22 +447,83 @@ ul {
   font-size: 0.9rem;
   font-family: "Source Serif Pro", serif; }
 
+@media (max-width: 400px) {
+  .nav-logo {
+    font-size: 1rem; }
+  .login {
+    font-size: 0.6rem; }
+  .join {
+    font-size: 0.6rem; }
+  .footer-links {
+    font-size: 0.8rem; }
+  .footer-list-heading {
+    font-size: 1rem; }
+  .load-btn {
+    font-size: 0.5rem; }
+  .trans-btn {
+    padding: 0.8rem 0.3rem; }
+  .icon {
+    width: 2.2rem;
+    height: 2.2rem; }
+  .space-container:not(:last-child) {
+    margin-bottom: 3rem; }
+  .space-desc {
+    font-family: var(--sec-font-family);
+    font-size: 0.8rem; }
+  .space-feat .icon {
+    width: 1rem;
+    height: 1rem; }
+    .space-feat .icon-tag {
+      width: 0.8rem;
+      height: 0.8rem;
+      transform: translateX(-3.4rem) translateY(0.5rem); }
+  .space-intro {
+    width: 120px;
+    height: 38px; }
+  .reviewer-img-Cont {
+    width: 70px;
+    height: 70px; }
+    .reviewer-img-Cont .icon-quotes-left {
+      width: 1rem;
+      height: 1rem; }
+  .hero_heading {
+    font-size: 2.4rem; }
+  .hero_desc {
+    font-size: 0.8rem; }
+  .services-heading {
+    font-size: 1.1rem; }
+  .space-name {
+    font-size: 1.1rem; }
+  .space .price {
+    font-size: 0.9rem; }
+  .space .address,
+  .space .rooms {
+    font-size: 0.9rem; }
+  .space .address {
+    font-size: 0.9rem; }
+  .space .cost {
+    font-size: 0.9rem; }
+  .reviewer_name {
+    font-size: 1rem; }
+  .reviewer_city {
+    font-size: 0.7rem; }
+  .reviewer_text {
+    font-size: 0.8rem; }
+  .primary_heading {
+    font-size: 1rem; }
+  .secondary-heading {
+    font-size: 0.8rem; } }
+
 .nav-logo {
   font-size: 2.4rem;
   letter-spacing: 1px;
   font-family: var(--pr-font-family);
   color: var(--logo-clr); }
-  @media (max-width: 400px) {
-    .nav-logo {
-      font-size: 1rem; } }
 
 .login {
   font-size: 1.1rem;
   color: var(--login-clr);
   letter-spacing: 1px; }
-  @media (max-width: 400px) {
-    .login {
-      font-size: 0.6rem; } }
 
 .join {
   text-transform: uppercase;
@@ -480,9 +533,6 @@ ul {
   color: #fff;
   border-radius: 22px;
   padding: 0.2rem 0.8rem; }
-  @media (max-width: 400px) {
-    .join {
-      font-size: 0.6rem; } }
   .join:hover {
     color: #e3662a;
     background: #fff; }
@@ -507,9 +557,6 @@ ul {
   @media (max-width: 950px) {
     .hero_heading {
       font-size: 2rem; } }
-  @media (max-width: 400px) {
-    .hero_heading {
-      font-size: 2.4rem; } }
 
 .hero_desc {
   font-family: var(--sec-font-family);
@@ -519,9 +566,6 @@ ul {
   font-weight: normal;
   max-width: 650px;
   color: #e7e5e2; }
-  @media (max-width: 400px) {
-    .hero_desc {
-      font-size: 0.8rem; } }
 
 .les-heading {
   color: var(--rentspace-clr);
@@ -534,9 +578,6 @@ ul {
   color: #000205;
   border-bottom: var(--border-bottom);
   display: inline-block; }
-  @media (max-width: 400px) {
-    .primary_heading {
-      font-size: 1rem; } }
 
 .secondary-heading {
   font-size: 1.5rem;
@@ -545,9 +586,6 @@ ul {
   border-bottom: var(--heading-border-bottom);
   font-weight: bolder;
   display: inline-block; }
-  @media (max-width: 400px) {
-    .secondary-heading {
-      font-size: 0.8rem; } }
 
 .services-heading {
   font-size: 1.1rem;
@@ -558,9 +596,6 @@ ul {
   letter-spacing: 1.1px;
   transition: transform 0.5s ease;
   transform-origin: right; }
-  @media (max-width: 400px) {
-    .services-heading {
-      font-size: 1.1rem; } }
   .services-heading-about {
     margin-top: 0.5rem; }
   .services-heading::after {
@@ -591,9 +626,6 @@ ul {
   color: #050303;
   display: inline-block;
   border-bottom: var(--border-bottom); }
-  @media (max-width: 400px) {
-    .space-name {
-      font-size: 1.1rem; } }
 
 .space-desc {
   font-size: 1.2rem;
@@ -610,9 +642,6 @@ ul {
   font-size: 1.2rem;
   color: #c6390d;
   transform: translateY(-0.6rem); }
-  @media (max-width: 400px) {
-    .price {
-      font-size: 0.9rem; } }
 
 .address,
 .rooms {
@@ -622,25 +651,15 @@ ul {
   font-size: 1.2rem;
   font-family: var(--sec-font-family);
   color: #140804; }
-  @media (max-width: 400px) {
-    .address,
-    .rooms {
-      font-size: 0.9rem; } }
 
 .address {
   font-size: 1.1rem; }
-  @media (max-width: 400px) {
-    .address {
-      font-size: 0.9rem; } }
 
 .cost {
   font-family: var(--sec-font-family);
   position: relative;
   font-size: 1.2rem;
   color: #140804; }
-  @media (max-width: 400px) {
-    .cost {
-      font-size: 0.9rem; } }
 
 .reviewer_name {
   font-size: 1.2rem;
@@ -649,9 +668,6 @@ ul {
   font-weight: bold;
   letter-spacing: 1px;
   font-family: var(--pr-font-family); }
-  @media (max-width: 400px) {
-    .reviewer_name {
-      font-size: 1rem; } }
 
 .reviewer_city {
   font-family: var(--pr-font-family);
@@ -660,9 +676,6 @@ ul {
   color: #91a899;
   font-size: 1.1rem;
   text-transform: uppercase; }
-  @media (max-width: 400px) {
-    .reviewer_city {
-      font-size: 0.7rem; } }
 
 .reviewer_text {
   width: 100%;
@@ -673,9 +686,6 @@ ul {
   letter-spacing: 1px;
   color: #000000;
   font-family: var(--sec-font-family); }
-  @media (max-width: 400px) {
-    .reviewer_text {
-      font-size: 0.8rem; } }
 
 .option-detail {
   font-size: 1.2rem;
@@ -1004,9 +1014,6 @@ ul {
   .load-btn:hover, .load-btn:focus {
     outline: 5px dashed var(--link-hover-clr-1);
     outline-offset: 10px; }
-  @media (max-width: 400px) {
-    .load-btn {
-      font-size: 0.5rem; } }
 
 .trans-btn {
   position: absolute;
@@ -1018,9 +1025,6 @@ ul {
   opacity: 0.6;
   padding: 1.3rem 0.5rem;
   cursor: pointer; }
-  @media (max-width: 400px) {
-    .trans-btn {
-      padding: 0.8rem 0.3rem; } }
 
 .icon {
   display: inline-block;
@@ -1633,10 +1637,6 @@ ul {
     padding: 0.3rem 0;
     stroke: currentColor;
     fill: white; }
-    @media (max-width: 400px) {
-      .services .icon {
-        width: 2.2rem;
-        height: 2.2rem; } }
     .services .icon-bullseye {
       background-color: #df1e2d; }
     .services .icon-gps_not_fixed {
@@ -1672,9 +1672,6 @@ ul {
   display: grid;
   align-items: center;
   justify-content: space-between; }
-  @media (max-width: 400px) {
-    .space-container:not(:last-child) {
-      margin-bottom: 3rem; } }
 
 .space-desc-cont {
   background-color: #fff; }
@@ -1689,11 +1686,6 @@ ul {
   grid-gap: 0.2rem;
   text-align: center; }
 
-@media (max-width: 400px) {
-  .space-desc {
-    font-family: var(--sec-font-family);
-    font-size: 0.8rem; } }
-
 .space-feat .icon {
   width: 1.5rem;
   height: 1.5rem; }
@@ -1701,20 +1693,11 @@ ul {
     fill: #db7932; }
   .space-feat .icon-hash {
     fill: #db7932; }
-  @media (max-width: 400px) {
-    .space-feat .icon {
-      width: 1rem;
-      height: 1rem; } }
   .space-feat .icon-tag {
     width: 0.8rem;
     height: 0.8rem;
     transform: translateX(-4.1rem) translateY(0.4rem);
     fill: #829d8c; }
-    @media (max-width: 400px) {
-      .space-feat .icon-tag {
-        width: 0.8rem;
-        height: 0.8rem;
-        transform: translateX(-3.4rem) translateY(0.5rem); } }
   .space-feat .icon-rupees-symb {
     width: 0.7rem;
     height: 0.7rem;
@@ -1747,10 +1730,6 @@ ul {
   @media only screen and (min-width: 1200px) {
     .space-intro {
       left: 4.4rem; } }
-  @media (max-width: 400px) {
-    .space-intro {
-      width: 120px;
-      height: 38px; } }
 
 .txtLeft {
   grid-column: 1 / 2;
@@ -1822,10 +1801,6 @@ ul {
   border: 3px solid #eee;
   border-radius: 50%;
   position: relative; }
-  @media (max-width: 400px) {
-    .reviewer-img-Cont {
-      width: 70px;
-      height: 70px; } }
   .reviewer-img-Cont .icon {
     position: absolute;
     bottom: 1px;
@@ -1837,10 +1812,6 @@ ul {
       height: 1.7rem;
       padding: 0.2rem;
       fill: #fff; }
-      @media (max-width: 400px) {
-        .reviewer-img-Cont .icon-quotes-left {
-          width: 1rem;
-          height: 1rem; } }
 
 .reviewer-img {
   width: 100%;
