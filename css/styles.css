@@ -680,19 +680,13 @@ ul {
   position: relative;
   top: -0.4rem;
   left: 0.2rem;
-  font-size: 1.2rem;
   font-family: var(--sec-font-family);
   color: #140804;
-}
-
-.address {
-  font-size: 1.1rem;
 }
 
 .cost {
   font-family: var(--sec-font-family);
   position: relative;
-  font-size: 1.2rem;
   color: #140804;
 }
 
