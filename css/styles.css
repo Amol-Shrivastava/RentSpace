@@ -562,12 +562,12 @@ ul {
 .address,
 .rooms {
   font-family: var(--sec-font-family);
-  color: #140804; }
+  color: #6d6d6c; }
 
 .cost {
   font-family: var(--sec-font-family);
   position: relative;
-  color: #140804; }
+  color: #6d6d6c; }
 
 .reviewer_name {
   font-size: 1.2rem;
