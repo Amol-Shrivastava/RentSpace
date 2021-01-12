@@ -1627,7 +1627,8 @@ ul {
       fill: #d9e7c9; }
 
 .sample-space {
-  text-align: center; }
+  text-align: center;
+  margin-top: 4rem; }
 
 .space-container {
   padding: 1.5rem 0;
@@ -1669,13 +1670,13 @@ ul {
       fill: #db7932; }
 
 .reviews {
+  margin: 2.5rem 0 5rem;
   position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 0; }
+  justify-content: space-between; }
 
 .review {
   position: relative;

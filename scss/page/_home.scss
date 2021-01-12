@@ -107,6 +107,7 @@
 //sample space styling
 .sample-space {
   text-align: center;
+  margin-top: 4rem;
 }
 
 .space {
@@ -165,10 +166,10 @@
 //review section styling
 
 .reviews {
+  margin: 2.5rem 0 5rem;
   position: relative;
   text-align: center;
   @include flex(column, space-between);
-  padding: 1.5rem 0;
 }
 
 .review {
