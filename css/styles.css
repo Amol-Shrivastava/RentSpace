@@ -537,7 +537,8 @@ ul {
   font-weight: 400;
   font-size: 0.9rem;
   word-wrap: wrap;
-  line-height: 1.7; }
+  line-height: 1.7;
+  max-width: 450px; }
 
 .space-name {
   font-family: var(--sec-font-family);
