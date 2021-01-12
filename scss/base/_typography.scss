@@ -85,7 +85,6 @@
   font-weight: 500;
   color: #1c0808;
   border-bottom: var(--heading-border-bottom);
-  // margin-bottom: 1.2rem;
   font-weight: bolder;
   display: inline-block;
 }
@@ -518,7 +517,7 @@
 .services {
   &-heading {
     @media (max-width: 500px) {
-      font-size: 1.1rem;
+      font-size: 0.82rem;
     }
   }
 }
