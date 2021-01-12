@@ -97,36 +97,23 @@
     position: relative;
     display: block;
     font-weight: 700;
-    color: #0d0e13;
+    color: #424242;
     letter-spacing: 1.1px;
-    transition: transform 0.5s ease;
-    transform-origin: right;
 
     &-about {
       margin-top: 0.5rem;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      width: 100%;
-      border-bottom: var(--border-bottom);
-      transform: scale(0);
-      transform-origin: left;
     }
   }
 
   &-desc {
     margin-bottom: 0.6rem;
-    color: #403e49;
+    color: #a7a4a4;
     display: inline-block;
     font-weight: 400;
-    width: 300px;
     font-size: 0.9rem;
     word-wrap: wrap;
     line-height: 1.7;
+    // border: 2px solid yellow;
   }
 }
 
@@ -136,49 +123,34 @@
     font-family: var(--sec-font-family);
     letter-spacing: 1px;
     font-size: 2rem;
-    margin: 1rem 0;
+    margin: 1rem 0 1.5rem;
     color: #050303;
     display: inline-block;
     border-bottom: var(--border-bottom);
   }
 
-  &-desc {
-    font-size: 1.2rem;
-    width: 80%;
-    margin: 0.4rem auto;
-    text-align: left;
-    line-height: 1.5;
+  &-about {
+    padding: 1rem;
+    font-size: 0.89rem;
+    color: #a0a0a0;
     letter-spacing: 1px;
-    color: #170d06;
-    padding: 0.7rem 0.3rem;
-    flex-wrap: wrap;
   }
 }
 
 .price {
-  font-size: 1.2rem;
   color: #c6390d;
   transform: translateY(-0.6rem);
 }
 
 .address,
 .rooms {
-  position: relative;
-  top: -0.4rem;
-  left: 0.2rem;
-  font-size: 1.2rem;
   font-family: var(--sec-font-family);
   color: #140804;
-}
-
-.address {
-  font-size: 1.1rem;
 }
 
 .cost {
   font-family: var(--sec-font-family);
   position: relative;
-  font-size: 1.2rem;
   color: #140804;
 }
 //reviewer section typography
@@ -186,8 +158,7 @@
 .reviewer {
   &_name {
     font-size: 1.2rem;
-    color: #080e0c;
-    // font-weight: 800;
+    color: #7e807f;
     display: block;
     font-weight: bold;
     letter-spacing: 1px;
@@ -198,7 +169,7 @@
     font-family: var(--pr-font-family);
     font-weight: normal;
     letter-spacing: 1.5px;
-    color: #91a899;
+    color: #b0c4b7;
     font-size: 1.1rem;
     text-transform: uppercase;
   }
@@ -210,7 +181,7 @@
     font-size: 1.1rem;
     line-height: 1.5;
     letter-spacing: 1px;
-    color: #000000;
+    color: #5e5d5d;
     font-family: var(--sec-font-family);
   }
 }
@@ -460,7 +431,6 @@
 
 .signheading {
   top: 1rem;
-  // margin-bottom: 0;
   @media only screen and (max-width: 750px) {
     top: 0;
   }
@@ -478,4 +448,116 @@
   color: #edf5e1;
   // color: #fff;
   // color: #060306;
+}
+
+///Media query for <500px ***************************************
+
+//navbar section typography
+
+.nav-logo {
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
+}
+
+.login {
+  @media (max-width: 500px) {
+    font-size: 0.6rem;
+  }
+}
+
+.join {
+  @media (max-width: 500px) {
+    font-size: 0.6rem;
+  }
+}
+
+//Footer mediaQuery for <400px
+.footer {
+  &-links {
+    @media (max-width: 500px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  &-list-heading {
+    @media (max-width: 500px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+//Repeating Headings styling
+.primary_heading {
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
+}
+
+.secondary-heading {
+  @media (max-width: 500px) {
+    font-size: 0.8rem;
+  }
+}
+
+//index page typography
+.hero {
+  &_heading {
+    @media (max-width: 500px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &_desc {
+    @media (max-width: 500px) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.services {
+  &-heading {
+    @media (max-width: 500px) {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.space {
+  &-name {
+    @media (max-width: 500px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &-feat {
+    .address,
+    .rooms,
+    .cost {
+      @media (max-width: 500px) {
+        font-size: 0.9rem;
+        font-family: var(--pr-font-family);
+      }
+    }
+  }
+}
+
+.reviewer {
+  &_name {
+    @media (max-width: 500px) {
+      font-size: 1rem;
+    }
+  }
+
+  &_city {
+    @media (max-width: 500px) {
+      font-size: 0.7rem;
+    }
+  }
+
+  &_text {
+    @media (max-width: 500px) {
+      font-size: 0.8rem;
+    }
+  }
 }
