@@ -6,9 +6,10 @@
   background: #139c9c;
   color: #fff;
   border: none;
-  @include shadow(0.3, 9px);
+  @include shadow(0.2, 4px);
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
+  font-family: var(--pr-font-family);
   letter-spacing: 1px;
   &:hover {
     background: #095b5b;

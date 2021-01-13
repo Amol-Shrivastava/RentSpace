@@ -20,19 +20,23 @@
   background-blend-mode: multiply;
   transition: transform 0.4s ease-in-out;
   &-1 {
-    background: #8a9491 url("../images/houses/hero.jpg");
+    background: #727070 url("../images/houses/hero.jpg");
     @include background(100%);
   }
 
   &-2 {
-    background: #bbb url("../images/houses/hero-lor.jpg");
+    background: #727070 url("../images/houses/hero-lor.jpg");
     @include background(100%);
   }
 
   &-3 {
-    background: #bbb url("../images/houses/hero-less.jpg");
+    background: #727070 url("../images/houses/hero-less.jpg");
     @include background(100%);
   }
+}
+
+.load-btn {
+  @include shadow(0.3, 5px);
 }
 
 //services section styling
@@ -124,17 +128,15 @@
     position: relative;
     margin: 0 2rem 1.5rem;
     border-radius: 20px;
-    // background: red;
-  }
-
-  &-img {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    display: block;
-    object-fit: cover;
-    @include shadow(0.3, 4px);
-    border-radius: 20px;
+    .space-img {
+      width: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+      display: block;
+      object-fit: cover;
+      @include shadow(0.5, 2px);
+      border-radius: 20px;
+    }
   }
 
   //purchase details
@@ -218,8 +220,8 @@
 
 //hero-section CTA
 .load-btn {
-  @media (max-width: 500px) {
-    font-size: 0.5rem;
+  @media (max-width: 529px) {
+    font-size: 0.8rem;
   }
 }
 
@@ -230,10 +232,11 @@
   }
 }
 
+//service svg
 .lessor-features,
 .lessee-features {
   svg {
-    @media (max-width: 500px) {
+    @media (max-width: 528px) {
       width: 2rem;
       height: 2rem;
     }
@@ -275,97 +278,52 @@
         @media (max-width: 500px) {
           width: 1rem;
           height: 1rem;
-          // fill: pink;
         }
       }
     }
   }
 }
 
-// //index page typography
-// .hero {
-//   &_heading {
-//     @media (max-width: 500px) {
-//       font-size: 2.4rem;
-//     }
-//   }
+///Media query for >500px <800px ***************************************
 
-//   &_desc {
-//     @media (max-width: 500px) {
-//       font-size: 0.8rem;
-//     }
-//   }
-// }
+//hero-section CTA
+.load-btn {
+  @media (min-width: 530px) and (max-width: 700px) {
+    font-size: 0.8rem;
+  }
+}
 
-// .services {
-//   &-heading {
-//     @media (max-width: 500px) {
-//       font-size: 1.1rem;
-//     }
-//   }
-// }
+//slider btns
+.trans-btn {
+  @media (max-width: 500px) {
+    padding: 0.8rem 0.3rem;
+  }
+}
+//service svg
+.lessor-features,
+.lessee-features {
+  svg {
+    @media (min-width: 530px) and (max-width: 700px) {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+  }
+}
 
-// .space {
-//   &-name {
-//     @media (max-width: 500px) {
-//       font-size: 1.1rem;
-//     }
-//   }
+//Sample Spaces
+.space {
+  &-img-cont {
+    @media (min-width: 530px) and (max-width: 700px) {
+      margin: 0 3rem 1.5rem;
+    }
+  }
 
-//   .price {
-//     @media (max-width: 500px) {
-//       font-size: 0.9rem;
-//     }
-//   }
-
-//   .address,
-//   .rooms {
-//     @media (max-width: 500px) {
-//       font-size: 0.9rem;
-//     }
-//   }
-
-//   .address {
-//     @media (max-width: 500px) {
-//       font-size: 0.9rem;
-//     }
-//   }
-
-//   .cost {
-//     @media (max-width: 500px) {
-//       font-size: 0.9rem;
-//     }
-//   }
-// }
-
-// .reviewer {
-//   &_name {
-//     @media (max-width: 500px) {
-//       font-size: 1rem;
-//     }
-//   }
-
-//   &_city {
-//     @media (max-width: 500px) {
-//       font-size: 0.7rem;
-//     }
-//   }
-
-//   &_text {
-//     @media (max-width: 500px) {
-//       font-size: 0.8rem;
-//     }
-//   }
-// }
-
-// .primary_heading {
-//   @media (max-width: 500px) {
-//     font-size: 1rem;
-//   }
-// }
-
-// .secondary-heading {
-//   @media (max-width: 500px) {
-//     font-size: 0.8rem;
-//   }
-// }
+  &-feat {
+    .icon {
+      @media (min-width: 530px) and (max-width: 700px) {
+        width: 0.9rem;
+        height: 0.9rem;
+      }
+    }
+  }
+}

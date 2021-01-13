@@ -33,7 +33,7 @@ ul {
 
 .nav,
 .other-page-navbar {
-  --logo-clr: #fefeff;
+  --logo-clr: #eeeeee;
   --login-clr: #dfe4eb;
   position: fixed;
   top: 0;
@@ -68,7 +68,7 @@ ul {
 }
 //Intersection Observer API classes Styling
 .nav-scrolled {
-  --logo-clr: #c4e4c9;
+  --logo-clr: #c7cec8;
   --login-clr: #b0b7d6;
   @include shadow(0.1, 3px);
   background: #07080f;
