@@ -1037,8 +1037,9 @@ ul {
   .trans-btn {
     padding: 0.4rem 0.3rem; } }
 
-#next {
-  margin-right: 0.52rem; }
+@media (min-width: 800px) {
+  #next {
+    margin-right: 0.52rem; } }
 
 @media (min-width: 530px) and (max-width: 700px) {
   .load-btn {

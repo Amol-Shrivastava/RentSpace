@@ -45,7 +45,9 @@
 }
 
 #next {
-  margin-right: 0.52rem;
+  @media (min-width: 800px) {
+    margin-right: 0.52rem;
+  }
 }
 
 ///Media query for >500px <800px ***************************************
