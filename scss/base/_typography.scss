@@ -141,6 +141,10 @@
     font-size: 0.89rem;
     color: #a0a0a0;
     letter-spacing: 1px;
+    @media (min-width: 701px) {
+      max-width: 600px;
+    }
+    // border: 2px solid red;
   }
 }
 
@@ -574,14 +578,14 @@
 //navbar section typography
 
 .nav-logo {
-  @media (min-width: 530px) and (max-width: 700px) {
+  @media (min-width: 701px) and (max-width: 1000px) {
     font-size: 1.1rem;
   }
 }
 
 .login,
 .join {
-  @media (min-width: 530px) and (max-width: 700px) {
+  @media (min-width: 701px) and (max-width: 1000px) {
     font-size: 0.7rem;
   }
 }
@@ -589,7 +593,7 @@
 //Footer mediaQuery for <500px
 .footer {
   &-links {
-    @media (min-width: 530px) and (max-width: 700px) {
+    @media (min-width: 701px) and (max-width: 1000px) {
       font-size: 0.9rem;
     }
     &-logo {
@@ -598,7 +602,7 @@
   }
 
   &-list-heading {
-    @media (min-width: 530px) and (max-width: 700px) {
+    @media (min-width: 701px) and (max-width: 1000px) {
       font-size: 1.1rem;
       font-weight: lighter;
     }
@@ -607,13 +611,13 @@
 
 //Repeating Headings styling
 .primary_heading {
-  @media (min-width: 530px) and (max-width: 700px) {
+  @media (min-width: 701px) and (max-width: 1000px) {
     font-size: 1.3rem;
   }
 }
 
 .secondary-heading {
-  @media (min-width: 530px) and (max-width: 700px) {
+  @media (min-width: 701px) and (max-width: 1000px) {
     font-size: 0.8rem;
   }
 }
@@ -621,14 +625,14 @@
 //index page typography
 .hero {
   &_heading {
-    @media (min-width: 530px) and (max-width: 700px) {
+    @media (min-width: 701px) and (max-width: 1000px) {
       font-size: 2.3rem;
       // border: 2px solid yellow;
     }
   }
 
   &_desc {
-    @media (min-width: 530px) and (max-width: 700px) {
+    @media (min-width: 701px) and (max-width: 1000px) {
       font-size: 1rem;
     }
   }
@@ -636,7 +640,7 @@
 
 .services {
   &-heading {
-    @media (min-width: 530px) and (max-width: 700px) {
+    @media (min-width: 701px) and (max-width: 1000px) {
       font-size: 0.95rem;
     }
   }
@@ -644,7 +648,7 @@
 
 .space {
   &-name {
-    @media (min-width: 530px) and (max-width: 700px) {
+    @media (min-width: 701px) and (max-width: 1000px) {
       font-size: 1rem;
     }
   }
@@ -653,7 +657,7 @@
     .address,
     .rooms,
     .cost {
-      @media (min-width: 530px) and (max-width: 700px) {
+      @media (min-width: 701px) and (max-width: 1000px) {
         font-size: 0.9rem;
         font-family: var(--pr-font-family);
       }
@@ -663,19 +667,245 @@
 
 .reviewer {
   &_name {
-    @media (min-width: 530px) and (max-width: 700px) {
+    @media (min-width: 701px) and (max-width: 1400px) {
       font-size: 1.1rem;
     }
   }
 
   &_city {
-    @media (min-width: 530px) and (max-width: 700px) {
+    @media (min-width: 701px) and (max-width: 1400px) {
       font-size: 0.8rem;
     }
   }
 
   &_text {
-    @media (min-width: 530px) and (max-width: 700px) {
+    @media (min-width: 701px) and (max-width: 1400px) {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+///Media query for >500px <800px ***************************************
+
+//navbar section typography
+
+.nav-logo {
+  @media (min-width: 531px) and (max-width: 1000px) {
+    font-size: 1.2rem;
+  }
+}
+
+.login,
+.join {
+  @media (min-width: 531px) and (max-width: 1000px) {
+    font-size: 0.7rem;
+  }
+}
+
+//Footer mediaQuery for <500px
+.footer {
+  &-links {
+    @media (min-width: 531px) and (max-width: 1000px) {
+      font-size: 0.9rem;
+    }
+    &-logo {
+      font-size: 1.1rem;
+    }
+  }
+
+  &-list-heading {
+    @media (min-width: 531px) and (max-width: 1000px) {
+      font-size: 1.1rem;
+      font-weight: lighter;
+    }
+  }
+}
+
+//Repeating Headings styling
+.primary_heading {
+  @media (min-width: 531px) and (max-width: 1000px) {
+    font-size: 1.3rem;
+  }
+}
+
+.secondary-heading {
+  @media (min-width: 531px) and (max-width: 1000px) {
+    font-size: 0.8rem;
+  }
+}
+
+//index page typography
+.hero {
+  &_heading {
+    @media (min-width: 531px) and (max-width: 1000px) {
+      font-size: 2.4rem;
+      // border: 2px solid yellow;
+    }
+  }
+
+  &_desc {
+    @media (min-width: 531px) and (max-width: 1000px) {
+      font-size: 1.2rem;
+      font-weight: lighter;
+    }
+  }
+}
+
+.services {
+  &-heading {
+    @media (min-width: 531px) and (max-width: 1000px) {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.space {
+  &-name {
+    @media (min-width: 531px) and (max-width: 1000px) {
+      font-size: 1rem;
+    }
+  }
+
+  &-feat {
+    .address,
+    .rooms,
+    .cost {
+      @media (min-width: 531px) and (max-width: 1000px) {
+        font-size: 0.9rem;
+        font-family: var(--pr-font-family);
+      }
+    }
+  }
+}
+
+.reviewer {
+  &_name {
+    @media (min-width: 531px) and (max-width: 1000px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &_city {
+    @media (min-width: 531px) and (max-width: 1000px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  &_text {
+    @media (min-width: 531px) and (max-width: 1000px) {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+///Media query for >1000px ***************************************
+
+//navbar section typography
+
+.nav-logo {
+  @media (min-width: 1002px) {
+    font-size: 1.2rem;
+  }
+}
+
+.login,
+.join {
+  @media (min-width: 1002px) {
+    font-size: 0.8rem;
+  }
+}
+
+//Footer mediaQuery for <500px
+.footer {
+  &-links {
+    @media (min-width: 1002px) {
+      font-size: 0.9rem;
+    }
+    &-logo {
+      font-size: 1.1rem;
+    }
+  }
+
+  &-list-heading {
+    @media (min-width: 1002px) {
+      font-size: 1.1rem;
+      font-weight: lighter;
+    }
+  }
+}
+
+//Repeating Headings styling
+.primary_heading {
+  @media (min-width: 1002px) {
+    font-size: 1.2rem;
+  }
+}
+
+.secondary-heading {
+  @media (min-width: 1002px) {
+    font-size: 0.8rem;
+  }
+}
+
+//index page typography
+.hero {
+  &_heading {
+    @media (min-width: 1002px) {
+      font-size: 2.4rem;
+      // border: 2px solid yellow;
+    }
+  }
+
+  &_desc {
+    @media (min-width: 1002px) {
+      font-size: 1.2rem;
+      font-weight: lighter;
+    }
+  }
+}
+
+.services {
+  &-heading {
+    @media (min-width: 1002px) {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.space {
+  &-name {
+    @media (min-width: 1002px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &-feat {
+    .address,
+    .rooms,
+    .cost {
+      @media (min-width: 1002px) {
+        font-size: 1rem;
+        font-family: var(--pr-font-family);
+      }
+    }
+  }
+}
+
+.reviewer {
+  &_name {
+    @media (min-width: 1002px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &_city {
+    @media (min-width: 1002px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  &_text {
+    @media (min-width: 1002px) {
       font-size: 0.85rem;
     }
   }

@@ -569,6 +569,9 @@ ul {
   font-size: 0.89rem;
   color: #a0a0a0;
   letter-spacing: 1px; }
+  @media (min-width: 701px) {
+    .space-about {
+      max-width: 600px; } }
 
 .price {
   color: #c6390d;
@@ -898,67 +901,197 @@ ul {
   .reviewer_text {
     font-size: 0.8rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .nav-logo {
     font-size: 1.1rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .login,
   .join {
     font-size: 0.7rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .footer-links {
     font-size: 0.9rem; } }
 
 .footer-links-logo {
   font-size: 1.1rem; }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .footer-list-heading {
     font-size: 1.1rem;
     font-weight: lighter; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .primary_heading {
     font-size: 1.3rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .secondary-heading {
     font-size: 0.8rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .hero_heading {
     font-size: 2.3rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .hero_desc {
     font-size: 1rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .services-heading {
     font-size: 0.95rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .space-name {
     font-size: 1rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .space-feat .address,
   .space-feat .rooms,
   .space-feat .cost {
     font-size: 0.9rem;
     font-family: var(--pr-font-family); } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1400px) {
   .reviewer_name {
     font-size: 1.1rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1400px) {
   .reviewer_city {
     font-size: 0.8rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1400px) {
+  .reviewer_text {
+    font-size: 0.85rem; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .nav-logo {
+    font-size: 1.2rem; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .login,
+  .join {
+    font-size: 0.7rem; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .footer-links {
+    font-size: 0.9rem; } }
+
+.footer-links-logo {
+  font-size: 1.1rem; }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .footer-list-heading {
+    font-size: 1.1rem;
+    font-weight: lighter; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .primary_heading {
+    font-size: 1.3rem; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .secondary-heading {
+    font-size: 0.8rem; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .hero_heading {
+    font-size: 2.4rem; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .hero_desc {
+    font-size: 1.2rem;
+    font-weight: lighter; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .services-heading {
+    font-size: 0.9rem; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .space-name {
+    font-size: 1rem; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .space-feat .address,
+  .space-feat .rooms,
+  .space-feat .cost {
+    font-size: 0.9rem;
+    font-family: var(--pr-font-family); } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .reviewer_name {
+    font-size: 1.1rem; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .reviewer_city {
+    font-size: 0.8rem; } }
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .reviewer_text {
+    font-size: 0.85rem; } }
+
+@media (min-width: 1002px) {
+  .nav-logo {
+    font-size: 1.2rem; } }
+
+@media (min-width: 1002px) {
+  .login,
+  .join {
+    font-size: 0.8rem; } }
+
+@media (min-width: 1002px) {
+  .footer-links {
+    font-size: 0.9rem; } }
+
+.footer-links-logo {
+  font-size: 1.1rem; }
+
+@media (min-width: 1002px) {
+  .footer-list-heading {
+    font-size: 1.1rem;
+    font-weight: lighter; } }
+
+@media (min-width: 1002px) {
+  .primary_heading {
+    font-size: 1.2rem; } }
+
+@media (min-width: 1002px) {
+  .secondary-heading {
+    font-size: 0.8rem; } }
+
+@media (min-width: 1002px) {
+  .hero_heading {
+    font-size: 2.4rem; } }
+
+@media (min-width: 1002px) {
+  .hero_desc {
+    font-size: 1.2rem;
+    font-weight: lighter; } }
+
+@media (min-width: 1002px) {
+  .services-heading {
+    font-size: 0.9rem; } }
+
+@media (min-width: 1002px) {
+  .space-name {
+    font-size: 1.6rem; } }
+
+@media (min-width: 1002px) {
+  .space-feat .address,
+  .space-feat .rooms,
+  .space-feat .cost {
+    font-size: 1rem;
+    font-family: var(--pr-font-family); } }
+
+@media (min-width: 1002px) {
+  .reviewer_name {
+    font-size: 1.1rem; } }
+
+@media (min-width: 1002px) {
+  .reviewer_city {
+    font-size: 0.8rem; } }
+
+@media (min-width: 1002px) {
   .reviewer_text {
     font-size: 0.85rem; } }
 
@@ -1012,7 +1145,8 @@ ul {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); }
   .load-btn:hover, .load-btn:focus {
     outline: 5px dashed var(--link-hover-clr-1);
-    outline-offset: 10px; }
+    outline-offset: 10px;
+    box-shadow: none; }
 
 .trans-btn {
   position: absolute;
@@ -1041,7 +1175,7 @@ ul {
   #next {
     margin-right: 0.52rem; } }
 
-@media (min-width: 530px) and (max-width: 700px) {
+@media (min-width: 701px) {
   .load-btn {
     font-size: 0.8rem; } }
 
@@ -1691,12 +1825,7 @@ ul {
   text-align: center; }
   .services_lessor {
     margin: 2rem 0; }
-  .services_lessee {
-    padding: 2rem 0; }
   .services .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    grid-gap: 0.5rem;
     padding: 0 1rem; }
   .services-customer {
     border: 1px solid #dfe5e6;
@@ -1732,7 +1861,8 @@ ul {
 .space-container {
   padding: 1.5rem 0;
   position: relative;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between; }
 
@@ -1818,6 +1948,12 @@ ul {
     width: 2rem;
     height: 2rem; } }
 
+@media (max-width: 700px) {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-gap: 0.5rem; } }
+
 .space-container {
   border-bottom: 10px dotted #ebebeb; }
 
@@ -1855,6 +1991,45 @@ ul {
   .space-feat .icon {
     width: 0.9rem;
     height: 0.9rem; } }
+
+@media (min-width: 701px) {
+  .lessor-features svg,
+  .lessee-features svg {
+    width: 2.5rem;
+    height: 2.5rem; } }
+
+@media (min-width: 701px) {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1.2rem;
+    margin: 0 1rem; } }
+
+@media (min-width: 701px) {
+  .space-container {
+    margin: 0 4rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid #d6d4d4; } }
+
+@media (min-width: 701px) {
+  .space-img-cont {
+    margin: 0 1rem 1.5rem; } }
+
+@media (min-width: 701px) {
+  .space-img-cont .space-img {
+    max-width: 500px; } }
+
+@media (min-width: 701px) {
+  .space-feat .icon {
+    width: 0.8rem;
+    height: 0.8rem; } }
+
+@media (min-width: 701px) {
+  .review {
+    max-width: 900px;
+    margin: 0 1rem 1.5rem; } }
 
 .search-content {
   position: absolute;

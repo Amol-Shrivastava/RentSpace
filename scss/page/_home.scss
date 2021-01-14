@@ -44,14 +44,7 @@
     margin: 2rem 0;
   }
 
-  &_lessee {
-    padding: 2rem 0;
-  }
-
   .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    grid-gap: 0.5rem;
     padding: 0 1rem;
   }
 
@@ -114,7 +107,8 @@
   &-container {
     padding: 1.5rem 0;
     position: relative;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
@@ -175,6 +169,7 @@
   position: relative;
   @include flex(column, space-between);
   margin: 0 4rem;
+  // max-width: 600px;
   padding: 2rem 0.4rem;
   @include shadow(0.2, 5px);
   border-radius: 20px;
@@ -222,6 +217,14 @@
       width: 2rem;
       height: 2rem;
     }
+  }
+}
+
+.features {
+  @media (max-width: 700px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-gap: 0.5rem;
   }
 }
 
@@ -294,5 +297,70 @@
         height: 0.9rem;
       }
     }
+  }
+}
+
+///Media query for >700px ***************************************
+
+//service svg
+.lessor-features,
+.lessee-features {
+  svg {
+    @media (min-width: 701px) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}
+
+.features {
+  @media (min-width: 701px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1.2rem;
+    margin: 0 1rem;
+  }
+}
+
+//Sample Spaces
+
+.space {
+  &-container {
+    @media (min-width: 701px) {
+      // border: 2px solid red;
+      margin: 0 4rem 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      border-bottom: 1px solid #d6d4d4;
+    }
+  }
+  &-img-cont {
+    @media (min-width: 701px) {
+      margin: 0 1rem 1.5rem;
+    }
+    //image section styling
+    .space-img {
+      @media (min-width: 701px) {
+        max-width: 500px;
+      }
+    }
+  }
+
+  &-feat {
+    .icon {
+      @media (min-width: 701px) {
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+    }
+  }
+}
+
+.review {
+  // border: 1px solid #bebcb8;
+  @media (min-width: 701px) {
+    max-width: 900px;
+    margin: 0 1rem 1.5rem;
   }
 }

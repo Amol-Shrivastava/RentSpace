@@ -14,6 +14,7 @@
   &:focus {
     outline: 5px dashed var(--link-hover-clr-1);
     outline-offset: 10px;
+    box-shadow: none;
   }
 }
 
@@ -54,7 +55,7 @@
 
 //hero-section CTA
 .load-btn {
-  @media (min-width: 530px) and (max-width: 700px) {
+  @media (min-width: 701px) {
     font-size: 0.8rem;
   }
 }
