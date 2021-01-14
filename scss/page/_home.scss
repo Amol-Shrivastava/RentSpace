@@ -35,10 +35,6 @@
   }
 }
 
-.load-btn {
-  @include shadow(0.3, 5px);
-}
-
 //services section styling
 .services {
   margin: 4rem 0 2rem;
@@ -218,20 +214,6 @@
 
 //***********HOME PAGE**************
 
-//hero-section CTA
-.load-btn {
-  @media (max-width: 529px) {
-    font-size: 0.8rem;
-  }
-}
-
-//slider btns
-.trans-btn {
-  @media (max-width: 500px) {
-    padding: 0.8rem 0.3rem;
-  }
-}
-
 //service svg
 .lessor-features,
 .lessee-features {
@@ -286,19 +268,6 @@
 
 ///Media query for >500px <800px ***************************************
 
-//hero-section CTA
-.load-btn {
-  @media (min-width: 530px) and (max-width: 700px) {
-    font-size: 0.8rem;
-  }
-}
-
-//slider btns
-.trans-btn {
-  @media (max-width: 500px) {
-    padding: 0.8rem 0.3rem;
-  }
-}
 //service svg
 .lessor-features,
 .lessee-features {

@@ -1,3 +1,69 @@
+//hero-section CTA
+.load-btn {
+  padding: 0.5rem 1.3rem;
+  border: none;
+  background: #0b82a3;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: var(--sec-font-family);
+  letter-spacing: 2px;
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
+  @include shadow(0.3, 5px);
+  &:hover,
+  &:focus {
+    outline: 5px dashed var(--link-hover-clr-1);
+    outline-offset: 10px;
+  }
+}
+
+//trans-btns*****************************
+.trans-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 6;
+  transform: translateY(-50%);
+  display: inline-block;
+  background: rgba(#000, 1);
+  opacity: 0.6;
+  padding: 0.7rem 0.2rem;
+  cursor: pointer;
+  @include flex(column);
+}
+
+.load-btn {
+  @media (max-width: 529px) {
+    font-size: 0.8rem;
+  }
+}
+
+//slider btns
+.trans-btn {
+  @media (max-width: 500px) {
+    padding: 0.4rem 0.3rem;
+  }
+}
+
+#next {
+  margin-right: 0.52rem;
+}
+
+///Media query for >500px <800px ***************************************
+
+//hero-section CTA
+.load-btn {
+  @media (min-width: 530px) and (max-width: 700px) {
+    font-size: 0.8rem;
+  }
+}
+
+//slider btns
+.trans-btn {
+  @media (max-width: 500px) {
+    padding: 0.8rem 0.3rem;
+  }
+}
+
 //show deal*******************************
 .view-deal {
   padding: 0.5rem 1rem;
@@ -72,36 +138,6 @@
   color: #f4eaf3;
 }
 
-.load-btn {
-  padding: 0.5rem 1.3rem;
-  border: none;
-  background: #0b82a3;
-  color: #fff;
-  font-size: 1.3rem;
-  font-family: var(--sec-font-family);
-  letter-spacing: 2px;
-  transition: transform 0.2s ease-in;
-  cursor: pointer;
-  &:hover,
-  &:focus {
-    outline: 5px dashed var(--link-hover-clr-1);
-    outline-offset: 10px;
-  }
-}
-
-//trans-btns*****************************
-.trans-btn {
-  position: absolute;
-  top: 50%;
-  z-index: 6;
-  transform: translateY(-50%);
-  display: inline-block;
-  background: rgba(#000, 1);
-  opacity: 0.6;
-  padding: 1.3rem 0.5rem;
-  cursor: pointer;
-}
-
 .icon {
   display: inline-block;
   font-size: 48px;
@@ -122,7 +158,7 @@
 }
 .cmnt-btn {
   .icon {
-    font-size: 35px;
+    font-size: 21px;
   }
 }
 .next-btn {
@@ -132,15 +168,6 @@
     .icon-arrow-right {
       color: #fff;
       filter: brightness(250%);
-    }
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .cmnt-btn {
-    padding: 1rem 0.2rem;
-    .icon {
-      font-size: 20px;
     }
   }
 }
