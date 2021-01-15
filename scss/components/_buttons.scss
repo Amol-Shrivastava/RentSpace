@@ -286,11 +286,8 @@
 }
 
 .overlay-img-button {
-  // border: 2px solid red;
   margin-top: 0.55rem;
   padding: 0.3rem 0.9rem;
-  width: 22px;
-  height: 22px;
   border-radius: 6px;
   background: #d4a821;
   color: #fff;
@@ -299,15 +296,26 @@
   letter-spacing: 1px;
   border: none;
   cursor: pointer;
+  text-align: center;
+
   &:hover {
     background: #a68611;
+  }
+}
+
+.rooms-btn {
+  @media (max-width: 500px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
 .sub-btn {
   display: block;
   margin: 0 auto;
-  width: 100vw;
+  width: calc(100vw - 2.4rem);
   padding: 0.4rem;
   text-align: center;
   border: none;

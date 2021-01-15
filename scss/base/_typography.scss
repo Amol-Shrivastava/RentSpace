@@ -27,7 +27,8 @@
   }
 }
 
-.footer-links {
+.footer-links,
+.other-footer-links {
   color: #969695;
   &-logo {
     color: #dbd6d6;
@@ -217,6 +218,7 @@
   color: #f24539;
   text-align: center;
   border-bottom: 1px dotted #0c1d22;
+  max-width: calc(100vw - 2.4rem);
   @include flex();
   @media only screen and (max-width: 600px) {
     margin-top: 2rem;
@@ -484,7 +486,8 @@
 }
 
 //Footer mediaQuery for <500px
-.footer {
+.footer,
+.other-footer {
   &-links {
     @media (max-width: 528px) {
       font-size: 0.8rem;
@@ -591,7 +594,7 @@
 }
 
 //Footer mediaQuery for <500px
-.footer {
+.footer .other-footer {
   &-links {
     @media (min-width: 701px) and (max-width: 1000px) {
       font-size: 0.9rem;
@@ -703,7 +706,8 @@
 }
 
 //Footer mediaQuery for <500px
-.footer {
+.footer,
+.other-footer {
   &-links {
     @media (min-width: 531px) and (max-width: 1000px) {
       font-size: 0.9rem;
@@ -816,7 +820,8 @@
 }
 
 //Footer mediaQuery for <500px
-.footer {
+.footer,
+.other-footer {
   &-links {
     @media (min-width: 1002px) {
       font-size: 0.9rem;

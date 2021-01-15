@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-gap: 2rem;
-    // align-items: center;
+    overflow-x: hidden;
   }
 }
 
@@ -19,22 +19,11 @@
 
 .form {
   &_body {
-    margin-left: 1rem;
-    @media only screen and (min-width: 700px) and (max-width: 1000px) {
-      margin-left: -1rem;
-      padding: 0 1rem;
-      border-left: 1px solid #ababbd;
-    }
-    @media only screen and (min-width: 1000px) {
-      margin-left: -1rem;
-      padding: 0 1rem;
-      border-left: 1px solid #ababbd;
-    }
+    max-width: calc(100vw - 2.4rem);
   }
 
   &_section + &_section {
     margin-top: 1.6rem;
-    border-top: 1px solid #23251f;
   }
 
   &_control {
@@ -42,7 +31,7 @@
 
     .text-input {
       display: block;
-      width: 100vw;
+      width: calc(100vw - 2.4rem);
       padding: 0.4rem 0.2rem;
       color: #0b0909;
       font-weight: bold;
@@ -146,7 +135,7 @@
   &-select-box {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    // width: 100%;
     max-width: 800px;
 
     .selected {
@@ -196,7 +185,7 @@
 
   &-option-cont {
     order: 5;
-    width: 100%;
+    // width: 100%;
     background-color: #fbf9fe;
     transition: transform 0.3s linear;
     border: 1px solid #3c4647;
@@ -219,11 +208,11 @@
       border: 2px solid #e74c3c;
     }
     .city-option {
-      width: 100%;
+      // width: 100%;
       cursor: pointer;
       // padding: .3rem 0;
       input {
-        width: 100%;
+        // width: 100%;
         display: none;
       }
       &:hover {
@@ -347,7 +336,7 @@
 
 .house-preview {
   position: relative;
-  width: 400px;
+  width: calc(400px - 2.4rem);
   height: 250px;
   border: 1px solid #637171;
   margin-bottom: 1.5rem;
@@ -362,33 +351,51 @@
 }
 
 .houseImg {
-  width: 400px;
+  width: calc(400px - 2.4rem);
   height: 250px;
   object-fit: cover;
   display: none;
 }
 
 .roomImgPreviewCont {
+  @media (max-width: 500px) {
+    position: relative;
+    top: 3rem;
+  }
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 120px));
-  justify-content: space-between;
-  grid-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   margin-top: 1rem;
-  // border: 2px solid red;
+  grid-gap: 2rem;
+  // border: 6px solid blue;
 }
 
-.room-preview {
-  // width: 100px;
-  min-height: 70px;
-  position: relative;
-  border: 1px solid #637171;
-  cursor: pointer;
-  transition: transform 0.4s ease;
-  transform: scale(1);
+.room-previewBox {
+  // border: 4px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+  align-items: center;
+  // border: 2px solid red;
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 24% auto;
+    grid-gap: 0.2rem;
+    justify-content: center;
+  }
+  .pic-input {
+    position: relative;
+    height: 70px;
+  }
+  .room-preview {
+    border: 1px solid #637171;
+    min-height: 200px;
+  }
+}
 
-  &:hover {
-    transform: scale(1.05);
-    @include shadow(0.3, 5px);
+.big-preview {
+  @media (max-width: 500px) {
+    position: relative;
+    top: 3rem;
   }
 }
 
@@ -396,6 +403,13 @@
   object-fit: cover;
   display: block;
   // display: none;
+}
+
+.rooms-heading {
+  @media (max-width: 500px) {
+    position: relative;
+    top: 3rem;
+  }
 }
 
 .show {
