@@ -2194,7 +2194,7 @@ ul {
   position: relative; }
   .form_control .text-input {
     display: block;
-    width: 100%;
+    width: 100vw;
     padding: 0.4rem 0.2rem;
     color: #0b0909;
     font-weight: bold;
