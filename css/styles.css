@@ -1368,7 +1368,7 @@ ul {
 .sub-btn {
   display: block;
   margin: 0 auto;
-  width: 100%;
+  width: 100vw;
   padding: 0.4rem;
   text-align: center;
   border: none;
@@ -2195,7 +2195,7 @@ ul {
   position: relative; }
   .form_control .text-input {
     display: block;
-    width: 100%;
+    width: 100vw;
     padding: 0.4rem 0.2rem;
     color: #0b0909;
     font-weight: bold;
@@ -2365,7 +2365,7 @@ ul {
   margin-bottom: 0.9rem; }
 
 .space-Box {
-  width: 100%;
+  width: 100vw;
   margin-top: 0.5rem;
   padding-top: 0.3rem; }
 
@@ -2403,7 +2403,7 @@ ul {
     color: #68636f;
     font-family: "Source Serif Pro", serif;
     transform: translateY(-3px);
-    width: 100%;
+    width: 100vw;
     max-width: 700px; }
   .edit-note .state-text {
     display: inline-block;
