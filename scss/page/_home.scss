@@ -165,14 +165,13 @@
 }
 
 .review {
-  // border: 1px solid #bebcb8;
   position: relative;
-  @include flex(column, space-between);
   margin: 0 4rem;
-  // max-width: 600px;
   padding: 2rem 0.4rem;
   @include shadow(0.2, 5px);
   border-radius: 20px;
+  @include flex(column, space-between);
+  max-width: 800px;
 }
 
 .reviewer {
@@ -340,11 +339,11 @@
       margin: 0 1rem 1.5rem;
     }
     //image section styling
-    .space-img {
-      @media (min-width: 701px) {
-        max-width: 500px;
-      }
-    }
+    // .space-img {
+    //   @media (min-width: 701px) {
+    //     max-width: 500px;
+    //   }
+    // }
   }
 
   &-feat {
@@ -354,13 +353,5 @@
         height: 0.8rem;
       }
     }
-  }
-}
-
-.review {
-  // border: 1px solid #bebcb8;
-  @media (min-width: 701px) {
-    max-width: 900px;
-    margin: 0 1rem 1.5rem;
   }
 }

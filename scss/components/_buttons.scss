@@ -12,8 +12,8 @@
   @include shadow(0.3, 5px);
   &:hover,
   &:focus {
-    outline: 5px dashed var(--link-hover-clr-1);
-    outline-offset: 10px;
+    outline: 3px dashed var(--link-hover-clr-1);
+    outline-offset: 8px;
     box-shadow: none;
   }
 }
@@ -42,12 +42,6 @@
 .trans-btn {
   @media (max-width: 500px) {
     padding: 0.4rem 0.3rem;
-  }
-}
-
-#next {
-  @media (min-width: 800px) {
-    margin-right: 0.52rem;
   }
 }
 
