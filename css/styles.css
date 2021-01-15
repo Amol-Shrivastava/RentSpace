@@ -94,6 +94,7 @@ ul {
   margin-top: auto;
   color: #fff;
   padding: 2rem 1rem;
+  min-width: 100vw;
   background-color: #2e2e34; }
   .footer-options {
     display: grid;
