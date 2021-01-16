@@ -2234,7 +2234,8 @@ ul {
   padding: 0 1.2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 2rem; }
+  grid-gap: 2rem;
+  overflow-x: hidden; }
   @media (max-width: 700px) {
     .lessor-form-container {
       margin-top: 5rem; } }
@@ -2389,7 +2390,6 @@ ul {
   .city-option-cont.error {
     border: 2px solid #e74c3c; }
   .city-option-cont .city-option {
-    border: 2px solid red;
     cursor: pointer; }
     .city-option-cont .city-option input {
       display: none; }
