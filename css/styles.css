@@ -2570,6 +2570,10 @@ ul {
 .posting_owner {
   margin-bottom: 0.6rem; }
 
+.form-footer {
+  position: relative;
+  top: 5rem; }
+
 .post--switch .switch--text {
   margin-right: 1rem;
   font-size: 1.2rem;

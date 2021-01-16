@@ -325,6 +325,11 @@
   }
 
   &--two {
+    // @media (max-width: 400px) {
+    //   border: 3px solid red;
+    //   position: relative;
+    //   left: -9rem;
+    // }
     @media (max-width: 500px) {
       left: 8.2rem;
       top: 0.4rem;
