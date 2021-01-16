@@ -1,12 +1,15 @@
 .lessor-form {
   &-container {
-    margin-top: 4rem;
+    @media (max-width: 700px) {
+      margin-top: 5rem;
+    }
+    margin-top: 6rem;
     margin-bottom: 1rem;
     padding: 0 1.2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-gap: 2rem;
-    overflow-x: hidden;
+    // overflow-x: hidden;
   }
 }
 
@@ -23,7 +26,8 @@
   }
 
   &_section + &_section {
-    margin-top: 1.6rem;
+    margin-top: 3rem;
+    // border: 2px solid red;
   }
 
   &_control {
@@ -31,8 +35,8 @@
 
     .text-input {
       display: block;
-      width: calc(100vw - 2.4rem);
-      padding: 0.4rem 0.2rem;
+      width: calc(100% - 2.4rem);
+      padding: 0.2rem;
       color: #0b0909;
       font-weight: bold;
       font-size: 1.1rem;
@@ -114,6 +118,8 @@
 
 .city {
   &-Box {
+    // background: yellow;
+    width: calc(100% - 2.4rem);
     &.error {
       .fa-exclamation-circle {
         color: #e74c3c;
@@ -135,14 +141,13 @@
   &-select-box {
     display: flex;
     flex-direction: column;
-    // width: 100%;
-    max-width: 800px;
+    // max-width: calc(100% - 2.4rem);
 
     .selected {
       cursor: pointer;
       order: 1;
       border: 1px solid #3c4647;
-      padding: 0.4rem;
+      padding: 0.1rem 0.3rem;
       @include flex(row, space-between);
       border-radius: 6px;
       .cityclicked {
@@ -208,11 +213,10 @@
       border: 2px solid #e74c3c;
     }
     .city-option {
-      // width: 100%;
+      border: 2px solid red;
       cursor: pointer;
-      // padding: .3rem 0;
+
       input {
-        // width: 100%;
         display: none;
       }
       &:hover {
@@ -221,10 +225,6 @@
           color: #f0ecec;
         }
       }
-    }
-
-    .city-option + .city-option {
-      margin-top: 0.4rem;
     }
 
     .city-Name {
@@ -297,10 +297,6 @@
   }
 }
 
-// .room-config_details{
-//   margin-top: 1rem;
-// }
-
 .edit-note {
   letter-spacing: 1px;
 
@@ -314,18 +310,13 @@
   }
 
   .occupancy-text {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #68636f;
-    font-family: "Source Serif Pro", serif;
-    transform: translateY(-3px);
     width: 100vw;
     max-width: 700px;
   }
 
   .state-text {
     display: inline-block;
-    margin-top: 0.7rem;
+    margin-top: 1.7rem;
     font-size: 0.9rem;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
@@ -343,11 +334,6 @@
   cursor: pointer;
   transition: transform 0.4s ease;
   transform: scale(1);
-
-  &:hover {
-    transform: scale(1.02);
-    @include shadow(0.3, 5px);
-  }
 }
 
 .houseImg {
@@ -375,7 +361,7 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 0.5rem;
   align-items: center;
-  // border: 2px solid red;
+
   @media (max-width: 500px) {
     grid-template-columns: 1fr;
     grid-template-rows: 24% auto;
@@ -389,6 +375,9 @@
   .room-preview {
     border: 1px solid #637171;
     min-height: 200px;
+    @media (max-width: 500px) {
+      width: calc(100% - 2.4rem);
+    }
   }
 }
 
@@ -412,6 +401,22 @@
   }
 }
 
+.desc {
+  @media (max-width: 500px) {
+    position: relative;
+    top: 3rem;
+    // border: 3px solid red;
+  }
+}
+
+.room-rent {
+  @media (max-width: 500px) {
+    position: relative;
+    top: 3rem;
+    // border: 3px solid red;
+  }
+}
+
 .show {
   opacity: 1;
   visibility: visible;
@@ -421,6 +426,11 @@
   list-style-type: disc;
   margin-left: 1rem;
   display: block;
+  margin-top: 1rem;
+}
+
+.holder-item + .holder-item {
+  margin-top: 1rem;
 }
 
 .upload-details {
@@ -428,8 +438,11 @@
 }
 
 .occup {
-  border-top: 1px solid #23251f;
   padding-top: 1rem;
+  @media (max-width: 500px) {
+    position: relative;
+    top: 3rem;
+  }
 }
 
 .stateInfo {

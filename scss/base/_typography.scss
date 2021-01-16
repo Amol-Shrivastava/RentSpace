@@ -219,8 +219,10 @@
   text-align: center;
   border-bottom: 1px dotted #0c1d22;
   max-width: calc(100vw - 2.4rem);
+  margin-bottom: 3rem;
   @include flex();
-  @media only screen and (max-width: 600px) {
+
+  @media only screen and (max-width: 500px) {
     margin-top: 2rem;
   }
 }
@@ -232,6 +234,7 @@
   line-height: 1.4;
   font-family: "Poppins", serif;
   color: #f16a64;
+  margin-bottom: 1.5rem;
 }
 
 .space-type-label {
@@ -245,10 +248,11 @@
 }
 
 .text-hint {
-  font-size: 1rem;
-  line-height: 1.2;
+  font-size: 0.8rem;
+  line-height: 1.5;
   letter-spacing: 1px;
-  color: #3c4244;
+  color: #06080a;
+  // margin-bottom: 1.5rem;
 }
 
 .space-desc {
@@ -257,12 +261,17 @@
   font-size: 1.1rem;
   letter-spacing: 1px;
   line-height: 1.2;
+  margin-top: 3.5rem;
   color: #000000;
   border: 1px solid #0e0911;
-  font-family: "Source Serif Pro", serif;
+  font-family: var(--pr-font-family);
+  margin-bottom: 3rem;
   &::placeholder {
-    font-size: 0.9rem;
-    color: #96a193;
+    font-size: 0.8rem;
+    color: #cccfc4;
+    position: relative;
+    top: 4rem;
+    left: 4rem;
   }
 
   &:focus {
@@ -271,29 +280,41 @@
   }
 }
 
+.occupancy-text {
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: #68636f;
+  font-family: var(--pr-font-family);
+  transform: translateY(-3px);
+}
+
 .holder-item {
   font-size: 0.8rem;
   font-family: "Source Serif Pro", serif;
   color: #5b5d5b;
   letter-spacing: 1px;
 }
-.holder-item + .holder-item {
-  margin-top: 0.3rem;
-}
 
 .photo-size {
   position: relative;
   top: 0.8rem;
+
+  @media (max-width: 500px) {
+    top: 3.6rem;
+  }
   font-size: 0.8rem;
   letter-spacing: 1.1px;
-  font-family: "Source Serif Pro", serif;
+  font-family: var(--sec-font-family);
   color: #9991a1;
 }
 
 .preview-img {
-  font-size: 1rem;
-  font-family: "Source Serif Pro", serif;
-  color: #9c9f93;
+  font-size: 0.8rem;
+  font-family: var(--sec-font-family);
+  color: #cccfc4;
+  margin-top: 5rem;
+  letter-spacing: 1px;
   @include flex();
 }
 

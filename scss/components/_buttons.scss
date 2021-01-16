@@ -307,15 +307,40 @@
   @media (max-width: 500px) {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 43%;
     transform: translate(-50%, -50%);
+  }
+
+  &--zero {
+    @media (max-width: 500px) {
+      left: 11rem;
+      // background: pink;
+    }
+  }
+
+  &--one {
+    @media (max-width: 500px) {
+      transform: translate(-42%, -50%);
+    }
+  }
+
+  &--two {
+    @media (max-width: 500px) {
+      left: 8.2rem;
+      top: 0.4rem;
+      // background: pink;
+    }
+    @media (max-width: 1000px) {
+      display: inline-block;
+      transform: translateX(-0.6rem);
+    }
   }
 }
 
 .sub-btn {
   display: block;
   margin: 0 auto;
-  width: calc(100vw - 2.4rem);
+  width: calc(100% - 2.4rem);
   padding: 0.4rem;
   text-align: center;
   border: none;
@@ -331,6 +356,11 @@
   &:focus {
     outline: 4px dotted #dd3232;
     outline-offset: 3px;
+  }
+  @media (max-width: 500px) {
+    position: relative;
+    top: 3rem;
+    // border: 3px solid red;
   }
 }
 

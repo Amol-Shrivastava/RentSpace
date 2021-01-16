@@ -41,12 +41,12 @@
     </div>
 
     <div class="form_body">
-      <h2 class="lessor-form-heading mb--md">Post About your Space</h2>
+      <h2 class="lessor-form-heading">Post About your Space</h2>
 
       <form action="" class="lessor_form" id="form">
 
         <div class="form_section identification">
-          <h3 class="section-heading mb--sm">Lessor Details</h3>
+          <h3 class="section-heading">Lessor Details</h3>
 
           <div class="form_control radio_control">
             <div class="posting_owner">
@@ -101,7 +101,7 @@
         </div>
 
         <div class="form_section room-config_details">
-          <h3 class="section-heading mt--md mb--sm">Space Type</h3>
+          <h3 class="section-heading mt--md">Space Type</h3>
           <div class="form_control room_control">
           <div class="single-room">
             <input type="radio" name="room-config" id="one-room" class="radio-input">
@@ -131,7 +131,7 @@
         </div>
 
         <div class="form_section address-details">
-          <h3 class="section-heading mt--md mb--sm">Address Details</h3>
+          <h3 class="section-heading mt--md">Address Details</h3>
 
           <div class="form_control houseName">
             <input type="text" id="House Name" class="text-input" autocomplete="off" placeholder="Please Enter Your House name (if house name is not there, use (surname)'s house)">
@@ -237,7 +237,7 @@
         </div>
 
         <div class="form_section amenities-details">
-          <h3 class="section-heading mt--md mb--sm">Amenities Details</h3>
+          <h3 class="section-heading mt--md">Amenities Details</h3>
 
           <div class="form_control elec">
             <input type="checkbox" name="electricity" id="electricity" class="checkbox-input">
@@ -283,13 +283,13 @@
         </div>
 
         <div class="form_section upload-details">
-          <h3 class="section-heading mt--md mb--sm">House Image</h3>
+          <h3 class="section-heading mt--md">House Image</h3>
          
           <div class="house-previewBox">
           <div class="form_control housImg mb--md mt--sm">
             <div class="bigPic-input">
               <input type="file" class="file-input" accept="image/*" id="houseImg">
-            <label class="overlay-img-button rooms-btn" for="houseImg">
+            <label class="overlay-img-button rooms-btn rooms-btn--zero" for="houseImg">
               Choose a photo
             </label>
             </div>
@@ -310,7 +310,7 @@
             <div class="room-previewBox">
               <div class="pic-input ml--md">
                 <input type="file" multiple class="file-input" name="image1" accept="image/*" id="roomImg">
-              <label class="overlay-img-button rooms-btn" for="roomImg" id = 'roomBtn'>
+              <label class="overlay-img-button rooms-btn rooms-btn--one" for="roomImg" id = 'roomBtn'>
                 Choose photo
               </label>
               </div>
@@ -327,7 +327,7 @@
            <div class="room-previewBox">
            <div class="pic-input ml--xsm">
             <input type="file" multiple class="file-input" name="image2" accept="image/*" id="roomImg">
-            <label class="overlay-img-button rooms-btn" for="roomImg" id = 'roomBtn' style="margin-left:23px">
+            <label class="overlay-img-button rooms-btn rooms-btn--two" for="roomImg" id = 'roomBtn' style="margin-left:23px">
               Choose photo
             </label>
            </div>
@@ -345,7 +345,7 @@
            <div class="room-previewBox">
            <div class="pic-input">
             <input type="file" multiple class="file-input" name="image3" accept="image/*" id="roomImg">
-            <label class="overlay-img-button rooms-btn" for="roomImg" id = 'roomBtn' style="margin-left:25px">
+            <label class="overlay-img-button rooms-btn rooms-btn--three" for="roomImg" id = 'roomBtn' style="margin-left:25px">
               Choose photo
             </label>
           </div>
@@ -364,7 +364,7 @@
            
         <div class="pic-input">
             <input type="file" multiple class="file-input" name="image4" accept="image/*" id="roomImg">
-            <label class="overlay-img-button rooms-btn" for="roomImg" id = 'roomBtn' style="margin-left:26px">
+            <label class="overlay-img-button rooms-btn rooms-btn--four" for="roomImg" id = 'roomBtn' style="margin-left:26px">
               Choose photo
             </label>
            </div>
@@ -381,7 +381,7 @@
             <div class="room-previewBox">
               <div class="pic-input">
               <input type="file" multiple class="file-input" name="image5" accept="image/*" id="roomImg">
-              <label class="overlay-img-button rooms-btn" for="roomImg" id = 'roomBtn' style="margin-left:28px">
+              <label class="overlay-img-button rooms-btn rooms-btn--five" for="roomImg" id = 'roomBtn' style="margin-left:28px">
                 Choose photo
               </label>
              </div>
@@ -397,18 +397,18 @@
            
           </div>
 
-          <small class="photo-size">All the above images must be individually less than 4MB.</small>
+          <small class="photo-size">All the above images must be less than 4MB.</small>
         </div>
 
         <div class="form_section desc">
-        <h3 class="section-heading mb--sm mt--md">Space Description</h3>
+        <h3 class="section-heading mt--md">Space Description</h3>
         <span class="text-holder-text">
-          <span class="text-hint mb--sm">
+          <span class="text-hint">
             Describe about your space and perks of choosing your
-            space. <br> You can use following listed things to
+            space.You can use following listed things to
             describe your space.
           </span>
-          <ul class="holder-list mt--sm">
+          <ul class="holder-list">
             <li class="holder-item">Surrounding places (For eg. market, mall, school/college., etc)</li>
             <li class="holder-item">Toilet Configuration</li>
             <li class="holder-item">Flooring</li>
@@ -430,7 +430,7 @@
         </div>
 
         <div class="form_control room-rent mt--md mb--md">
-          <h3 class="section-heading mb--sm">Rent / month</h3>
+          <h3 class="section-heading">Rent / month</h3>
             <input type="tel" id="Price" class="text-input" autocomplete="off" placeholder="Please enter rent you expect including all maintenance cost">
             <span class="confirmation">
               <i class="fas fa-check-circle price-icon"></i>
