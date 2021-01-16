@@ -325,11 +325,6 @@
   }
 
   &--two {
-    // @media (max-width: 400px) {
-    //   border: 3px solid red;
-    //   position: relative;
-    //   left: -9rem;
-    // }
     @media (max-width: 500px) {
       left: 8.2rem;
       top: 0.4rem;
@@ -358,10 +353,10 @@
     background-color: #cf4040;
   }
 
-  &:focus {
-    outline: 4px dotted #dd3232;
-    outline-offset: 3px;
-  }
+  // &:focus {
+  //   outline: 4px dotted #dd3232;
+  //   outline-offset: 3px;
+  // }
   @media (max-width: 500px) {
     position: relative;
     top: 3rem;

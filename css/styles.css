@@ -1446,9 +1446,6 @@ ul {
   cursor: pointer; }
   .sub-btn:hover {
     background-color: #cf4040; }
-  .sub-btn:focus {
-    outline: 4px dotted #dd3232;
-    outline-offset: 3px; }
   @media (max-width: 500px) {
     .sub-btn {
       position: relative;
