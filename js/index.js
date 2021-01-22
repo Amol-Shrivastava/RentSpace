@@ -21,8 +21,8 @@ const signModal = document.querySelector("#signupModal");
 const signupbtn = document.querySelector(".signUp");
 
 //user functionality
-const userModal = document.querySelector("#userModal");
-const userIcon = document.querySelector(".user-icon");
+const userModal = document.querySelector("#loginModal");
+const userIcon = document.querySelector(".login");
 
 // navbar animation
 const navOptions = {
